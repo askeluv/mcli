@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-import { readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
-import type { Registry, CliTool } from './types.js';
+import type { CliTool } from './types.js';
 import { searchTools, findTool, getCategories, sortByAgentScore, tierBadge, filterByMinScore, filterByCategory } from './lib.js';
+import { loadRegistry, RegistryError } from './registry.js';
 
 // Parse --flag and --flag=value from args
 function parseFlag(args: string[], flag: string): string | null {
@@ -23,11 +23,6 @@ function parseNumericFlag(args: string[], flag: string): number | null {
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const registryPath = join(__dirname, '..', 'registry', 'tools.json');
-
-function loadRegistry(): Registry {
-  const data = readFileSync(registryPath, 'utf-8');
-  return JSON.parse(data);
-}
 
 function scoreColor(score: number): string {
   if (score >= 8) return '\x1b[32m'; // green
@@ -149,7 +144,20 @@ Examples:
     return;
   }
 
-  const registry = loadRegistry();
+  let registry;
+  try {
+    registry = loadRegistry(registryPath);
+  } catch (err) {
+    if (err instanceof RegistryError) {
+      console.error(`Error: ${err.message}`);
+      if (err.cause) {
+        console.error(`  Caused by: ${err.cause.message}`);
+      }
+    } else {
+      console.error('Unexpected error loading registry:', err);
+    }
+    process.exit(1);
+  }
 
   switch (command) {
     case 'search': {
