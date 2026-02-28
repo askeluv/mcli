@@ -2,6 +2,42 @@
 
 You're working on **mcli** — a CLI for discovering CLI tools, optimized for AI agents.
 
+## ⚠️ Test-Driven Development (TDD)
+
+**This repo follows strict TDD. No exceptions.**
+
+### The Rule
+1. **Write tests FIRST** — Before implementing any feature
+2. **Run tests, see them fail** — Confirms the test is valid
+3. **Implement the minimum code** — Make tests pass
+4. **Refactor** — Clean up while tests stay green
+
+### Commands
+```bash
+npm test              # Run all tests once
+npm run test:watch    # Watch mode (run on file changes)
+npm run test:coverage # Run with coverage report
+```
+
+### What to Test
+- **All new functions in `src/lib.ts`** — Unit tests required
+- **Registry changes** — `registry.test.ts` validates all tools
+- **CLI behavior** — For user-facing changes, add integration tests
+
+### Test Location
+- Unit tests: `src/__tests__/lib.test.ts`
+- Registry validation: `src/__tests__/registry.test.ts`
+- Future CLI tests: `src/__tests__/cli.test.ts`
+
+### Before Committing
+```bash
+npm test  # Must pass
+```
+
+If tests fail, fix them before pushing. No "I'll add tests later."
+
+---
+
 ## Project Overview
 
 mcli is "the app store for AI agents." It helps agents (and humans) discover, compare, and evaluate CLI tools based on structured metadata and agent-generated reviews.

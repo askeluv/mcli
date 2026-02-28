@@ -57,9 +57,19 @@ Tools are rated 1-10 on agent-friendliness based on:
 - [ ] Web interface — Browse the registry online
 - [ ] Skill integration — Link to skills.sh for usage instructions
 
+## Development
+
+This project follows **test-driven development (TDD)**. Tests must pass before merging.
+
+```bash
+npm test              # Run tests
+npm run test:watch    # Watch mode
+npm run test:coverage # Coverage report
+```
+
 ## Contributing
 
-PRs welcome! To add a tool, edit `registry/tools.json`.
+PRs welcome! To add a tool, edit `registry/tools.json`. All tools are validated by tests.
 
 ## License
 

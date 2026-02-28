@@ -3,6 +3,7 @@ import { readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import type { Registry, CliTool } from './types.js';
+import { searchTools, findTool, getCategories, sortByAgentScore, tierBadge } from './lib.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const registryPath = join(__dirname, '..', 'registry', 'tools.json');
@@ -10,14 +11,6 @@ const registryPath = join(__dirname, '..', 'registry', 'tools.json');
 function loadRegistry(): Registry {
   const data = readFileSync(registryPath, 'utf-8');
   return JSON.parse(data);
-}
-
-function tierBadge(tier: string): string {
-  switch (tier) {
-    case 'verified': return '✓';
-    case 'community': return '○';
-    default: return '?';
-  }
 }
 
 function scoreColor(score: number): string {
@@ -57,15 +50,7 @@ function printTool(tool: CliTool, verbose = false): void {
   console.log();
 }
 
-function search(registry: Registry, query: string): CliTool[] {
-  const q = query.toLowerCase();
-  return registry.tools.filter(tool =>
-    tool.slug.toLowerCase().includes(q) ||
-    tool.name.toLowerCase().includes(q) ||
-    tool.description.toLowerCase().includes(q) ||
-    tool.categories.some(c => c.toLowerCase().includes(q))
-  );
-}
+// search function moved to lib.ts as searchTools
 
 function compare(registry: Registry, slugs: string[]): void {
   const tools = slugs.map(slug => 
@@ -136,7 +121,7 @@ Examples:
         console.log('Usage: mcli search <query>');
         return;
       }
-      const results = search(registry, query);
+      const results = searchTools(registry, query);
       if (results.length === 0) {
         console.log('No tools found');
       } else {
@@ -151,7 +136,7 @@ Examples:
         console.log('Usage: mcli info <slug>');
         return;
       }
-      const tool = registry.tools.find(t => t.slug === slug);
+      const tool = findTool(registry, slug);
       if (!tool) {
         console.log(`Tool not found: ${slug}`);
       } else {
@@ -176,7 +161,7 @@ Examples:
         console.log('Usage: mcli install <slug>');
         return;
       }
-      const tool = registry.tools.find(t => t.slug === slug);
+      const tool = findTool(registry, slug);
       if (!tool) {
         console.log(`Tool not found: ${slug}`);
       } else {
@@ -188,16 +173,15 @@ Examples:
     case 'list': {
       let tools = [...registry.tools];
       if (args.includes('--agent-friendly')) {
-        tools.sort((a, b) => b.agentScore - a.agentScore);
+        tools = sortByAgentScore(tools);
       }
       tools.forEach(t => printTool(t));
       break;
     }
 
     case 'categories': {
-      const cats = new Set<string>();
-      registry.tools.forEach(t => t.categories.forEach(c => cats.add(c)));
-      console.log('Categories:', [...cats].sort().join(', '));
+      const cats = getCategories(registry);
+      console.log('Categories:', cats.join(', '));
       break;
     }
 
