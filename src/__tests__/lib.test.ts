@@ -4,6 +4,9 @@ import {
   findTool,
   getCategories,
   sortByAgentScore,
+  sortByRelevance,
+  tierBoost,
+  effectiveScore,
   filterByMinScore,
   filterByCategory,
   filterByTier,
@@ -144,6 +147,60 @@ describe('sortByAgentScore', () => {
     ];
     const original = [...tools];
     sortByAgentScore(tools);
+    expect(tools).toEqual(original);
+  });
+});
+
+describe('tierBoost', () => {
+  it('returns 2 for verified', () => {
+    expect(tierBoost('verified')).toBe(2);
+  });
+
+  it('returns 1 for community', () => {
+    expect(tierBoost('community')).toBe(1);
+  });
+
+  it('returns 0 for unverified', () => {
+    expect(tierBoost('unverified')).toBe(0);
+  });
+});
+
+describe('effectiveScore', () => {
+  it('adds tier boost to agent score', () => {
+    const verified = createTool({ agentScore: 8, tier: 'verified' });
+    const community = createTool({ agentScore: 8, tier: 'community' });
+    const unverified = createTool({ agentScore: 8, tier: 'unverified' });
+    
+    expect(effectiveScore(verified)).toBe(10);
+    expect(effectiveScore(community)).toBe(9);
+    expect(effectiveScore(unverified)).toBe(8);
+  });
+});
+
+describe('sortByRelevance', () => {
+  it('sorts by effective score descending', () => {
+    const lowScore = createTool({ slug: 'low', agentScore: 5, tier: 'verified' }); // 7
+    const highScore = createTool({ slug: 'high', agentScore: 9, tier: 'unverified' }); // 9
+    
+    const sorted = sortByRelevance([lowScore, highScore]);
+    expect(sorted.map(t => t.slug)).toEqual(['high', 'low']);
+  });
+
+  it('prefers verified tools at same effective score', () => {
+    const verified = createTool({ slug: 'verified', agentScore: 8, tier: 'verified' }); // 10
+    const unverified = createTool({ slug: 'unverified', agentScore: 10, tier: 'unverified' }); // 10
+    
+    const sorted = sortByRelevance([unverified, verified]);
+    expect(sorted.map(t => t.slug)).toEqual(['verified', 'unverified']);
+  });
+
+  it('does not mutate original array', () => {
+    const tools = [
+      createTool({ slug: 'a', agentScore: 5 }),
+      createTool({ slug: 'b', agentScore: 9 }),
+    ];
+    const original = [...tools];
+    sortByRelevance(tools);
     expect(tools).toEqual(original);
   });
 });

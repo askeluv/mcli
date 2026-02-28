@@ -2,7 +2,7 @@
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import type { CliTool, Registry } from './types.js';
-import { searchTools, findTool, getCategories, sortByAgentScore, tierBadge, filterByMinScore, filterByCategory } from './lib.js';
+import { searchTools, findTool, getCategories, sortByAgentScore, sortByRelevance, tierBadge, filterByMinScore, filterByCategory } from './lib.js';
 import { loadRegistry, RegistryError } from './registry.js';
 
 // Parse --flag and --flag=value from args
@@ -182,10 +182,8 @@ Examples:
         results = filterByCategory(results, category);
       }
       
-      // Sort by score if requested
-      if (args.includes('--agent-friendly')) {
-        results = sortByAgentScore(results);
-      }
+      // Sort by relevance (agent score + tier boost) by default
+      results = sortByRelevance(results);
       
       if (results.length === 0) {
         console.log('No tools found');
