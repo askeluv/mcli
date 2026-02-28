@@ -3,7 +3,23 @@ import { readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import type { Registry, CliTool } from './types.js';
-import { searchTools, findTool, getCategories, sortByAgentScore, tierBadge } from './lib.js';
+import { searchTools, findTool, getCategories, sortByAgentScore, tierBadge, filterByMinScore, filterByCategory } from './lib.js';
+
+// Parse --flag and --flag=value from args
+function parseFlag(args: string[], flag: string): string | null {
+  for (const arg of args) {
+    if (arg === flag) return 'true';
+    if (arg.startsWith(`${flag}=`)) return arg.slice(flag.length + 1);
+  }
+  return null;
+}
+
+function parseNumericFlag(args: string[], flag: string): number | null {
+  const val = parseFlag(args, flag);
+  if (val === null) return null;
+  const num = parseInt(val, 10);
+  return isNaN(num) ? null : num;
+}
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const registryPath = join(__dirname, '..', 'registry', 'tools.json');
@@ -33,6 +49,17 @@ function printTool(tool: CliTool, verbose = false): void {
   if (verbose) {
     console.log(`  Vendor: ${tool.vendor.name} (${tool.vendor.domain})`);
     console.log(`  Categories: ${tool.categories.join(', ')}`);
+    
+    // Show agent score breakdown if available
+    if (tool.agentScores) {
+      console.log(`  Agent Scores (1-5 each):`);
+      console.log(`    JSON Output:     ${tool.agentScores.jsonOutput}/5`);
+      console.log(`    Non-Interactive: ${tool.agentScores.nonInteractive}/5`);
+      console.log(`    Token Efficiency:${tool.agentScores.tokenEfficiency}/5`);
+      console.log(`    Safety Features: ${tool.agentScores.safetyFeatures}/5`);
+      console.log(`    Pipeline Friend: ${tool.agentScores.pipelineFriendly}/5`);
+    }
+    
     console.log(`  Install:`);
     for (const [method, cmd] of Object.entries(tool.install)) {
       if (cmd) console.log(`    ${method}: ${cmd}`);
@@ -100,14 +127,24 @@ Commands:
   compare <slug> [slug...] Compare multiple tools
   install <slug>           Show install commands for a tool
   list                     List all tools
-  list --agent-friendly    List tools sorted by agent score
   categories               List all categories
+
+Filters (for search and list):
+  --min-score=N            Only show tools with agent score >= N
+  --category=NAME          Filter by category
+  --agent-friendly         Sort by agent score (highest first)
+
+Tier Badges:
+  ✓ = Verified (traced to official vendor source)
+  ○ = Community (reviewed but not vendor-verified)
+  ? = Unverified (auto-indexed, use with caution)
 
 Examples:
   mcli search cloud
-  mcli info hcloud
+  mcli search git --category=git
+  mcli list --agent-friendly --min-score=8
+  mcli info gh
   mcli compare aws gcloud hcloud
-  mcli install gh
 `);
     return;
   }
@@ -116,12 +153,32 @@ Examples:
 
   switch (command) {
     case 'search': {
-      const query = args.slice(1).join(' ');
+      // Extract query (non-flag args after command)
+      const queryParts = args.slice(1).filter(a => !a.startsWith('--'));
+      const query = queryParts.join(' ');
       if (!query) {
-        console.log('Usage: mcli search <query>');
+        console.log('Usage: mcli search <query> [--min-score=N] [--category=NAME]');
         return;
       }
-      const results = searchTools(registry, query);
+      
+      let results = searchTools(registry, query);
+      
+      // Apply filters
+      const minScore = parseNumericFlag(args, '--min-score');
+      if (minScore !== null) {
+        results = filterByMinScore(results, minScore);
+      }
+      
+      const category = parseFlag(args, '--category');
+      if (category && category !== 'true') {
+        results = filterByCategory(results, category);
+      }
+      
+      // Sort by score if requested
+      if (args.includes('--agent-friendly')) {
+        results = sortByAgentScore(results);
+      }
+      
       if (results.length === 0) {
         console.log('No tools found');
       } else {
@@ -172,10 +229,28 @@ Examples:
 
     case 'list': {
       let tools = [...registry.tools];
+      
+      // Apply filters
+      const minScore = parseNumericFlag(args, '--min-score');
+      if (minScore !== null) {
+        tools = filterByMinScore(tools, minScore);
+      }
+      
+      const category = parseFlag(args, '--category');
+      if (category && category !== 'true') {
+        tools = filterByCategory(tools, category);
+      }
+      
+      // Sort by score if requested
       if (args.includes('--agent-friendly')) {
         tools = sortByAgentScore(tools);
       }
-      tools.forEach(t => printTool(t));
+      
+      if (tools.length === 0) {
+        console.log('No tools found matching filters');
+      } else {
+        tools.forEach(t => printTool(t));
+      }
       break;
     }
 

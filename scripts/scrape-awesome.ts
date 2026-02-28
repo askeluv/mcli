@@ -5,7 +5,7 @@
  * Usage: npx tsx scripts/scrape-awesome.ts [--limit 50] [--category entertainment]
  */
 
-import Anthropic from "@anthropic-ai/sdk";
+import OpenAI from "openai";
 import { readFileSync, writeFileSync, existsSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
@@ -147,9 +147,9 @@ async function fetchReadme(repoUrl: string): Promise<string | null> {
   }
 }
 
-// Use Claude to analyze a tool and generate registry entry
+// Use GPT-4 to analyze a tool and generate registry entry
 async function analyzeToolWithAI(
-  client: Anthropic,
+  client: OpenAI,
   tool: ParsedTool,
   readme: string | null
 ): Promise<ToolEntry | null> {
@@ -211,13 +211,13 @@ Agent Scores Guidelines (each dimension 1-5):
 Return ONLY the JSON object, no markdown or explanation.`;
 
   try {
-    const response = await client.messages.create({
-      model: "claude-sonnet-4-20250514",
+    const response = await client.chat.completions.create({
+      model: "gpt-4.1",
       max_tokens: 1000,
       messages: [{ role: "user", content: prompt }],
     });
 
-    const text = response.content[0].type === "text" ? response.content[0].text : "";
+    const text = response.choices[0]?.message?.content || "";
     
     // Extract JSON from response
     const jsonMatch = text.match(/\{[\s\S]*\}/);
@@ -280,7 +280,13 @@ async function main() {
   tools = tools.slice(0, limit);
   console.log(`Processing ${tools.length} tools (limit: ${limit})`);
   
-  const client = new Anthropic();
+  if (!process.env.OPENAI_API_KEY) {
+    console.error('Error: OPENAI_API_KEY environment variable is required');
+    process.exit(1);
+  }
+  const client = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+  });
   const newTools: ToolEntry[] = [];
   
   for (let i = 0; i < tools.length; i++) {
