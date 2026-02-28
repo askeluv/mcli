@@ -5737,43 +5737,6 @@
       "agentScore": 5
     },
     {
-      "slug": "cointop",
-      "name": "cointop",
-      "vendor": {
-        "name": "miguelmota",
-        "domain": "github.com/miguelmota",
-        "verified": false
-      },
-      "repo": "https://github.com/miguelmota/cointop",
-      "docs": "https://docs.cointop.sh/",
-      "install": {
-        "brew": "cointop",
-        "go": "github.com/miguelmota/cointop@latest"
-      },
-      "capabilities": {
-        "jsonOutput": false,
-        "auth": [],
-        "idempotent": true,
-        "interactive": true,
-        "streaming": true
-      },
-      "agentScores": {
-        "jsonOutput": 1,
-        "nonInteractive": 1,
-        "tokenEfficiency": 2,
-        "safetyFeatures": 1,
-        "pipelineFriendly": 2
-      },
-      "categories": [
-        "finance",
-        "cryptocurrency",
-        "monitoring"
-      ],
-      "tier": "unverified",
-      "description": "Interactive terminal UI for real-time cryptocurrency tracking and portfolio monitoring.",
-      "agentScore": 3
-    },
-    {
       "slug": "ticker",
       "name": "Ticker",
       "vendor": {
@@ -14414,6 +14377,391 @@
       ],
       "tier": "verified",
       "description": "Onchain analytics CLI for Smart Money, wallet profiling, token research. Built for AI agents."
+    },
+    {
+      "slug": "cast",
+      "name": "Cast (Foundry)",
+      "vendor": {
+        "name": "Foundry",
+        "domain": "getfoundry.sh",
+        "verified": true
+      },
+      "repo": "https://github.com/foundry-rs/foundry",
+      "docs": "https://book.getfoundry.sh/cast/",
+      "install": {
+        "script": "curl -L https://foundry.paradigm.xyz | bash && foundryup"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:ETH_RPC_URL"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "crypto",
+        "ethereum",
+        "blockchain",
+        "dev"
+      ],
+      "tier": "verified",
+      "description": "Swiss Army knife for Ethereum. RPC calls, tx decoding, wallet ops, ENS lookups, gas estimation."
+    },
+    {
+      "slug": "forge",
+      "name": "Forge (Foundry)",
+      "vendor": {
+        "name": "Foundry",
+        "domain": "getfoundry.sh",
+        "verified": true
+      },
+      "repo": "https://github.com/foundry-rs/foundry",
+      "docs": "https://book.getfoundry.sh/forge/",
+      "install": {
+        "script": "curl -L https://foundry.paradigm.xyz | bash && foundryup"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 9,
+      "categories": [
+        "crypto",
+        "ethereum",
+        "blockchain",
+        "dev",
+        "testing"
+      ],
+      "tier": "verified",
+      "description": "Blazing fast Ethereum testing framework. Build, test, deploy Solidity contracts."
+    },
+    {
+      "slug": "foundry-anvil",
+      "name": "Anvil (Foundry)",
+      "vendor": {
+        "name": "Foundry",
+        "domain": "getfoundry.sh",
+        "verified": true
+      },
+      "repo": "https://github.com/foundry-rs/foundry",
+      "docs": "https://book.getfoundry.sh/anvil/",
+      "install": {
+        "script": "curl -L https://foundry.paradigm.xyz | bash && foundryup"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": false,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 9,
+      "categories": [
+        "crypto",
+        "ethereum",
+        "blockchain",
+        "dev"
+      ],
+      "tier": "verified",
+      "description": "Local Ethereum node for development. Fork mainnet, impersonate accounts, mine blocks on demand."
+    },
+    {
+      "slug": "solana",
+      "name": "Solana CLI",
+      "vendor": {
+        "name": "Solana Foundation",
+        "domain": "solana.com",
+        "verified": true
+      },
+      "repo": "https://github.com/solana-labs/solana",
+      "docs": "https://docs.solana.com/cli",
+      "install": {
+        "script": "sh -c \"$(curl -sSfL https://release.anza.xyz/stable/install)\""
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "~/.config/solana/id.json"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 9,
+      "categories": [
+        "crypto",
+        "solana",
+        "blockchain"
+      ],
+      "tier": "verified",
+      "description": "Core Solana blockchain CLI. Account management, staking, validators, airdrops."
+    },
+    {
+      "slug": "spl-token",
+      "name": "SPL Token CLI",
+      "vendor": {
+        "name": "Solana Foundation",
+        "domain": "solana.com",
+        "verified": true
+      },
+      "repo": "https://github.com/solana-labs/solana-program-library",
+      "docs": "https://spl.solana.com/token",
+      "install": {
+        "cargo": "spl-token-cli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "~/.config/solana/id.json"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 9,
+      "categories": [
+        "crypto",
+        "solana",
+        "blockchain",
+        "tokens"
+      ],
+      "tier": "verified",
+      "description": "Create, mint, transfer, and burn SPL tokens on Solana."
+    },
+    {
+      "slug": "anchor",
+      "name": "Anchor CLI",
+      "vendor": {
+        "name": "Coral",
+        "domain": "anchor-lang.com",
+        "verified": true
+      },
+      "repo": "https://github.com/coral-xyz/anchor",
+      "docs": "https://www.anchor-lang.com/docs",
+      "install": {
+        "cargo": "anchor-cli",
+        "script": "cargo install --git https://github.com/coral-xyz/anchor avm && avm install latest && avm use latest"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "~/.config/solana/id.json"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 4,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "crypto",
+        "solana",
+        "blockchain",
+        "dev"
+      ],
+      "tier": "verified",
+      "description": "Solana smart contract framework. Build, test, deploy Solana programs with less boilerplate."
+    },
+    {
+      "slug": "cointop",
+      "name": "Cointop",
+      "vendor": {
+        "name": "Miguel Mota",
+        "domain": "cointop.sh",
+        "verified": false
+      },
+      "repo": "https://github.com/cointop-sh/cointop",
+      "docs": "https://docs.cointop.sh",
+      "install": {
+        "brew": "cointop",
+        "go": "github.com/cointop-sh/cointop@latest",
+        "snap": "cointop"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 2,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 2
+      },
+      "agentScore": 5,
+      "categories": [
+        "crypto",
+        "prices",
+        "portfolio"
+      ],
+      "tier": "community",
+      "description": "Interactive terminal UI for tracking crypto prices. Fast, lightweight, vim-like keybindings."
+    },
+    {
+      "slug": "cryo",
+      "name": "Cryo",
+      "vendor": {
+        "name": "Paradigm",
+        "domain": "paradigm.xyz",
+        "verified": true
+      },
+      "repo": "https://github.com/paradigmxyz/cryo",
+      "docs": "https://github.com/paradigmxyz/cryo#readme",
+      "install": {
+        "cargo": "cryo_cli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:ETH_RPC_URL"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 9,
+      "categories": [
+        "crypto",
+        "ethereum",
+        "blockchain",
+        "analytics",
+        "data"
+      ],
+      "tier": "verified",
+      "description": "High-performance blockchain data extraction. Export blocks, txs, logs to Parquet/CSV."
+    },
+    {
+      "slug": "ethereum-etl",
+      "name": "Ethereum ETL",
+      "vendor": {
+        "name": "Blockchain ETL",
+        "domain": "github.com/blockchain-etl",
+        "verified": false
+      },
+      "repo": "https://github.com/blockchain-etl/ethereum-etl",
+      "docs": "https://ethereum-etl.readthedocs.io",
+      "install": {
+        "pip": "ethereum-etl"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:PROVIDER_URI"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 8,
+      "categories": [
+        "crypto",
+        "ethereum",
+        "blockchain",
+        "analytics",
+        "data"
+      ],
+      "tier": "community",
+      "description": "Export Ethereum blockchain data to CSV/JSON. Blocks, transactions, logs, token transfers."
+    },
+    {
+      "slug": "cryptowallet-cli",
+      "name": "Crypto Wallet CLI",
+      "vendor": {
+        "name": "Yerofey",
+        "domain": "github.com/yerofey",
+        "verified": false
+      },
+      "repo": "https://github.com/yerofey/cryptowallet-cli",
+      "docs": "https://github.com/yerofey/cryptowallet-cli#readme",
+      "install": {
+        "npm": "@yerofey/cryptowallet-cli"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 3
+      },
+      "agentScore": 7,
+      "categories": [
+        "crypto",
+        "wallet",
+        "keygen"
+      ],
+      "tier": "community",
+      "description": "Generate wallets for 50+ blockchains. BTC, ETH, SON, any EVM chain. Mnemonics and keypairs."
     }
   ]
 }
