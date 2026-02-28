@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-02-28",
+  "updated": "2026-03-01",
   "tools": [
     {
       "slug": "hcloud",
@@ -14336,6 +14336,84 @@
       "tier": "unverified",
       "description": "Ecosystem of over 100 CLI tools, AI copilot, and dev utilities, with secure sandboxing.",
       "agentScore": 5
+    },
+    {
+      "slug": "linear-cli",
+      "name": "Linear CLI",
+      "vendor": {
+        "name": "schpet",
+        "domain": "github.com/schpet",
+        "verified": false
+      },
+      "repo": "https://github.com/schpet/linear-cli",
+      "docs": "https://github.com/schpet/linear-cli#readme",
+      "install": {
+        "brew": "schpet/tap/linear"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:LINEAR_API_KEY",
+          "~/.config/linear/config.json"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 4,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "devtools",
+        "productivity",
+        "git"
+      ],
+      "tier": "community",
+      "description": "Linear issue tracker CLI - list, start, create PRs. Agent-friendly with skill support."
+    },
+    {
+      "slug": "nansen-cli",
+      "name": "Nansen CLI",
+      "vendor": {
+        "name": "Nansen",
+        "domain": "nansen.ai",
+        "verified": true
+      },
+      "repo": "https://github.com/nansen-ai/nansen-cli",
+      "docs": "https://docs.nansen.ai",
+      "install": {
+        "npm": "nansen-cli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:NANSEN_API_KEY",
+          "~/.nansen/config.json"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 9,
+      "categories": [
+        "crypto",
+        "analytics",
+        "blockchain"
+      ],
+      "tier": "verified",
+      "description": "Onchain analytics CLI for Smart Money, wallet profiling, token research. Built for AI agents."
     }
   ]
 }
