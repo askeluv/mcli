@@ -1,6 +1,6 @@
 {
   "name": "mcli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A CLI for discovering and comparing CLI tools",
   "type": "module",
   "bin": {
