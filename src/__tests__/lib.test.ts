@@ -12,6 +12,8 @@ import {
   validateRegistry,
   getInstallCommand,
   compareTools,
+  computeAgentScore,
+  validateAgentScores,
 } from '../lib.js';
 import type { Registry, CliTool } from '../types.js';
 
@@ -553,5 +555,101 @@ describe('performance', () => {
     const duration = performance.now() - start;
 
     expect(duration).toBeLessThan(500); // Should complete in <500ms
+  });
+});
+
+describe('computeAgentScore', () => {
+  it('computes weighted average correctly', () => {
+    // All 5s = (5*3 + 5*3 + 5*2 + 5*1 + 5*1) / 50 * 10 = 10
+    expect(computeAgentScore({
+      jsonOutput: 5,
+      nonInteractive: 5,
+      tokenEfficiency: 5,
+      safetyFeatures: 5,
+      pipelineFriendly: 5,
+    })).toBe(10);
+  });
+
+  it('weights jsonOutput and nonInteractive higher', () => {
+    // High json/nonInteractive, low others
+    const highPriority = computeAgentScore({
+      jsonOutput: 5,
+      nonInteractive: 5,
+      tokenEfficiency: 1,
+      safetyFeatures: 1,
+      pipelineFriendly: 1,
+    });
+    // Low json/nonInteractive, high others
+    const lowPriority = computeAgentScore({
+      jsonOutput: 1,
+      nonInteractive: 1,
+      tokenEfficiency: 5,
+      safetyFeatures: 5,
+      pipelineFriendly: 5,
+    });
+    expect(highPriority).toBeGreaterThan(lowPriority);
+  });
+
+  it('returns minimum 1 for all 1s', () => {
+    expect(computeAgentScore({
+      jsonOutput: 1,
+      nonInteractive: 1,
+      tokenEfficiency: 1,
+      safetyFeatures: 1,
+      pipelineFriendly: 1,
+    })).toBe(2); // (1*3 + 1*3 + 1*2 + 1*1 + 1*1) / 50 * 10 = 2
+  });
+});
+
+describe('validateAgentScores', () => {
+  it('validates correct scores', () => {
+    const result = validateAgentScores({
+      jsonOutput: 5,
+      nonInteractive: 4,
+      tokenEfficiency: 3,
+      safetyFeatures: 2,
+      pipelineFriendly: 1,
+    });
+    expect(result.valid).toBe(true);
+  });
+
+  it('rejects non-object', () => {
+    expect(validateAgentScores(null).valid).toBe(false);
+    expect(validateAgentScores('string').valid).toBe(false);
+  });
+
+  it('rejects scores outside 1-5 range', () => {
+    expect(validateAgentScores({
+      jsonOutput: 0,
+      nonInteractive: 5,
+      tokenEfficiency: 5,
+      safetyFeatures: 5,
+      pipelineFriendly: 5,
+    }).valid).toBe(false);
+
+    expect(validateAgentScores({
+      jsonOutput: 6,
+      nonInteractive: 5,
+      tokenEfficiency: 5,
+      safetyFeatures: 5,
+      pipelineFriendly: 5,
+    }).valid).toBe(false);
+  });
+
+  it('rejects non-integer scores', () => {
+    expect(validateAgentScores({
+      jsonOutput: 3.5,
+      nonInteractive: 5,
+      tokenEfficiency: 5,
+      safetyFeatures: 5,
+      pipelineFriendly: 5,
+    }).valid).toBe(false);
+  });
+
+  it('rejects missing dimensions', () => {
+    expect(validateAgentScores({
+      jsonOutput: 5,
+      // missing others
+    }).valid).toBe(false);
   });
 });

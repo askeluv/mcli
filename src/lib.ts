@@ -2,7 +2,47 @@
  * Core library functions for mcli.
  * Extracted from CLI for testability.
  */
-import type { Registry, CliTool } from './types.js';
+import type { Registry, CliTool, AgentScores } from './types.js';
+
+/**
+ * Compute overall agentScore from detailed agentScores.
+ * Weighted average: json(3) + nonInteractive(3) + tokenEfficiency(2) + safety(1) + pipeline(1)
+ * Returns 1-10 scale.
+ */
+export function computeAgentScore(scores: AgentScores): number {
+  const weighted = 
+    scores.jsonOutput * 3 +
+    scores.nonInteractive * 3 +
+    scores.tokenEfficiency * 2 +
+    scores.safetyFeatures * 1 +
+    scores.pipelineFriendly * 1;
+  
+  // Max possible = 5*10 = 50, scale to 1-10
+  return Math.round((weighted / 50) * 10);
+}
+
+/**
+ * Validate agentScores object.
+ */
+export function validateAgentScores(scores: unknown): { valid: boolean; errors: string[] } {
+  const errors: string[] = [];
+  
+  if (!scores || typeof scores !== 'object') {
+    return { valid: false, errors: ['agentScores must be an object'] };
+  }
+  
+  const s = scores as Record<string, unknown>;
+  const dimensions = ['jsonOutput', 'nonInteractive', 'tokenEfficiency', 'safetyFeatures', 'pipelineFriendly'];
+  
+  for (const dim of dimensions) {
+    const val = s[dim];
+    if (typeof val !== 'number' || val < 1 || val > 5 || !Number.isInteger(val)) {
+      errors.push(`agentScores.${dim} must be an integer 1-5`);
+    }
+  }
+  
+  return { valid: errors.length === 0, errors };
+}
 
 /**
  * Search tools by query string.

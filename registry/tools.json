@@ -5,132 +5,390 @@
     {
       "slug": "hcloud",
       "name": "Hetzner Cloud CLI",
-      "vendor": { "name": "Hetzner", "domain": "hetzner.com", "verified": true },
+      "vendor": {
+        "name": "Hetzner",
+        "domain": "hetzner.com",
+        "verified": true
+      },
       "repo": "https://github.com/hetznercloud/cli",
       "docs": "https://docs.hetzner.com/cloud/cli",
-      "install": { "brew": "hcloud", "apt": "hcloud-cli" },
-      "capabilities": { "jsonOutput": true, "auth": ["env:HCLOUD_TOKEN"], "idempotent": true, "interactive": false, "streaming": false },
+      "install": {
+        "brew": "hcloud",
+        "apt": "hcloud-cli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:HCLOUD_TOKEN"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
       "agentScore": 9,
-      "categories": ["cloud", "infrastructure"],
+      "categories": [
+        "cloud",
+        "infrastructure"
+      ],
       "tier": "verified",
-      "description": "Manage Hetzner Cloud resources. Simple, fast, cheap EU/US servers."
+      "description": "Manage Hetzner Cloud resources. Simple, fast, cheap EU/US servers.",
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      }
     },
     {
       "slug": "doctl",
       "name": "DigitalOcean CLI",
-      "vendor": { "name": "DigitalOcean", "domain": "digitalocean.com", "verified": true },
+      "vendor": {
+        "name": "DigitalOcean",
+        "domain": "digitalocean.com",
+        "verified": true
+      },
       "repo": "https://github.com/digitalocean/doctl",
       "docs": "https://docs.digitalocean.com/reference/doctl/",
-      "install": { "brew": "doctl", "apt": "doctl" },
-      "capabilities": { "jsonOutput": true, "auth": ["env:DIGITALOCEAN_ACCESS_TOKEN", "doctl auth init"], "idempotent": true, "interactive": true, "streaming": false },
+      "install": {
+        "brew": "doctl",
+        "apt": "doctl"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:DIGITALOCEAN_ACCESS_TOKEN",
+          "doctl auth init"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
       "agentScore": 8,
-      "categories": ["cloud", "infrastructure"],
+      "categories": [
+        "cloud",
+        "infrastructure"
+      ],
       "tier": "verified",
-      "description": "Manage DigitalOcean resources including droplets, databases, and Kubernetes."
+      "description": "Manage DigitalOcean resources including droplets, databases, and Kubernetes.",
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 4,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      }
     },
     {
       "slug": "aws",
       "name": "AWS CLI",
-      "vendor": { "name": "Amazon Web Services", "domain": "aws.amazon.com", "verified": true },
+      "vendor": {
+        "name": "Amazon Web Services",
+        "domain": "aws.amazon.com",
+        "verified": true
+      },
       "repo": "https://github.com/aws/aws-cli",
       "docs": "https://docs.aws.amazon.com/cli/",
-      "install": { "brew": "awscli", "apt": "awscli", "binary": "https://aws.amazon.com/cli/" },
-      "capabilities": { "jsonOutput": true, "auth": ["env:AWS_ACCESS_KEY_ID", "env:AWS_SECRET_ACCESS_KEY", "~/.aws/credentials"], "idempotent": true, "interactive": false, "streaming": true },
-      "agentScore": 6,
-      "categories": ["cloud", "infrastructure"],
+      "install": {
+        "brew": "awscli",
+        "apt": "awscli",
+        "binary": "https://aws.amazon.com/cli/"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:AWS_ACCESS_KEY_ID",
+          "env:AWS_SECRET_ACCESS_KEY",
+          "~/.aws/credentials"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScore": 8,
+      "categories": [
+        "cloud",
+        "infrastructure"
+      ],
       "tier": "verified",
-      "description": "Comprehensive AWS resource management. Powerful but verbose."
+      "description": "Comprehensive AWS resource management. Powerful but verbose.",
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 4,
+        "tokenEfficiency": 2,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      }
     },
     {
       "slug": "gcloud",
       "name": "Google Cloud CLI",
-      "vendor": { "name": "Google Cloud", "domain": "cloud.google.com", "verified": true },
+      "vendor": {
+        "name": "Google Cloud",
+        "domain": "cloud.google.com",
+        "verified": true
+      },
       "repo": "https://github.com/google-cloud-sdk",
       "docs": "https://cloud.google.com/sdk/docs",
-      "install": { "brew": "google-cloud-sdk", "apt": "google-cloud-cli", "script": "https://cloud.google.com/sdk/docs/install" },
-      "capabilities": { "jsonOutput": true, "auth": ["gcloud auth login", "env:GOOGLE_APPLICATION_CREDENTIALS"], "idempotent": true, "interactive": true, "streaming": false },
-      "agentScore": 7,
-      "categories": ["cloud", "infrastructure", "ai"],
+      "install": {
+        "brew": "google-cloud-sdk",
+        "apt": "google-cloud-cli",
+        "script": "https://cloud.google.com/sdk/docs/install"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "gcloud auth login",
+          "env:GOOGLE_APPLICATION_CREDENTIALS"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScore": 8,
+      "categories": [
+        "cloud",
+        "infrastructure",
+        "ai"
+      ],
       "tier": "verified",
-      "description": "Manage GCP resources. Clean CLI, good AI/ML integration."
+      "description": "Manage GCP resources. Clean CLI, good AI/ML integration.",
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 3,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      }
     },
     {
       "slug": "flyctl",
       "name": "Fly.io CLI",
-      "vendor": { "name": "Fly.io", "domain": "fly.io", "verified": true },
+      "vendor": {
+        "name": "Fly.io",
+        "domain": "fly.io",
+        "verified": true
+      },
       "repo": "https://github.com/superfly/flyctl",
       "docs": "https://fly.io/docs/flyctl/",
-      "install": { "brew": "flyctl", "script": "curl -L https://fly.io/install.sh | sh" },
-      "capabilities": { "jsonOutput": true, "auth": ["fly auth login", "env:FLY_API_TOKEN"], "idempotent": true, "interactive": true, "streaming": true },
+      "install": {
+        "brew": "flyctl",
+        "script": "curl -L https://fly.io/install.sh | sh"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "fly auth login",
+          "env:FLY_API_TOKEN"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
       "agentScore": 8,
-      "categories": ["cloud", "containers", "deployment"],
+      "categories": [
+        "cloud",
+        "containers",
+        "deployment"
+      ],
       "tier": "verified",
-      "description": "Deploy and manage apps on Fly.io's global edge network."
+      "description": "Deploy and manage apps on Fly.io's global edge network.",
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 4,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      }
     },
     {
       "slug": "gh",
       "name": "GitHub CLI",
-      "vendor": { "name": "GitHub", "domain": "github.com", "verified": true },
+      "vendor": {
+        "name": "GitHub",
+        "domain": "github.com",
+        "verified": true
+      },
       "repo": "https://github.com/cli/cli",
       "docs": "https://cli.github.com/manual/",
-      "install": { "brew": "gh", "apt": "gh" },
-      "capabilities": { "jsonOutput": true, "auth": ["gh auth login", "env:GH_TOKEN"], "idempotent": true, "interactive": true, "streaming": false },
+      "install": {
+        "brew": "gh",
+        "apt": "gh"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "gh auth login",
+          "env:GH_TOKEN"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
       "agentScore": 9,
-      "categories": ["git", "devtools", "ci"],
+      "categories": [
+        "git",
+        "devtools",
+        "ci"
+      ],
       "tier": "verified",
-      "description": "GitHub from the command line. Issues, PRs, Actions, and more."
+      "description": "GitHub from the command line. Issues, PRs, Actions, and more.",
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 4,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      }
     },
     {
       "slug": "jq",
       "name": "jq",
-      "vendor": { "name": "Stephen Dolan", "domain": "jqlang.github.io", "verified": true },
+      "vendor": {
+        "name": "Stephen Dolan",
+        "domain": "jqlang.github.io",
+        "verified": true
+      },
       "repo": "https://github.com/jqlang/jq",
       "docs": "https://jqlang.github.io/jq/manual/",
-      "install": { "brew": "jq", "apt": "jq" },
-      "capabilities": { "jsonOutput": true, "auth": [], "idempotent": true, "interactive": false, "streaming": true },
+      "install": {
+        "brew": "jq",
+        "apt": "jq"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
       "agentScore": 10,
-      "categories": ["json", "data", "devtools"],
+      "categories": [
+        "json",
+        "data",
+        "devtools"
+      ],
       "tier": "verified",
-      "description": "Lightweight JSON processor. Essential for CLI pipelines."
+      "description": "Lightweight JSON processor. Essential for CLI pipelines.",
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      }
     },
     {
       "slug": "rg",
       "name": "ripgrep",
-      "vendor": { "name": "Andrew Gallant", "domain": "github.com/BurntSushi", "verified": true },
+      "vendor": {
+        "name": "Andrew Gallant",
+        "domain": "github.com/BurntSushi",
+        "verified": true
+      },
       "repo": "https://github.com/BurntSushi/ripgrep",
       "docs": "https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md",
-      "install": { "brew": "ripgrep", "apt": "ripgrep", "cargo": "ripgrep" },
-      "capabilities": { "jsonOutput": true, "auth": [], "idempotent": true, "interactive": false, "streaming": true },
-      "agentScore": 9,
-      "categories": ["search", "devtools"],
+      "install": {
+        "brew": "ripgrep",
+        "apt": "ripgrep",
+        "cargo": "ripgrep"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScore": 10,
+      "categories": [
+        "search",
+        "devtools"
+      ],
       "tier": "verified",
-      "description": "Fast recursive grep. Respects gitignore, handles large codebases."
+      "description": "Fast recursive grep. Respects gitignore, handles large codebases.",
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      }
     },
     {
       "slug": "fzf",
       "name": "fzf",
-      "vendor": { "name": "Junegunn Choi", "domain": "github.com/junegunn", "verified": true },
+      "vendor": {
+        "name": "Junegunn Choi",
+        "domain": "github.com/junegunn",
+        "verified": true
+      },
       "repo": "https://github.com/junegunn/fzf",
       "docs": "https://github.com/junegunn/fzf#usage",
-      "install": { "brew": "fzf", "apt": "fzf" },
-      "capabilities": { "jsonOutput": false, "auth": [], "idempotent": true, "interactive": true, "streaming": true },
+      "install": {
+        "brew": "fzf",
+        "apt": "fzf"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
       "agentScore": 4,
-      "categories": ["search", "devtools", "interactive"],
+      "categories": [
+        "search",
+        "devtools",
+        "interactive"
+      ],
       "tier": "verified",
-      "description": "Fuzzy finder for files, history, and more. Highly interactive."
+      "description": "Fuzzy finder for files, history, and more. Highly interactive.",
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 1,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      }
     },
     {
       "slug": "docker",
       "name": "Docker CLI",
-      "vendor": { "name": "Docker", "domain": "docker.com", "verified": true },
+      "vendor": {
+        "name": "Docker",
+        "domain": "docker.com",
+        "verified": true
+      },
       "repo": "https://github.com/docker/cli",
       "docs": "https://docs.docker.com/engine/reference/commandline/cli/",
-      "install": { "brew": "docker", "apt": "docker.io" },
-      "capabilities": { "jsonOutput": true, "auth": ["docker login"], "idempotent": false, "interactive": true, "streaming": true },
-      "agentScore": 7,
-      "categories": ["containers", "devtools"],
+      "install": {
+        "brew": "docker",
+        "apt": "docker.io"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "docker login"
+        ],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScore": 8,
+      "categories": [
+        "containers",
+        "devtools"
+      ],
       "tier": "verified",
-      "description": "Build, run, and manage containers."
+      "description": "Build, run, and manage containers.",
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 3,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      }
     }
   ]
 }
