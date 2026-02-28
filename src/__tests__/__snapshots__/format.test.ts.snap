@@ -1,0 +1,48 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`formatCompareTable > matches snapshot 1`] = `
+"Tool                aws            gcloud         
+--------------------------------------------------
+Agent Score         6/10           7/10           
+JSON Output         yes            yes            
+Idempotent          yes            yes            
+Interactive         no             yes            
+Streaming           yes            no             
+Verified            ✓              ✓              "
+`;
+
+exports[`formatInstallCommands > matches snapshot 1`] = `
+"# Install ripgrep
+
+# macOS (Homebrew)
+brew install ripgrep
+
+# Debian/Ubuntu
+sudo apt install ripgrep
+
+# Cargo (Rust)
+cargo install ripgrep
+"
+`;
+
+exports[`formatToolBrief > matches snapshot 1`] = `
+"✓ jq (jq) - Agent Score: [32m10/10[0m
+  Lightweight JSON processor."
+`;
+
+exports[`formatToolDetailed > matches snapshot 1`] = `
+"✓ GitHub CLI (gh) - Agent Score: [32m9/10[0m
+  GitHub from the command line.
+  Vendor: GitHub (github.com)
+  Categories: git, devtools
+  Install:
+    brew: gh
+    apt: gh
+  Capabilities:
+    JSON output: yes
+    Idempotent: yes
+    Interactive: yes
+    Auth: gh auth login, env:GH_TOKEN
+  Repo: https://github.com/cli/cli
+  Docs: https://cli.github.com/manual/"
+`;
