@@ -139,12 +139,23 @@ Rate tools 1-10 based on:
 - **community**: Submitted by community, reviewed, but not vendor-verified  
 - **unverified**: Auto-indexed or unreviewed submission
 
-## Contributing a Tool
+## Contributing Tools
 
+**Batch size:** 10-20 tools per PR (easier to review)
+
+**Process:**
+1. Run scraper with small limit: `npx tsx scripts/scrape-awesome.ts --limit 20`
+2. Review generated entries in `registry/tools.json`
+3. Spot-check agent scores against actual CLI behavior
+4. Create PR with descriptive title: "Add 15 tools: databases, monitoring"
+5. Include notable high/low scorers in PR description
+
+**Manual additions:**
 1. Edit `registry/tools.json`
-2. Add tool following the schema above
-3. Set appropriate `agentScore` and `tier`
-4. Submit PR with rationale
+2. Add tool following the schema
+3. Set appropriate `agentScores` (all 5 dimensions)
+4. Run `npm test` to validate
+5. Submit PR with rationale
 
 ## Coding Conventions
 
