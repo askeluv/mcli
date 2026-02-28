@@ -359,4 +359,199 @@ describe('compareTools', () => {
     expect(result.find(r => r.field === 'Interactive')?.values).toEqual([false, true]);
     expect(result.find(r => r.field === 'Streaming')?.values).toEqual([false, true]);
   });
+
+  it('handles single tool', () => {
+    const tool = createTool({ slug: 'single', agentScore: 7 });
+    const result = compareTools([tool]);
+    expect(result).toHaveLength(6);
+    expect(result.find(r => r.field === 'Agent Score')?.values).toEqual([7]);
+  });
+
+  it('handles many tools', () => {
+    const tools = Array.from({ length: 10 }, (_, i) => 
+      createTool({ slug: `tool-${i}`, agentScore: i + 1 })
+    );
+    const result = compareTools(tools);
+    expect(result.find(r => r.field === 'Agent Score')?.values).toHaveLength(10);
+  });
+});
+
+// ============================================================
+// Edge Cases (added per Teddy's TDD review)
+// ============================================================
+
+describe('searchTools edge cases', () => {
+  it('handles unicode queries', () => {
+    const tool = createTool({ description: '日本語ツール for Japanese users' });
+    const registry = createRegistry([tool]);
+    expect(searchTools(registry, '日本語')).toHaveLength(1);
+  });
+
+  it('handles regex special characters safely', () => {
+    const registry = createRegistry([createTool()]);
+    // These should not throw or cause regex errors
+    expect(() => searchTools(registry, '[.*+?^${}()|')).not.toThrow();
+    expect(() => searchTools(registry, '\\')).not.toThrow();
+    expect(searchTools(registry, '[cloud]')).toEqual([]);
+  });
+
+  it('handles empty registry', () => {
+    const registry = createRegistry([]);
+    expect(searchTools(registry, 'anything')).toEqual([]);
+  });
+
+  it('handles very long queries', () => {
+    const registry = createRegistry([createTool()]);
+    const longQuery = 'a'.repeat(10000);
+    expect(() => searchTools(registry, longQuery)).not.toThrow();
+    expect(searchTools(registry, longQuery)).toEqual([]);
+  });
+});
+
+describe('findTool edge cases', () => {
+  it('returns undefined for empty registry', () => {
+    const registry = createRegistry([]);
+    expect(findTool(registry, 'anything')).toBeUndefined();
+  });
+
+  it('handles empty string slug', () => {
+    const registry = createRegistry([createTool()]);
+    expect(findTool(registry, '')).toBeUndefined();
+  });
+});
+
+describe('filterByCategory edge cases', () => {
+  it('returns empty array for non-existent category', () => {
+    const tool = createTool({ categories: ['cloud'] });
+    expect(filterByCategory([tool], 'nonexistent')).toEqual([]);
+  });
+
+  it('handles empty category string', () => {
+    const tool = createTool({ categories: ['cloud'] });
+    expect(filterByCategory([tool], '')).toEqual([]);
+  });
+});
+
+describe('filterByTier edge cases', () => {
+  it('filters unverified tier', () => {
+    const unverified = createTool({ slug: 'u', tier: 'unverified' });
+    const verified = createTool({ slug: 'v', tier: 'verified' });
+    expect(filterByTier([unverified, verified], 'unverified')).toEqual([unverified]);
+  });
+});
+
+describe('validateTool edge cases', () => {
+  it('validates streaming capability is boolean', () => {
+    const tool = createTool();
+    (tool.capabilities as Record<string, unknown>).streaming = 'yes';
+    const result = validateTool(tool);
+    expect(result.valid).toBe(false);
+    expect(result.errors.some(e => e.includes('streaming'))).toBe(true);
+  });
+
+  it('validates vendor.verified is boolean', () => {
+    const tool = createTool();
+    (tool.vendor as Record<string, unknown>).verified = 'yes';
+    const result = validateTool(tool);
+    expect(result.valid).toBe(false);
+    expect(result.errors.some(e => e.includes('vendor.verified'))).toBe(true);
+  });
+
+  it('allows missing optional fields (repo, docs)', () => {
+    const tool = createTool();
+    delete (tool as Record<string, unknown>).repo;
+    delete (tool as Record<string, unknown>).docs;
+    expect(validateTool(tool).valid).toBe(true);
+  });
+
+  it('validates description is not empty', () => {
+    const tool = createTool({ description: '' });
+    const result = validateTool(tool);
+    expect(result.valid).toBe(false);
+  });
+
+  it('validates name is not empty', () => {
+    const tool = createTool({ name: '' });
+    const result = validateTool(tool);
+    expect(result.valid).toBe(false);
+  });
+});
+
+describe('getInstallCommand edge cases', () => {
+  it('returns script value as-is', () => {
+    const tool = createTool({ install: { script: 'curl -L https://example.com | sh' } });
+    expect(getInstallCommand(tool, 'script')).toBe('curl -L https://example.com | sh');
+  });
+
+  it('handles tool with no install methods', () => {
+    const tool = createTool({ install: {} });
+    expect(getInstallCommand(tool, 'brew')).toBeNull();
+    expect(getInstallCommand(tool, 'apt')).toBeNull();
+  });
+});
+
+describe('getCategories edge cases', () => {
+  it('handles tools with many categories', () => {
+    const tool = createTool({ categories: ['a', 'b', 'c', 'd', 'e'] });
+    const cats = getCategories(createRegistry([tool]));
+    expect(cats).toEqual(['a', 'b', 'c', 'd', 'e']);
+  });
+
+  it('deduplicates across tools', () => {
+    const registry = createRegistry([
+      createTool({ slug: 't1', categories: ['cloud', 'infra'] }),
+      createTool({ slug: 't2', categories: ['cloud', 'devtools'] }),
+    ]);
+    const cats = getCategories(registry);
+    expect(cats.filter(c => c === 'cloud')).toHaveLength(1);
+  });
+});
+
+describe('sortByAgentScore edge cases', () => {
+  it('handles tools with same score', () => {
+    const tools = [
+      createTool({ slug: 'a', agentScore: 5 }),
+      createTool({ slug: 'b', agentScore: 5 }),
+      createTool({ slug: 'c', agentScore: 5 }),
+    ];
+    const sorted = sortByAgentScore(tools);
+    expect(sorted).toHaveLength(3);
+    expect(sorted.every(t => t.agentScore === 5)).toBe(true);
+  });
+
+  it('handles empty array', () => {
+    expect(sortByAgentScore([])).toEqual([]);
+  });
+});
+
+describe('performance', () => {
+  it('handles large registries efficiently', () => {
+    const tools = Array.from({ length: 1000 }, (_, i) => 
+      createTool({ 
+        slug: `tool-${i}`,
+        description: `Tool number ${i} for testing performance`,
+        categories: ['test', `category-${i % 10}`],
+      })
+    );
+    const registry = createRegistry(tools);
+
+    const start = performance.now();
+    searchTools(registry, 'tool');
+    const duration = performance.now() - start;
+
+    expect(duration).toBeLessThan(100); // Should complete in <100ms
+  });
+
+  it('validates large registry quickly', () => {
+    const tools = Array.from({ length: 500 }, (_, i) => 
+      createTool({ slug: `tool-${i}` })
+    );
+    const registry = createRegistry(tools);
+
+    const start = performance.now();
+    validateRegistry(registry);
+    const duration = performance.now() - start;
+
+    expect(duration).toBeLessThan(500); // Should complete in <500ms
+  });
 });

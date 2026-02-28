@@ -5,11 +5,12 @@ export default defineConfig({
     globals: false,
     environment: 'node',
     include: ['src/__tests__/**/*.test.ts'],
+    testTimeout: 30000, // CLI tests need more time
     coverage: {
       provider: 'v8',
       reporter: ['text', 'html'],
       include: ['src/**/*.ts'],
-      exclude: ['src/__tests__/**', 'src/cli.ts'],
+      exclude: ['src/__tests__/**'],
     },
   },
 });

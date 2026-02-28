@@ -124,6 +124,7 @@ export function validateTool(tool: unknown): { valid: boolean; errors: string[] 
     const v = t.vendor as Record<string, unknown>;
     if (typeof v.name !== 'string' || !v.name) errors.push('vendor.name is required');
     if (typeof v.domain !== 'string' || !v.domain) errors.push('vendor.domain is required');
+    if (typeof v.verified !== 'boolean') errors.push('vendor.verified must be boolean');
   }
   
   // Install object
@@ -139,6 +140,7 @@ export function validateTool(tool: unknown): { valid: boolean; errors: string[] 
     if (typeof c.jsonOutput !== 'boolean') errors.push('capabilities.jsonOutput must be boolean');
     if (typeof c.idempotent !== 'boolean') errors.push('capabilities.idempotent must be boolean');
     if (typeof c.interactive !== 'boolean') errors.push('capabilities.interactive must be boolean');
+    if (typeof c.streaming !== 'boolean') errors.push('capabilities.streaming must be boolean');
     if (!Array.isArray(c.auth)) errors.push('capabilities.auth must be an array');
   }
   
