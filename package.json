@@ -1,5 +1,5 @@
 {
-  "name": "@askeluv/mcli",
+  "name": "@asvanevik/mcli",
   "version": "0.0.4",
   "description": "A CLI for discovering and comparing CLI tools",
   "type": "module",
