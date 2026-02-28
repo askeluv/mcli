@@ -3,7 +3,7 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import type { CliTool, Registry } from './types.js';
 import { searchTools, findTool, getCategories, sortByAgentScore, sortByRelevance, tierBadge, filterByMinScore, filterByCategory } from './lib.js';
-import { loadRegistry, RegistryError } from './registry.js';
+import { loadRegistry, RegistryError, hasLocalRegistry, updateRegistry, LOCAL_REGISTRY_PATH } from './registry.js';
 
 // Parse --flag and --flag=value from args
 function parseFlag(args: string[], flag: string): string | null {
@@ -108,7 +108,7 @@ function installCmd(tool: CliTool): void {
   if (tool.install.script) console.log(`# Install script\n${tool.install.script}\n`);
 }
 
-function main(): void {
+async function main(): Promise<void> {
   const args = process.argv.slice(2);
   const command = args[0];
 
@@ -123,6 +123,7 @@ Commands:
   install <slug>           Show install commands for a tool
   list                     List all tools
   categories               List all categories
+  update                   Fetch latest registry from remote
 
 Filters (for search and list):
   --min-score=N            Only show tools with agent score >= N
@@ -144,9 +145,30 @@ Examples:
     return;
   }
 
+  // Handle update command separately (async)
+  if (command === 'update') {
+    console.log('Fetching latest registry...');
+    try {
+      const registry = await updateRegistry();
+      console.log(`✓ Updated to ${registry.version} (${registry.tools.length} tools)`);
+      console.log(`  Saved to ${LOCAL_REGISTRY_PATH}`);
+    } catch (err) {
+      if (err instanceof RegistryError) {
+        console.error(`Error: ${err.message}`);
+      } else {
+        console.error('Update failed:', err);
+      }
+      process.exit(1);
+    }
+    return;
+  }
+
+  // Load registry: prefer local cache, fallback to bundled
+  const effectiveRegistryPath = hasLocalRegistry() ? LOCAL_REGISTRY_PATH : registryPath;
+  
   let registry;
   try {
-    registry = loadRegistry(registryPath);
+    registry = loadRegistry(effectiveRegistryPath);
   } catch (err) {
     if (err instanceof RegistryError) {
       console.error(`Error: ${err.message}`);

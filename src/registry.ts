@@ -2,9 +2,15 @@
  * Registry loading with proper error handling.
  * Extracted for testability.
  */
-import { readFileSync, existsSync } from 'fs';
+import { readFileSync, existsSync, writeFileSync, mkdirSync } from 'fs';
+import { join } from 'path';
+import { homedir } from 'os';
 import type { Registry } from './types.js';
 import { validateRegistry } from './lib.js';
+
+export const REMOTE_REGISTRY_URL = 'https://raw.githubusercontent.com/askeluv/mcli/main/registry/tools.json';
+export const LOCAL_REGISTRY_DIR = join(homedir(), '.mcli');
+export const LOCAL_REGISTRY_PATH = join(LOCAL_REGISTRY_DIR, 'registry.json');
 
 export class RegistryError extends Error {
   constructor(message: string, public cause?: Error) {
@@ -54,4 +60,70 @@ export function loadRegistry(path: string): Registry {
   }
 
   return data as Registry;
+}
+
+/**
+ * Check if a local registry exists.
+ */
+export function hasLocalRegistry(): boolean {
+  return existsSync(LOCAL_REGISTRY_PATH);
+}
+
+/**
+ * Fetch registry from remote URL.
+ * @throws {RegistryError} If fetch fails or response is invalid
+ */
+export async function fetchRemoteRegistry(): Promise<Registry> {
+  let response: Response;
+  try {
+    response = await fetch(REMOTE_REGISTRY_URL);
+  } catch (err) {
+    throw new RegistryError(
+      'Failed to fetch remote registry',
+      err instanceof Error ? err : undefined
+    );
+  }
+
+  if (!response.ok) {
+    throw new RegistryError(
+      `Failed to fetch registry: HTTP ${response.status}`
+    );
+  }
+
+  let data: unknown;
+  try {
+    data = await response.json();
+  } catch (err) {
+    throw new RegistryError(
+      'Remote registry contains invalid JSON',
+      err instanceof Error ? err : undefined
+    );
+  }
+
+  const validation = validateRegistry(data);
+  if (!validation.valid) {
+    throw new RegistryError(
+      `Remote registry validation failed: ${validation.errors.join('; ')}`
+    );
+  }
+
+  return data as Registry;
+}
+
+/**
+ * Save registry to local cache.
+ */
+export function saveLocalRegistry(registry: Registry): void {
+  mkdirSync(LOCAL_REGISTRY_DIR, { recursive: true });
+  writeFileSync(LOCAL_REGISTRY_PATH, JSON.stringify(registry, null, 2));
+}
+
+/**
+ * Update local registry from remote.
+ * @returns The updated registry
+ */
+export async function updateRegistry(): Promise<Registry> {
+  const registry = await fetchRemoteRegistry();
+  saveLocalRegistry(registry);
+  return registry;
 }
