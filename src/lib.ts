@@ -84,6 +84,38 @@ export function sortByAgentScore(tools: CliTool[]): CliTool[] {
 }
 
 /**
+ * Get tier boost value for ranking.
+ * Verified tools get priority in search results.
+ */
+export function tierBoost(tier: CliTool['tier']): number {
+  switch (tier) {
+    case 'verified': return 2;
+    case 'community': return 1;
+    default: return 0;
+  }
+}
+
+/**
+ * Compute effective score for ranking (agent score + tier boost).
+ */
+export function effectiveScore(tool: CliTool): number {
+  return tool.agentScore + tierBoost(tool.tier);
+}
+
+/**
+ * Sort tools by effective score (agent score + tier boost), descending.
+ * Within same effective score, verified tools come first.
+ */
+export function sortByRelevance(tools: CliTool[]): CliTool[] {
+  return [...tools].sort((a, b) => {
+    const scoreDiff = effectiveScore(b) - effectiveScore(a);
+    if (scoreDiff !== 0) return scoreDiff;
+    // Tiebreaker: verified > community > unverified
+    return tierBoost(b.tier) - tierBoost(a.tier);
+  });
+}
+
+/**
  * Filter tools by minimum agent score.
  */
 export function filterByMinScore(tools: CliTool[], minScore: number): CliTool[] {
