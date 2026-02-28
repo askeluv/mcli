@@ -1,6 +1,6 @@
 {
   "name": "@asvanevik/mcli",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "A CLI for discovering and comparing CLI tools",
   "type": "module",
   "bin": {
