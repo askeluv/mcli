@@ -1,5 +1,5 @@
 {
-  "name": "mcli",
+  "name": "metacli",
   "version": "0.0.2",
   "description": "A CLI for discovering and comparing CLI tools",
   "type": "module",
