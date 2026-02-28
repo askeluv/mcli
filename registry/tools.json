@@ -389,6 +389,3851 @@
         "safetyFeatures": 3,
         "pipelineFriendly": 4
       }
+    },
+    {
+      "slug": "newsboat",
+      "name": "Newsboat",
+      "vendor": {
+        "name": "Newsboat",
+        "domain": "github.com/newsboat",
+        "verified": false
+      },
+      "repo": "https://github.com/newsboat/newsboat",
+      "docs": "https://newsboat.org/releases/2.42/docs/newsboat.html",
+      "install": {
+        "brew": "newsboat",
+        "apt": "newsboat"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "config file (~/.newsboat/urls, ~/.newsboat/config)"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 3,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "entertainment",
+        "news",
+        "productivity"
+      ],
+      "tier": "unverified",
+      "description": "Text-based, extendable RSS feed reader for your terminal.",
+      "agentScore": 5
+    },
+    {
+      "slug": "mal-cli",
+      "name": "MAL-Cli",
+      "vendor": {
+        "name": "L4z3x",
+        "domain": "github.com/L4z3x",
+        "verified": false
+      },
+      "repo": "https://github.com/L4z3x/mal-cli",
+      "docs": null,
+      "install": {
+        "cargo": "mal-cli-rs",
+        "apt": "mal-cli"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "config file: $HOME/.config/mal-tui/config.yml"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 3,
+        "tokenEfficiency": 2,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "entertainment"
+      ],
+      "tier": "unverified",
+      "description": "Fast, keyboard-driven terminal client for MyAnimeList built with Rust.",
+      "agentScore": 4
+    },
+    {
+      "slug": "cmus",
+      "name": "cmus",
+      "vendor": {
+        "name": "cmus",
+        "domain": "github.com/cmus",
+        "verified": false
+      },
+      "repo": "https://github.com/cmus/cmus",
+      "docs": "https://cmus.github.io/",
+      "install": {
+        "brew": "cmus",
+        "apt": "cmus"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 2,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "music",
+        "player"
+      ],
+      "tier": "unverified",
+      "description": "Small, fast and powerful console music player.",
+      "agentScore": 4
+    },
+    {
+      "slug": "instant-music-downloader",
+      "name": "Instant-Music-Downloader",
+      "vendor": {
+        "name": "Yask Srivastava",
+        "domain": "github.com/yask123",
+        "verified": false
+      },
+      "repo": "https://github.com/yask123/Instant-Music-Downloader",
+      "docs": null,
+      "install": {},
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 2,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 1,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "music",
+        "downloader"
+      ],
+      "tier": "unverified",
+      "description": "Instantly download any song by name, lyrics, or artist from the command line.",
+      "agentScore": 4
+    },
+    {
+      "slug": "itunes-remote",
+      "name": "itunes-remote",
+      "vendor": {
+        "name": "Michael Kühnel",
+        "domain": "github.com/mischah",
+        "verified": false
+      },
+      "repo": "https://github.com/mischah/itunes-remote",
+      "docs": null,
+      "install": {
+        "npm": "itunes-remote"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 2,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "music",
+        "cli",
+        "macos"
+      ],
+      "tier": "unverified",
+      "description": "Control iTunes on Mac via interactive CLI commands.",
+      "agentScore": 4
+    },
+    {
+      "slug": "somafm-cli",
+      "name": "somafm-cli",
+      "vendor": {
+        "name": "rockymadden",
+        "domain": "github.com/rockymadden",
+        "verified": false
+      },
+      "repo": "https://github.com/rockymadden/somafm-cli",
+      "docs": null,
+      "install": {
+        "brew": "rockymadden/rockymadden/somafm-cli"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "music",
+        "cli",
+        "audio"
+      ],
+      "tier": "unverified",
+      "description": "Listen to SomaFM stations in your terminal via pure bash.",
+      "agentScore": 6
+    },
+    {
+      "slug": "mpd",
+      "name": "Music Player Daemon",
+      "vendor": {
+        "name": "MusicPlayerDaemon",
+        "domain": "github.com/MusicPlayerDaemon",
+        "verified": false
+      },
+      "repo": "https://github.com/MusicPlayerDaemon/MPD",
+      "docs": "https://mpd.readthedocs.io/en/stable/user.html",
+      "install": {
+        "brew": "mpd",
+        "apt": "mpd"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": false,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 4,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "music",
+        "daemon"
+      ],
+      "tier": "unverified",
+      "description": "A flexible, remote-controllable music player server (daemon) for multiple formats.",
+      "agentScore": 6
+    },
+    {
+      "slug": "ncmpcpp",
+      "name": "ncmpcpp",
+      "vendor": {
+        "name": "Andrzej Rybczak",
+        "domain": "github.com/arybczak",
+        "verified": false
+      },
+      "repo": "https://github.com/arybczak/ncmpcpp",
+      "docs": null,
+      "install": {
+        "brew": "ncmpcpp",
+        "apt": "ncmpcpp"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "config file"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 3,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "music",
+        "mpd-client"
+      ],
+      "tier": "unverified",
+      "description": "Feature-rich ncurses MPD (Music Player Daemon) client with playlist and tag editor features.",
+      "agentScore": 5
+    },
+    {
+      "slug": "musikcube",
+      "name": "musikcube",
+      "vendor": {
+        "name": "clangen",
+        "domain": "github.com/clangen",
+        "verified": false
+      },
+      "repo": "https://github.com/clangen/musikcube",
+      "docs": "https://github.com/clangen/musikcube/wiki/user-guide",
+      "install": {
+        "brew": "musikcube"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 1,
+        "tokenEfficiency": 2,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "music",
+        "audio",
+        "player",
+        "server"
+      ],
+      "tier": "unverified",
+      "description": "Terminal-based, cross-platform music player, audio engine, metadata indexer and server.",
+      "agentScore": 3
+    },
+    {
+      "slug": "beets",
+      "name": "Beets",
+      "vendor": {
+        "name": "beetbox",
+        "domain": "github.com/beetbox",
+        "verified": false
+      },
+      "repo": "https://github.com/beetbox/beets",
+      "docs": "https://beets.readthedocs.io/",
+      "install": {
+        "brew": "beets",
+        "apt": "beets"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "music",
+        "library-management",
+        "tagging"
+      ],
+      "tier": "unverified",
+      "description": "Music library manager and tagger for organizing, tagging, and fetching metadata.",
+      "agentScore": 9
+    },
+    {
+      "slug": "spotatui",
+      "name": "spotatui",
+      "vendor": {
+        "name": "LargeModGames",
+        "domain": "github.com/LargeModGames",
+        "verified": false
+      },
+      "repo": "https://github.com/LargeModGames/spotatui",
+      "docs": null,
+      "install": {
+        "cargo": "spotatui"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "config file:~/.config/spotatui/config.yml",
+          "OAuth via browser"
+        ],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 2,
+        "tokenEfficiency": 2,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 1
+      },
+      "categories": [
+        "music",
+        "spotify",
+        "terminal"
+      ],
+      "tier": "unverified",
+      "description": "Terminal-based Spotify client with streaming, lyrics, and audio visualization.",
+      "agentScore": 3
+    },
+    {
+      "slug": "swaglyrics-for-spotify",
+      "name": "SwagLyrics-For-Spotify",
+      "vendor": {
+        "name": "SwagLyrics",
+        "domain": "github.com/SwagLyrics",
+        "verified": false
+      },
+      "repo": "https://github.com/SwagLyrics/SwagLyrics-For-Spotify",
+      "docs": null,
+      "install": {
+        "brew": "swaglyrics",
+        "apt": "swaglyrics"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": false,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "music",
+        "lyrics"
+      ],
+      "tier": "unverified",
+      "description": "Displays lyrics for the currently playing Spotify song in your terminal.",
+      "agentScore": 6
+    },
+    {
+      "slug": "dzr",
+      "name": "dzr",
+      "vendor": {
+        "name": "yne",
+        "domain": "github.com/yne",
+        "verified": false
+      },
+      "repo": "https://github.com/yne/dzr",
+      "docs": null,
+      "install": {
+        "brew": "dzr"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 1,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "music",
+        "player",
+        "streaming"
+      ],
+      "tier": "unverified",
+      "description": "A cross-platform command-line deezer.com music player with lyrics and metadata features.",
+      "agentScore": 3
+    },
+    {
+      "slug": "radio-active",
+      "name": "Radio Active",
+      "vendor": {
+        "name": "deep5050",
+        "domain": "github.com/deep5050",
+        "verified": false
+      },
+      "repo": "https://github.com/deep5050/radio-active",
+      "docs": "https://deepwiki.com/deep5050/radio-active",
+      "install": {
+        "pip": "radio-active"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 1,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "music",
+        "radio",
+        "audio"
+      ],
+      "tier": "unverified",
+      "description": "Internet radio player CLI with 40K+ stations, song info, recording, and favorites.",
+      "agentScore": 3
+    },
+    {
+      "slug": "mpvc",
+      "name": "mpvc",
+      "vendor": {
+        "name": "gmt4",
+        "domain": "github.com/gmt4",
+        "verified": false
+      },
+      "repo": "https://github.com/gmt4/mpvc",
+      "docs": "https://github.com/gmt4/mpvc#documentation",
+      "install": {
+        "brew": "mpvc",
+        "apt": "mpvc"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 3,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "music",
+        "cli",
+        "media-player"
+      ],
+      "tier": "unverified",
+      "description": "Scriptable command-line music player interfacing mpv, with TUI, FZF, & streaming support",
+      "agentScore": 5
+    },
+    {
+      "slug": "tuisic",
+      "name": "TUISIC",
+      "vendor": {
+        "name": "Dark-Kernel",
+        "domain": "github.com/Dark-Kernel",
+        "verified": false
+      },
+      "repo": "https://github.com/Dark-Kernel/tuisic",
+      "docs": null,
+      "install": {},
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 1,
+        "tokenEfficiency": 2,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "music",
+        "streaming"
+      ],
+      "tier": "unverified",
+      "description": "Login-free CLI application for online music search, streaming, and download.",
+      "agentScore": 3
+    },
+    {
+      "slug": "youtube-dl",
+      "name": "youtube-dl",
+      "vendor": {
+        "name": "ytdl-org",
+        "domain": "github.com/ytdl-org",
+        "verified": false
+      },
+      "repo": "https://github.com/ytdl-org/youtube-dl",
+      "docs": "https://github.com/ytdl-org/youtube-dl/blob/master/README.md",
+      "install": {
+        "brew": "youtube-dl",
+        "apt": "youtube-dl"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 3,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "video",
+        "downloader"
+      ],
+      "tier": "unverified",
+      "description": "Download videos from YouTube.com and many other video sites.",
+      "agentScore": 8
+    },
+    {
+      "slug": "streamlink",
+      "name": "Streamlink",
+      "vendor": {
+        "name": "Streamlink",
+        "domain": "github.com/streamlink",
+        "verified": false
+      },
+      "repo": "https://github.com/streamlink/streamlink",
+      "docs": "https://streamlink.github.io/cli.html",
+      "install": {
+        "brew": "streamlink",
+        "apt": "streamlink"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "video",
+        "streaming"
+      ],
+      "tier": "unverified",
+      "description": "Extract streams from websites and play them in your video player of choice.",
+      "agentScore": 6
+    },
+    {
+      "slug": "mps-youtube",
+      "name": "mps-youtube",
+      "vendor": {
+        "name": "mps-youtube",
+        "domain": "github.com/mps-youtube",
+        "verified": false
+      },
+      "repo": "https://github.com/mps-youtube/mps-youtube",
+      "docs": "https://github.com/mps-youtube/mps-youtube/wiki",
+      "install": {
+        "pip": "yewtube"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 2,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "video",
+        "audio",
+        "downloader",
+        "player"
+      ],
+      "tier": "unverified",
+      "description": "Terminal YouTube player and downloader; search, stream, and save YouTube audio/video.",
+      "agentScore": 4
+    },
+    {
+      "slug": "editly",
+      "name": "Editly",
+      "vendor": {
+        "name": "mifi",
+        "domain": "github.com/mifi",
+        "verified": false
+      },
+      "repo": "https://github.com/mifi/editly",
+      "docs": "https://github.com/mifi/editly#readme",
+      "install": {
+        "npm": "editly"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "video",
+        "cli",
+        "editing"
+      ],
+      "tier": "unverified",
+      "description": "Declarative video editing using CLI and JSON specs; assemble videos from clips/images/audio.",
+      "agentScore": 6
+    },
+    {
+      "slug": "yt-dlp",
+      "name": "yt-dlp",
+      "vendor": {
+        "name": "yt-dlp",
+        "domain": "github.com/yt-dlp",
+        "verified": false
+      },
+      "repo": "https://github.com/yt-dlp/yt-dlp",
+      "docs": "https://github.com/yt-dlp/yt-dlp#readme",
+      "install": {
+        "brew": "yt-dlp",
+        "apt": "yt-dlp"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:NETRC",
+          "config file",
+          "env:YTDL_USERNAME",
+          "env:YTDL_PASSWORD"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "video",
+        "audio",
+        "download"
+      ],
+      "tier": "unverified",
+      "description": "Feature-rich command-line audio/video downloader supporting thousands of sites.",
+      "agentScore": 10
+    },
+    {
+      "slug": "moviemon",
+      "name": "moviemon",
+      "vendor": {
+        "name": "iCHAIT",
+        "domain": "github.com/iCHAIT",
+        "verified": false
+      },
+      "repo": "https://github.com/iCHAIT/moviemon",
+      "docs": null,
+      "install": {
+        "pip": "moviemon"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "movies",
+        "media",
+        "cli"
+      ],
+      "tier": "unverified",
+      "description": "Display detailed information about your movie files from the command line.",
+      "agentScore": 6
+    },
+    {
+      "slug": "movie-cli",
+      "name": "movie-cli",
+      "vendor": {
+        "name": "mayankchd",
+        "domain": "github.com/mayankchd",
+        "verified": false
+      },
+      "repo": "https://github.com/mayankchd/movie",
+      "docs": null,
+      "install": {
+        "npm": "movie-cli"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "movies",
+        "entertainment"
+      ],
+      "tier": "unverified",
+      "description": "Get info about a movie or compare two movies from the CLI",
+      "agentScore": 6
+    },
+    {
+      "slug": "pokete",
+      "name": "Pokete",
+      "vendor": {
+        "name": "lxgr-linux",
+        "domain": "github.com/lxgr-linux",
+        "verified": false
+      },
+      "repo": "https://github.com/lxgr-linux/Pokete",
+      "docs": null,
+      "install": {
+        "pip": "pokete",
+        "aur": "pokete-git"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 1,
+        "tokenEfficiency": 2,
+        "safetyFeatures": 1,
+        "pipelineFriendly": 1
+      },
+      "categories": [
+        "games"
+      ],
+      "tier": "unverified",
+      "description": "Terminal-based Pokemon-like adventure game with turn-based battles and creature catching.",
+      "agentScore": 2
+    },
+    {
+      "slug": "epr",
+      "name": "epr",
+      "vendor": {
+        "name": "wustho",
+        "domain": "github.com/wustho",
+        "verified": false
+      },
+      "repo": "https://github.com/wustho/epr",
+      "docs": null,
+      "install": {
+        "brew": "epr"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 1,
+        "tokenEfficiency": 2,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 1
+      },
+      "categories": [
+        "books",
+        "epub",
+        "reader"
+      ],
+      "tier": "unverified",
+      "description": "Terminal-based EPUB reader with reading history and vim-like controls.",
+      "agentScore": 3
+    },
+    {
+      "slug": "bible-js-cli",
+      "name": "Bible.Js CLI",
+      "vendor": {
+        "name": "BibleJS",
+        "domain": "github.com/BibleJS",
+        "verified": false
+      },
+      "repo": "https://github.com/BibleJS/BibleApp",
+      "docs": null,
+      "install": {
+        "npm": "bible"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "books"
+      ],
+      "tier": "unverified",
+      "description": "Read the Holy Bible from your terminal or scripts using this simple CLI.",
+      "agentScore": 6
+    },
+    {
+      "slug": "speed-read",
+      "name": "SpeedRead",
+      "vendor": {
+        "name": "sunsations",
+        "domain": "github.com/sunsations",
+        "verified": false
+      },
+      "repo": "https://github.com/sunsations/speed_read",
+      "docs": null,
+      "install": {
+        "gem": "speed_read"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 3,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "books",
+        "reading"
+      ],
+      "tier": "unverified",
+      "description": "A simple terminal-based speedreader (Spritz-alike) for reading text at adjustable WPM.",
+      "agentScore": 5
+    },
+    {
+      "slug": "medium-cli",
+      "name": "medium-cli",
+      "vendor": {
+        "name": "djadmin",
+        "domain": "github.com/djadmin",
+        "verified": false
+      },
+      "repo": "https://github.com/djadmin/medium-cli",
+      "docs": null,
+      "install": {
+        "npm": "mediumcli"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "books",
+        "news",
+        "blog"
+      ],
+      "tier": "unverified",
+      "description": "Read Medium.com stories from the command line; browse, search, and open articles.",
+      "agentScore": 6
+    },
+    {
+      "slug": "hygg",
+      "name": "hygg",
+      "vendor": {
+        "name": "kruserr",
+        "domain": "github.com/kruserr",
+        "verified": false
+      },
+      "repo": "https://github.com/kruserr/hygg",
+      "docs": "https://github.com/kruseio/hygg/blob/main/docs/README.md",
+      "install": {
+        "cargo": "hygg"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 1,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "books",
+        "productivity",
+        "terminal"
+      ],
+      "tier": "unverified",
+      "description": "Minimalist Vim-like TUI document reader for PDFs, EPUB, DOCX, and more.",
+      "agentScore": 3
+    },
+    {
+      "slug": "irssi",
+      "name": "Irssi",
+      "vendor": {
+        "name": "Irssi",
+        "domain": "github.com/irssi",
+        "verified": false
+      },
+      "repo": "https://github.com/irssi/irssi",
+      "docs": "https://irssi.org/documentation/",
+      "install": {
+        "brew": "irssi",
+        "apt": "irssi"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 1,
+        "tokenEfficiency": 2,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "chat"
+      ],
+      "tier": "unverified",
+      "description": "Modular text mode IRC chat client for terminal use.",
+      "agentScore": 3
+    },
+    {
+      "slug": "kirc",
+      "name": "kirc",
+      "vendor": {
+        "name": "mcpcpc",
+        "domain": "github.com/mcpcpc",
+        "verified": false
+      },
+      "repo": "https://github.com/mcpcpc/kirc",
+      "docs": null,
+      "install": {},
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "env:password",
+          "env:auth",
+          "cli:password",
+          "cli:auth"
+        ],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 2,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "chat",
+        "irc",
+        "terminal"
+      ],
+      "tier": "unverified",
+      "description": "Tiny, keyboard-driven IRC client for terminal users.",
+      "agentScore": 4
+    },
+    {
+      "slug": "legit",
+      "name": "legit",
+      "vendor": {
+        "name": "captainsafia",
+        "domain": "github.com/captainsafia",
+        "verified": false
+      },
+      "repo": "https://github.com/captainsafia/legit",
+      "docs": null,
+      "install": {
+        "npm": "@captainsafia/legit"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "development",
+        "legal"
+      ],
+      "tier": "unverified",
+      "description": "Generate Open Source licenses as files or file headers via command line.",
+      "agentScore": 6
+    },
+    {
+      "slug": "mklicense",
+      "name": "mklicense",
+      "vendor": {
+        "name": "Cezar Augusto",
+        "domain": "github.com/cezaraugusto",
+        "verified": false
+      },
+      "repo": "https://github.com/cezaraugusto/mklicense",
+      "docs": null,
+      "install": {
+        "npm": "mklicense"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 1,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "development",
+        "legal"
+      ],
+      "tier": "unverified",
+      "description": "Create a custom LICENSE file painlessly with customized info.",
+      "agentScore": 4
+    },
+    {
+      "slug": "rebound",
+      "name": "rebound",
+      "vendor": {
+        "name": "shobrook",
+        "domain": "github.com/shobrook",
+        "verified": false
+      },
+      "repo": "https://github.com/shobrook/rebound",
+      "docs": null,
+      "install": {
+        "apt": "rebound-cli"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 1,
+        "tokenEfficiency": 2,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "development",
+        "devops"
+      ],
+      "tier": "unverified",
+      "description": "Run code and browse Stack Overflow answers for errors in your terminal.",
+      "agentScore": 3
+    },
+    {
+      "slug": "foy",
+      "name": "Foy",
+      "vendor": {
+        "name": "zaaack",
+        "domain": "github.com/zaaack",
+        "verified": false
+      },
+      "repo": "https://github.com/zaaack/foy",
+      "docs": "https://github.com/zaaack/foy#foy",
+      "install": {
+        "npm": "foy"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "development",
+        "task-runner",
+        "build-tool"
+      ],
+      "tier": "unverified",
+      "description": "Lightweight, modern task runner and build tool for JavaScript/TypeScript projects.",
+      "agentScore": 6
+    },
+    {
+      "slug": "just",
+      "name": "just",
+      "vendor": {
+        "name": "Casey Rodarmor",
+        "domain": "github.com/casey",
+        "verified": false
+      },
+      "repo": "https://github.com/casey/just",
+      "docs": "https://just.systems/man/en/",
+      "install": {
+        "brew": "just",
+        "cargo": "just",
+        "apt": "just"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "development",
+        "automation"
+      ],
+      "tier": "unverified",
+      "description": "Modern make-like command runner for project recipes and automation.",
+      "agentScore": 6
+    },
+    {
+      "slug": "bcal",
+      "name": "bcal",
+      "vendor": {
+        "name": "jarun",
+        "domain": "github.com/jarun",
+        "verified": false
+      },
+      "repo": "https://github.com/jarun/bcal",
+      "docs": null,
+      "install": {
+        "brew": "bcal",
+        "apt": "bcal"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 3,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "development",
+        "calculator",
+        "conversion",
+        "storage"
+      ],
+      "tier": "unverified",
+      "description": "REPL CLI utility for storage conversions, calculations, and unit conversions.",
+      "agentScore": 5
+    },
+    {
+      "slug": "bitwise",
+      "name": "Bitwise",
+      "vendor": {
+        "name": "mellowcandle",
+        "domain": "github.com/mellowcandle",
+        "verified": false
+      },
+      "repo": "https://github.com/mellowcandle/bitwise",
+      "docs": null,
+      "install": {
+        "brew": "bitwise",
+        "apt": "bitwise"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 3,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "development",
+        "utilities"
+      ],
+      "tier": "unverified",
+      "description": "Interactive bitwise calculator for base conversion and bit manipulation",
+      "agentScore": 5
+    },
+    {
+      "slug": "cgasm",
+      "name": "Cgasm",
+      "vendor": {
+        "name": "bnagy",
+        "domain": "github.com/bnagy",
+        "verified": false
+      },
+      "repo": "https://github.com/bnagy/cgasm",
+      "docs": null,
+      "install": {
+        "go": "github.com/bnagy/cgasm"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "development",
+        "documentation",
+        "assembly",
+        "reference"
+      ],
+      "tier": "unverified",
+      "description": "Standalone CLI for offline x86 assembly instruction documentation.",
+      "agentScore": 6
+    },
+    {
+      "slug": "grex",
+      "name": "grex",
+      "vendor": {
+        "name": "Peter M. Stahl",
+        "domain": "github.com/pemistahl",
+        "verified": false
+      },
+      "repo": "https://github.com/pemistahl/grex",
+      "docs": "https://github.com/pemistahl/grex#readme",
+      "install": {
+        "cargo": "grex"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "development",
+        "regex",
+        "automation",
+        "text-processing"
+      ],
+      "tier": "unverified",
+      "description": "Generate regular expressions automatically from user-provided test cases.",
+      "agentScore": 6
+    },
+    {
+      "slug": "iola",
+      "name": "iola",
+      "vendor": {
+        "name": "pvarentsov",
+        "domain": "github.com/pvarentsov",
+        "verified": false
+      },
+      "repo": "https://github.com/pvarentsov/iola",
+      "docs": null,
+      "install": {
+        "brew": "iola",
+        "npm": "iola"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 3,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "development",
+        "networking"
+      ],
+      "tier": "unverified",
+      "description": "Socket client with REST API for testing WebSocket, Socket.IO, TCP, and Unix sockets",
+      "agentScore": 7
+    },
+    {
+      "slug": "add-gitignore",
+      "name": "add-gitignore",
+      "vendor": {
+        "name": "Tejas Q",
+        "domain": "github.com/TejasQ",
+        "verified": false
+      },
+      "repo": "https://github.com/TejasQ/add-gitignore",
+      "docs": null,
+      "install": {
+        "npm": "add-gitignore"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 3,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "development"
+      ],
+      "tier": "unverified",
+      "description": "Interactively generate a .gitignore for your project based on your needs.",
+      "agentScore": 5
+    },
+    {
+      "slug": "is-up-cli",
+      "name": "is-up-cli",
+      "vendor": {
+        "name": "sindresorhus",
+        "domain": "github.com/sindresorhus",
+        "verified": false
+      },
+      "repo": "https://github.com/sindresorhus/is-up-cli",
+      "docs": null,
+      "install": {
+        "npm": "is-up-cli"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "development",
+        "network",
+        "monitoring"
+      ],
+      "tier": "unverified",
+      "description": "Checks if a domain or website is up using the isitup.org API.",
+      "agentScore": 6
+    },
+    {
+      "slug": "reachable",
+      "name": "Reachable",
+      "vendor": {
+        "name": "italolelis",
+        "domain": "github.com/italolelis",
+        "verified": false
+      },
+      "repo": "https://github.com/italolelis/reachable",
+      "docs": "https://github.com/italolelis/reachable#usage",
+      "install": {
+        "brew": "reachable",
+        "go": "github.com/italolelis/reachable"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "development",
+        "network"
+      ],
+      "tier": "unverified",
+      "description": "Checks if one or more domains are up/reachable via command line",
+      "agentScore": 6
+    },
+    {
+      "slug": "diff2html-cli",
+      "name": "diff2html-cli",
+      "vendor": {
+        "name": "rtfpessoa",
+        "domain": "github.com/rtfpessoa",
+        "verified": false
+      },
+      "repo": "https://github.com/rtfpessoa/diff2html-cli",
+      "docs": "https://github.com/rtfpessoa/diff2html-cli#usage",
+      "install": {
+        "npm": "diff2html-cli"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "development"
+      ],
+      "tier": "unverified",
+      "description": "Generate pretty HTML diffs from unified and git diff output via the command line",
+      "agentScore": 6
+    },
+    {
+      "slug": "emacs",
+      "name": "Emacs",
+      "vendor": {
+        "name": "Emacs Project",
+        "domain": "github.com/emacs-mirror",
+        "verified": false
+      },
+      "repo": "https://github.com/emacs-mirror/emacs",
+      "docs": "https://www.gnu.org/software/emacs/manual/",
+      "install": {
+        "brew": "emacs",
+        "apt": "emacs"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 2,
+        "tokenEfficiency": 2,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "text-editors"
+      ],
+      "tier": "unverified",
+      "description": "An extensible, customizable, free/libre text editor — and more.",
+      "agentScore": 3
+    },
+    {
+      "slug": "vim",
+      "name": "Vim",
+      "vendor": {
+        "name": "Bram Moolenaar",
+        "domain": "github.com/vim",
+        "verified": false
+      },
+      "repo": "https://github.com/vim/vim",
+      "docs": "https://vimhelp.org/",
+      "install": {
+        "brew": "vim",
+        "apt": "vim"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 1,
+        "tokenEfficiency": 2,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "text-editors"
+      ],
+      "tier": "unverified",
+      "description": "Vim - the ubiquitous text editor.",
+      "agentScore": 3
+    },
+    {
+      "slug": "neovim",
+      "name": "Neovim",
+      "vendor": {
+        "name": "Neovim",
+        "domain": "github.com/neovim",
+        "verified": false
+      },
+      "repo": "https://github.com/neovim/neovim",
+      "docs": "https://neovim.io/doc/",
+      "install": {
+        "brew": "neovim",
+        "apt": "neovim"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 3,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "text-editors"
+      ],
+      "tier": "unverified",
+      "description": "Modern Vim: a fully extensible, embeddable, and highly configurable text editor.",
+      "agentScore": 5
+    },
+    {
+      "slug": "kakoune",
+      "name": "Kakoune",
+      "vendor": {
+        "name": "mawww",
+        "domain": "github.com/mawww",
+        "verified": false
+      },
+      "repo": "https://github.com/mawww/kakoune",
+      "docs": null,
+      "install": {
+        "brew": "kakoune",
+        "apt": "kakoune"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 1,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "text-editors"
+      ],
+      "tier": "unverified",
+      "description": "Modal text editor inspired by vim, focused on selections and orthogonality.",
+      "agentScore": 3
+    },
+    {
+      "slug": "micro",
+      "name": "micro",
+      "vendor": {
+        "name": "zyedidia",
+        "domain": "github.com/zyedidia",
+        "verified": false
+      },
+      "repo": "https://github.com/zyedidia/micro",
+      "docs": "https://micro-editor.github.io",
+      "install": {
+        "brew": "micro",
+        "apt": "micro"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 1,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "text-editors"
+      ],
+      "tier": "unverified",
+      "description": "A simple and intuitive terminal-based text editor with modern features.",
+      "agentScore": 3
+    },
+    {
+      "slug": "o",
+      "name": "Orbiton",
+      "vendor": {
+        "name": "xyproto",
+        "domain": "github.com/xyproto",
+        "verified": false
+      },
+      "repo": "https://github.com/xyproto/o",
+      "docs": null,
+      "install": {
+        "go": "github.com/xyproto/orbiton/v2"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 1,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "text-editors",
+        "ide"
+      ],
+      "tier": "unverified",
+      "description": "Configuration-free, lightweight CLI text editor and IDE",
+      "agentScore": 3
+    },
+    {
+      "slug": "helix",
+      "name": "Helix",
+      "vendor": {
+        "name": "helix-editor",
+        "domain": "github.com/helix-editor",
+        "verified": false
+      },
+      "repo": "https://github.com/helix-editor/helix",
+      "docs": "https://docs.helix-editor.com/",
+      "install": {
+        "brew": "helix",
+        "cargo": "helix"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 1,
+        "tokenEfficiency": 2,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "text-editors"
+      ],
+      "tier": "unverified",
+      "description": "Modal terminal text editor inspired by Kakoune and Neovim.",
+      "agentScore": 3
+    },
+    {
+      "slug": "caniuse-cmd",
+      "name": "caniuse-cmd",
+      "vendor": {
+        "name": "sgentle",
+        "domain": "github.com/sgentle",
+        "verified": false
+      },
+      "repo": "https://github.com/sgentle/caniuse-cmd",
+      "docs": null,
+      "install": {
+        "npm": "caniuse-cmd"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "frontend-development",
+        "browser-compatibility"
+      ],
+      "tier": "unverified",
+      "description": "CLI tool for checking browser support of web features using caniuse.com data.",
+      "agentScore": 7
+    },
+    {
+      "slug": "strip-css-comments-cli",
+      "name": "strip-css-comments-cli",
+      "vendor": {
+        "name": "sindresorhus",
+        "domain": "github.com/sindresorhus",
+        "verified": false
+      },
+      "repo": "https://github.com/sindresorhus/strip-css-comments-cli",
+      "docs": null,
+      "install": {
+        "npm": "strip-css-comments-cli"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 5
+      },
+      "categories": [
+        "frontend-development",
+        "cli"
+      ],
+      "tier": "unverified",
+      "description": "CLI tool to strip comments from CSS files or streams.",
+      "agentScore": 6
+    },
+    {
+      "slug": "viewport-list-cli",
+      "name": "viewport-list-cli",
+      "vendor": {
+        "name": "Kevin Mårtensson",
+        "domain": "github.com/kevva",
+        "verified": false
+      },
+      "repo": "https://github.com/kevva/viewport-list-cli",
+      "docs": null,
+      "install": {
+        "npm": "viewport-list-cli"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "frontend-development",
+        "device-testing",
+        "cli-tools"
+      ],
+      "tier": "unverified",
+      "description": "CLI to list common device viewports, useful for frontend testing and development.",
+      "agentScore": 7
+    },
+    {
+      "slug": "localtunnel",
+      "name": "localtunnel",
+      "vendor": {
+        "name": "localtunnel",
+        "domain": "github.com/localtunnel",
+        "verified": false
+      },
+      "repo": "https://github.com/localtunnel/localtunnel",
+      "docs": null,
+      "install": {
+        "brew": "localtunnel",
+        "npm": "localtunnel"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "public-localhost"
+      ],
+      "tier": "unverified",
+      "description": "Expose your localhost to a public URL for easy sharing and testing.",
+      "agentScore": 6
+    },
+    {
+      "slug": "tunnelmole",
+      "name": "Tunnelmole",
+      "vendor": {
+        "name": "robbie-cahill",
+        "domain": "github.com/robbie-cahill",
+        "verified": false
+      },
+      "repo": "https://github.com/robbie-cahill/tunnelmole-client",
+      "docs": null,
+      "install": {
+        "npm": "tunnelmole"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": false,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "public-localhost"
+      ],
+      "tier": "unverified",
+      "description": "Expose your local HTTP server to the internet with a public HTTPS URL.",
+      "agentScore": 6
+    },
+    {
+      "slug": "mobicon-cli",
+      "name": "mobicon-cli",
+      "vendor": {
+        "name": "Sam Verschueren",
+        "domain": "github.com/SamVerschueren",
+        "verified": false
+      },
+      "repo": "https://github.com/SamVerschueren/mobicon-cli",
+      "docs": null,
+      "install": {
+        "npm": "mobicon-cli"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "mobile-development"
+      ],
+      "tier": "unverified",
+      "description": "Mobile app icon generator for Android, iOS, and PWA from a single image.",
+      "agentScore": 6
+    },
+    {
+      "slug": "mobisplash-cli",
+      "name": "mobisplash-cli",
+      "vendor": {
+        "name": "Sam Verschueren",
+        "domain": "github.com/SamVerschueren",
+        "verified": false
+      },
+      "repo": "https://github.com/SamVerschueren/mobisplash-cli",
+      "docs": "https://github.com/SamVerschueren/mobisplash-cli#readme",
+      "install": {
+        "npm": "mobisplash-cli"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "mobile-development",
+        "image-generation"
+      ],
+      "tier": "unverified",
+      "description": "Mobile app splash screen generator for Android, iOS, and more.",
+      "agentScore": 6
+    },
+    {
+      "slug": "deviceframe",
+      "name": "deviceframe",
+      "vendor": {
+        "name": "c0bra",
+        "domain": "github.com/c0bra",
+        "verified": false
+      },
+      "repo": "https://github.com/c0bra/deviceframe",
+      "docs": null,
+      "install": {
+        "npm": "deviceframe"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 2,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "mobile-development",
+        "screenshot",
+        "design"
+      ],
+      "tier": "unverified",
+      "description": "Wrap screenshots or URLs with device frames for attractive app/site mockups.",
+      "agentScore": 4
+    },
+    {
+      "slug": "mycli",
+      "name": "mycli",
+      "vendor": {
+        "name": "dbcli",
+        "domain": "github.com/dbcli",
+        "verified": false
+      },
+      "repo": "https://github.com/dbcli/mycli",
+      "docs": "https://mycli.net/docs",
+      "install": {
+        "brew": "mycli",
+        "apt": "mycli"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "env:MYSQL_HOST",
+          "env:MYSQL_USER",
+          "env:MYSQL_PASSWORD",
+          "config file:~/.myclirc"
+        ],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 3,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "database",
+        "mysql",
+        "cli"
+      ],
+      "tier": "unverified",
+      "description": "MySQL client with autocompletion and syntax highlighting.",
+      "agentScore": 5
+    },
+    {
+      "slug": "pgcli",
+      "name": "pgcli",
+      "vendor": {
+        "name": "dbcli",
+        "domain": "github.com/dbcli",
+        "verified": false
+      },
+      "repo": "https://github.com/dbcli/pgcli",
+      "docs": "https://pgcli.com/",
+      "install": {
+        "brew": "pgcli",
+        "apt": "pgcli"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "env:PGHOST",
+          "env:PGUSER",
+          "env:PGPASSWORD",
+          "config file:~/.pgpass"
+        ],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 3,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "database",
+        "postgresql",
+        "cli"
+      ],
+      "tier": "unverified",
+      "description": "Postgres CLI with autocompletion and syntax highlighting.",
+      "agentScore": 5
+    },
+    {
+      "slug": "sqlline",
+      "name": "SQLLine",
+      "vendor": {
+        "name": "Julian Hyde",
+        "domain": "github.com/julianhyde",
+        "verified": false
+      },
+      "repo": "https://github.com/julianhyde/sqlline",
+      "docs": "https://github.com/julianhyde/sqlline/wiki",
+      "install": {},
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "cli:--user/--password",
+          "jdbc-url",
+          "env:USER/PASSWORD (if supported by jdbc driver)"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 3,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "database",
+        "sql"
+      ],
+      "tier": "unverified",
+      "description": "Shell for issuing SQL to relational databases via JDBC.",
+      "agentScore": 5
+    },
+    {
+      "slug": "iredis",
+      "name": "IRedis",
+      "vendor": {
+        "name": "laixintao",
+        "domain": "github.com/laixintao",
+        "verified": false
+      },
+      "repo": "https://github.com/laixintao/iredis",
+      "docs": "https://www.iredis.xbin.io/",
+      "install": {
+        "brew": "iredis",
+        "apt": "iredis",
+        "pip": "iredis"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "env:REDIS_URL",
+          "config file:~/.iredisrc",
+          "CLI parameter:--url"
+        ],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 2,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "database",
+        "cli",
+        "redis",
+        "terminal"
+      ],
+      "tier": "unverified",
+      "description": "CLI Redis client with autocompletion, validation, and syntax highlighting",
+      "agentScore": 5
+    },
+    {
+      "slug": "usql",
+      "name": "usql",
+      "vendor": {
+        "name": "xo",
+        "domain": "github.com/xo",
+        "verified": false
+      },
+      "repo": "https://github.com/xo/usql",
+      "docs": "https://github.com/xo/usql#readme",
+      "install": {
+        "brew": "usql",
+        "go": "github.com/xo/usql@latest"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "env:DB_USER",
+          "env:DB_PASS",
+          "config file",
+          "native CLI params"
+        ],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 3,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "database"
+      ],
+      "tier": "unverified",
+      "description": "Universal SQL client for many databases with psql-inspired CLI and autocompletion.",
+      "agentScore": 5
+    },
+    {
+      "slug": "htconvert",
+      "name": "htconvert",
+      "vendor": {
+        "name": "Luke Childs",
+        "domain": "github.com/lukechilds",
+        "verified": false
+      },
+      "repo": "https://github.com/lukechilds/htconvert",
+      "docs": null,
+      "install": {
+        "npm": "htconvert"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 5
+      },
+      "categories": [
+        "devops",
+        "conversion",
+        "nginx",
+        "apache"
+      ],
+      "tier": "unverified",
+      "description": "Convert .htaccess redirects to nginx.conf redirects.",
+      "agentScore": 6
+    },
+    {
+      "slug": "saws",
+      "name": "SAWS",
+      "vendor": {
+        "name": "donnemartin",
+        "domain": "github.com/donnemartin",
+        "verified": false
+      },
+      "repo": "https://github.com/donnemartin/saws",
+      "docs": "http://saws.readthedocs.org/en/latest/",
+      "install": {
+        "brew": "saws"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:AWS_ACCESS_KEY_ID",
+          "env:AWS_SECRET_ACCESS_KEY",
+          "config file:~/.aws/credentials"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 3,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "devops",
+        "cloud",
+        "aws"
+      ],
+      "tier": "unverified",
+      "description": "Supercharged AWS CLI with autocomplete, fuzzy matching, and advanced UI features.",
+      "agentScore": 7
+    },
+    {
+      "slug": "s3cmd",
+      "name": "S3cmd",
+      "vendor": {
+        "name": "S3tools",
+        "domain": "github.com/s3tools",
+        "verified": false
+      },
+      "repo": "https://github.com/s3tools/s3cmd",
+      "docs": "https://s3tools.org/usage",
+      "install": {
+        "brew": "s3cmd",
+        "apt": "s3cmd"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "config file",
+          "env:AWS_ACCESS_KEY_ID",
+          "env:AWS_SECRET_ACCESS_KEY"
+        ],
+        "idempotent": false,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 4,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "devops",
+        "storage"
+      ],
+      "tier": "unverified",
+      "description": "Fully-featured CLI tool for managing Amazon S3 and compatible storage services.",
+      "agentScore": 6
+    },
+    {
+      "slug": "pm2",
+      "name": "PM2",
+      "vendor": {
+        "name": "Unitech",
+        "domain": "github.com/Unitech",
+        "verified": false
+      },
+      "repo": "https://github.com/Unitech/pm2",
+      "docs": "https://pm2.keymetrics.io/docs/usage/quick-start/",
+      "install": {
+        "npm": "pm2"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "devops"
+      ],
+      "tier": "unverified",
+      "description": "Production process manager for Node.js/Bun apps with clustering and monitoring.",
+      "agentScore": 9
+    },
+    {
+      "slug": "ops",
+      "name": "OPS",
+      "vendor": {
+        "name": "NanoVMs",
+        "domain": "github.com/nanovms",
+        "verified": false
+      },
+      "repo": "https://github.com/nanovms/ops",
+      "docs": "https://nanovms.gitbook.io/ops/",
+      "install": {
+        "brew": "nanovms/ops/ops",
+        "apt": "ops",
+        "go": "github.com/nanovms/ops"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "devops"
+      ],
+      "tier": "unverified",
+      "description": "Unikernel compilation and orchestration tool.",
+      "agentScore": 6
+    },
+    {
+      "slug": "flog",
+      "name": "Flog",
+      "vendor": {
+        "name": "mingrammer",
+        "domain": "github.com/mingrammer",
+        "verified": false
+      },
+      "repo": "https://github.com/mingrammer/flog",
+      "docs": null,
+      "install": {
+        "brew": "flog",
+        "go": "github.com/mingrammer/flog"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": false,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "devops",
+        "testing"
+      ],
+      "tier": "unverified",
+      "description": "Generate fake logs in standard formats (apache, syslog, json) for testing and development.",
+      "agentScore": 8
+    },
+    {
+      "slug": "k9s",
+      "name": "K9s",
+      "vendor": {
+        "name": "derailed",
+        "domain": "github.com/derailed",
+        "verified": false
+      },
+      "repo": "https://github.com/derailed/k9s",
+      "docs": "https://k9scli.io",
+      "install": {
+        "brew": "derailed/k9s/k9s"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "env:KUBECONFIG",
+          "config file"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 1,
+        "tokenEfficiency": 2,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 1
+      },
+      "categories": [
+        "devops",
+        "kubernetes"
+      ],
+      "tier": "unverified",
+      "description": "Terminal UI to observe and manage Kubernetes clusters interactively.",
+      "agentScore": 3
+    },
+    {
+      "slug": "pingme",
+      "name": "PingMe",
+      "vendor": {
+        "name": "kha7iq",
+        "domain": "github.com/kha7iq",
+        "verified": false
+      },
+      "repo": "https://github.com/kha7iq/pingme",
+      "docs": "https://kha7iq.github.io/pingme",
+      "install": {
+        "brew": "pingme"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "env:VAR_NAME"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 4,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "devops",
+        "notifications"
+      ],
+      "tier": "unverified",
+      "description": "Send messages/alerts to multiple messaging platforms & email from the CLI.",
+      "agentScore": 5
+    },
+    {
+      "slug": "ipfs-deploy",
+      "name": "ipfs-deploy",
+      "vendor": {
+        "name": "agentofuser",
+        "domain": "github.com/agentofuser",
+        "verified": false
+      },
+      "repo": "https://github.com/agentofuser/ipfs-deploy",
+      "docs": null,
+      "install": {
+        "npm": "ipfs-deploy"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": false,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 4,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "devops",
+        "static-site",
+        "web",
+        "deployment"
+      ],
+      "tier": "unverified",
+      "description": "Deploy static websites to IPFS pinning services with optional DNS updates.",
+      "agentScore": 5
+    },
+    {
+      "slug": "discharge",
+      "name": "Discharge",
+      "vendor": {
+        "name": "brandonweiss",
+        "domain": "github.com/brandonweiss",
+        "verified": false
+      },
+      "repo": "https://github.com/brandonweiss/discharge",
+      "docs": null,
+      "install": {
+        "npm": "@static/discharge"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "env:AWS_ACCESS_KEY_ID",
+          "env:AWS_SECRET_ACCESS_KEY",
+          "config:~/.aws/credentials",
+          "config:.discharge.json"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 4,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "devops",
+        "static-site",
+        "aws",
+        "deployment"
+      ],
+      "tier": "unverified",
+      "description": "Simple CLI for deploying static websites to Amazon S3 with optional CDN support.",
+      "agentScore": 5
+    },
+    {
+      "slug": "updatecli",
+      "name": "Updatecli",
+      "vendor": {
+        "name": "Updatecli",
+        "domain": "github.com/updatecli",
+        "verified": false
+      },
+      "repo": "https://github.com/updatecli/updatecli",
+      "docs": "https://www.updatecli.io/docs/",
+      "install": {
+        "brew": "updatecli",
+        "go": "github.com/updatecli/updatecli/cmd/updatecli@latest"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "devops",
+        "dependency-management",
+        "automation"
+      ],
+      "tier": "unverified",
+      "description": "A declarative dependency management tool for automating updates across projects.",
+      "agentScore": 6
+    },
+    {
+      "slug": "telert",
+      "name": "Telert",
+      "vendor": {
+        "name": "navig-me",
+        "domain": "github.com/navig-me",
+        "verified": false
+      },
+      "repo": "https://github.com/navig-me/telert",
+      "docs": "https://github.com/navig-me/telert#readme",
+      "install": {
+        "pip": "telert",
+        "docker": "ghcr.io/navig-me/telert:latest"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "env:TELEGRAM_TOKEN",
+          "env:SLACK_TOKEN",
+          "env:DISCORD_TOKEN",
+          "config file"
+        ],
+        "idempotent": false,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 4,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "devops",
+        "monitoring",
+        "alerting"
+      ],
+      "tier": "unverified",
+      "description": "Multi-channel alerts for long-running commands and process/log/uptime monitoring.",
+      "agentScore": 6
+    },
+    {
+      "slug": "logdy",
+      "name": "Logdy",
+      "vendor": {
+        "name": "logdyhq",
+        "domain": "github.com/logdyhq",
+        "verified": false
+      },
+      "repo": "https://github.com/logdyhq/logdy-core",
+      "docs": "https://logdy.dev/docs/quick-start",
+      "install": {
+        "brew": "logdy"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 3,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 5
+      },
+      "categories": [
+        "devops",
+        "logging",
+        "monitoring"
+      ],
+      "tier": "unverified",
+      "description": "Supercharge terminal logs with an embedded real-time web UI.",
+      "agentScore": 8
+    },
+    {
+      "slug": "s5cmd",
+      "name": "s5cmd",
+      "vendor": {
+        "name": "Peak",
+        "domain": "github.com/peak",
+        "verified": false
+      },
+      "repo": "https://github.com/peak/s5cmd",
+      "docs": "https://github.com/peak/s5cmd#overview",
+      "install": {
+        "brew": "s5cmd",
+        "go": "github.com/peak/s5cmd/v2/cmd/s5cmd@latest",
+        "apt": "s5cmd"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:AWS_ACCESS_KEY_ID",
+          "env:AWS_SECRET_ACCESS_KEY",
+          "env:AWS_SESSION_TOKEN",
+          "env:GOOGLE_APPLICATION_CREDENTIALS"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "categories": [
+        "devops",
+        "cloud",
+        "filesystems",
+        "storage"
+      ],
+      "tier": "unverified",
+      "description": "Blazing fast CLI for S3 and local files with wildcard support and structured output.",
+      "agentScore": 10
+    },
+    {
+      "slug": "updo",
+      "name": "Updo",
+      "vendor": {
+        "name": "Owloops",
+        "domain": "github.com/Owloops",
+        "verified": false
+      },
+      "repo": "https://github.com/Owloops/updo",
+      "docs": null,
+      "install": {
+        "brew": "owloops/tap/updo"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 4,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "devops",
+        "monitoring"
+      ],
+      "tier": "unverified",
+      "description": "Command-line tool for real-time website uptime and performance monitoring",
+      "agentScore": 8
+    },
+    {
+      "slug": "cronboard",
+      "name": "Cronboard",
+      "vendor": {
+        "name": "antoniorodr",
+        "domain": "github.com/antoniorodr",
+        "verified": false
+      },
+      "repo": "https://github.com/antoniorodr/Cronboard",
+      "docs": null,
+      "install": {
+        "brew": "cronboard"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "ssh",
+          "env:SSH_KEY",
+          "env:SSH_PASSWORD"
+        ],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 1,
+        "tokenEfficiency": 2,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "devops"
+      ],
+      "tier": "unverified",
+      "description": "Terminal dashboard to manage cron jobs locally and over SSH connections.",
+      "agentScore": 3
+    },
+    {
+      "slug": "s3m",
+      "name": "s3m",
+      "vendor": {
+        "name": "s3m",
+        "domain": "github.com/s3m",
+        "verified": false
+      },
+      "repo": "https://github.com/s3m/s3m",
+      "docs": "https://github.com/s3m/s3m#readme",
+      "install": {
+        "cargo": "s3m"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "config file: ~/.config/s3m/config.yml"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 3,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 5
+      },
+      "categories": [
+        "devops",
+        "cloud",
+        "backup",
+        "data-transfer"
+      ],
+      "tier": "unverified",
+      "description": "Stream data into S3 buckets with resumable, pipelined, and fault-tolerant uploads.",
+      "agentScore": 5
+    },
+    {
+      "slug": "lstags",
+      "name": "Lstags",
+      "vendor": {
+        "name": "ivanilves",
+        "domain": "github.com/ivanilves",
+        "verified": false
+      },
+      "repo": "https://github.com/ivanilves/lstags",
+      "docs": null,
+      "install": {
+        "go": "github.com/ivanilves/lstags@latest"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "config file:~/.docker/config.json"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 4,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "docker",
+        "container-registry",
+        "sync"
+      ],
+      "tier": "unverified",
+      "description": "Synchronize and compare Docker images and tags across multiple registries.",
+      "agentScore": 6
+    },
+    {
+      "slug": "dockly",
+      "name": "Dockly",
+      "vendor": {
+        "name": "lirantal",
+        "domain": "github.com/lirantal",
+        "verified": false
+      },
+      "repo": "https://github.com/lirantal/dockly",
+      "docs": null,
+      "install": {
+        "npm": "dockly"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 1,
+        "tokenEfficiency": 2,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 1
+      },
+      "categories": [
+        "docker",
+        "container-management"
+      ],
+      "tier": "unverified",
+      "description": "Immersive terminal interface for interactively managing Docker containers and images.",
+      "agentScore": 3
+    },
+    {
+      "slug": "lazydocker",
+      "name": "Lazydocker",
+      "vendor": {
+        "name": "Jesse Duffield",
+        "domain": "github.com/jesseduffield",
+        "verified": false
+      },
+      "repo": "https://github.com/jesseduffield/lazydocker",
+      "docs": "https://github.com/jesseduffield/lazydocker#readme",
+      "install": {
+        "brew": "lazydocker",
+        "go": "github.com/jesseduffield/lazydocker@latest"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 1,
+        "tokenEfficiency": 2,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 1
+      },
+      "categories": [
+        "docker",
+        "container",
+        "terminal-ui"
+      ],
+      "tier": "unverified",
+      "description": "Terminal UI for docker and docker-compose, simplifying container management.",
+      "agentScore": 3
+    },
+    {
+      "slug": "docker-pushrm",
+      "name": "docker-pushrm",
+      "vendor": {
+        "name": "christian-korneck",
+        "domain": "github.com/christian-korneck",
+        "verified": false
+      },
+      "repo": "https://github.com/christian-korneck/docker-pushrm",
+      "docs": "https://github.com/christian-korneck/docker-pushrm#readme",
+      "install": {},
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "docker-credentials",
+          "env:DOCKER_USER",
+          "env:DOCKER_PASS",
+          "env:PUSHRM_SHORT",
+          "env:PUSHRM_FILE"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "docker",
+        "container-registry"
+      ],
+      "tier": "unverified",
+      "description": "Push a local README as your Docker/OCI container repo description.",
+      "agentScore": 6
+    },
+    {
+      "slug": "ctop",
+      "name": "ctop",
+      "vendor": {
+        "name": "bcicen",
+        "domain": "github.com/bcicen",
+        "verified": false
+      },
+      "repo": "https://github.com/bcicen/ctop",
+      "docs": null,
+      "install": {
+        "brew": "ctop",
+        "apt": "docker-ctop"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 1,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "docker",
+        "monitoring"
+      ],
+      "tier": "unverified",
+      "description": "Top-like interface for real-time Docker container metrics and monitoring.",
+      "agentScore": 3
+    },
+    {
+      "slug": "release-it",
+      "name": "Release It!",
+      "vendor": {
+        "name": "webpro",
+        "domain": "github.com/webpro",
+        "verified": false
+      },
+      "repo": "https://github.com/webpro/release-it",
+      "docs": "https://github.com/webpro/release-it#readme",
+      "install": {
+        "brew": "release-it",
+        "npm": "release-it"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "env:GITHUB_TOKEN",
+          "env:GITLAB_TOKEN",
+          "config file:.release-it.json",
+          "package.json:release-it"
+        ],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "release",
+        "automation",
+        "devops"
+      ],
+      "tier": "unverified",
+      "description": "Automate versioning, changelog, and releases for Git and npm projects.",
+      "agentScore": 6
+    },
+    {
+      "slug": "clog",
+      "name": "clog",
+      "vendor": {
+        "name": "clog-tool",
+        "domain": "github.com/clog-tool",
+        "verified": false
+      },
+      "repo": "https://github.com/clog-tool/clog-cli",
+      "docs": null,
+      "install": {
+        "cargo": "clog-cli",
+        "npm": "clog-cli"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "release"
+      ],
+      "tier": "unverified",
+      "description": "Generates a changelog from git commits following the Angular conventional format.",
+      "agentScore": 6
+    },
+    {
+      "slug": "np",
+      "name": "np",
+      "vendor": {
+        "name": "sindresorhus",
+        "domain": "github.com/sindresorhus",
+        "verified": false
+      },
+      "repo": "https://github.com/sindresorhus/np",
+      "docs": "https://github.com/sindresorhus/np#readme",
+      "install": {
+        "npm": "np"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 2,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "release",
+        "npm",
+        "package-management"
+      ],
+      "tier": "unverified",
+      "description": "A better npm publish: interactive release automation for npm packages",
+      "agentScore": 4
+    },
+    {
+      "slug": "release",
+      "name": "Release",
+      "vendor": {
+        "name": "Vercel",
+        "domain": "vercel.com",
+        "verified": false
+      },
+      "repo": "https://github.com/vercel/release",
+      "docs": null,
+      "install": {
+        "npm": "release"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "env:GITHUB_TOKEN"
+        ],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 3,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "release"
+      ],
+      "tier": "unverified",
+      "description": "Generate changelogs and GitHub releases from recent commits with one command.",
+      "agentScore": 5
+    },
+    {
+      "slug": "semantic-release",
+      "name": "semantic-release",
+      "vendor": {
+        "name": "semantic-release",
+        "domain": "github.com/semantic-release",
+        "verified": false
+      },
+      "repo": "https://github.com/semantic-release/semantic-release",
+      "docs": "https://semantic-release.gitbook.io/semantic-release/",
+      "install": {
+        "npm": "semantic-release"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "env:NPM_TOKEN",
+          "env:GITHUB_TOKEN",
+          "config file"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 4,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "release",
+        "automation",
+        "publishing"
+      ],
+      "tier": "unverified",
+      "description": "Automated version management and package publishing for CI/CD workflows.",
+      "agentScore": 6
+    },
+    {
+      "slug": "npm-name-cli",
+      "name": "npm-name-cli",
+      "vendor": {
+        "name": "sindresorhus",
+        "domain": "github.com/sindresorhus",
+        "verified": false
+      },
+      "repo": "https://github.com/sindresorhus/npm-name-cli",
+      "docs": null,
+      "install": {
+        "npm": "npm-name-cli"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "npm",
+        "package-discovery"
+      ],
+      "tier": "unverified",
+      "description": "Check whether a package or organization name is available on npm.",
+      "agentScore": 6
+    },
+    {
+      "slug": "npm-user-cli",
+      "name": "npm-user-cli",
+      "vendor": {
+        "name": "Sindre Sorhus",
+        "domain": "github.com/sindresorhus",
+        "verified": false
+      },
+      "repo": "https://github.com/sindresorhus/npm-user-cli",
+      "docs": null,
+      "install": {
+        "npm": "npm-user-cli"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "npm",
+        "user-info"
+      ],
+      "tier": "unverified",
+      "description": "Get user info of an npm user from the CLI.",
+      "agentScore": 6
+    },
+    {
+      "slug": "npm-home",
+      "name": "npm-home",
+      "vendor": {
+        "name": "sindresorhus",
+        "domain": "github.com/sindresorhus",
+        "verified": false
+      },
+      "repo": "https://github.com/sindresorhus/npm-home",
+      "docs": null,
+      "install": {
+        "npm": "npm-home"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 1,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "npm",
+        "devtools"
+      ],
+      "tier": "unverified",
+      "description": "Opens the npm, Yarn, or GitHub page for this or named packages.",
+      "agentScore": 6
+    },
+    {
+      "slug": "pkg-dir-cli",
+      "name": "pkg-dir-cli",
+      "vendor": {
+        "name": "sindresorhus",
+        "domain": "github.com/sindresorhus",
+        "verified": false
+      },
+      "repo": "https://github.com/sindresorhus/pkg-dir-cli",
+      "docs": null,
+      "install": {
+        "npm": "package-directory-cli"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 5
+      },
+      "categories": [
+        "npm",
+        "project-discovery"
+      ],
+      "tier": "unverified",
+      "description": "Find the root directory of a Node.js project or npm package.",
+      "agentScore": 7
+    },
+    {
+      "slug": "npm-check-updates",
+      "name": "npm-check-updates",
+      "vendor": {
+        "name": "Timothy J. Kim (tjunnone)",
+        "domain": "github.com/tjunnone",
+        "verified": false
+      },
+      "repo": "https://github.com/tjunnone/npm-check-updates",
+      "docs": "https://github.com/tjunnone/npm-check-updates#readme",
+      "install": {
+        "npm": "npm-check-updates"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "npm",
+        "dependency-management",
+        "javascript",
+        "update"
+      ],
+      "tier": "unverified",
+      "description": "Find newer versions of npm package dependencies than your package.json allows.",
+      "agentScore": 9
+    },
+    {
+      "slug": "updates",
+      "name": "updates",
+      "vendor": {
+        "name": "silverwind",
+        "domain": "github.com/silverwind",
+        "verified": false
+      },
+      "repo": "https://github.com/silverwind/updates",
+      "docs": null,
+      "install": {
+        "npm": "updates"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:UPDATES_GITHUB_API_TOKEN",
+          "env:UPDATES_FORGE_TOKENS",
+          "config:updates.config.js"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "npm",
+        "dependency-management",
+        "multi-language",
+        "automation"
+      ],
+      "tier": "unverified",
+      "description": "Flexible CLI tool to check and update npm, Python, Go, Actions, and Docker dependencies.",
+      "agentScore": 9
+    },
+    {
+      "slug": "wipe-modules",
+      "name": "wipe-modules",
+      "vendor": {
+        "name": "bntzio",
+        "domain": "github.com/bntzio",
+        "verified": false
+      },
+      "repo": "https://github.com/bntzio/wipe-modules",
+      "docs": "https://github.com/bntzio/wipe-modules#readme",
+      "install": {
+        "npm": "wipe-modules"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "npm",
+        "filesystem",
+        "cleanup",
+        "javascript"
+      ],
+      "tier": "unverified",
+      "description": "Removes node_modules folders from inactive projects to save disk space.",
+      "agentScore": 6
+    },
+    {
+      "slug": "yo",
+      "name": "Yo",
+      "vendor": {
+        "name": "Yeoman",
+        "domain": "github.com/yeoman",
+        "verified": false
+      },
+      "repo": "https://github.com/yeoman/yo",
+      "docs": "http://yeoman.io/learning/",
+      "install": {
+        "brew": "yo",
+        "npm": "yo"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 1,
+        "tokenEfficiency": 2,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "boilerplate",
+        "scaffolding"
+      ],
+      "tier": "unverified",
+      "description": "Scaffolding tool for running Yeoman generators.",
+      "agentScore": 3
+    },
+    {
+      "slug": "boilr",
+      "name": "Boilr",
+      "vendor": {
+        "name": "tmrts",
+        "domain": "github.com/tmrts",
+        "verified": false
+      },
+      "repo": "https://github.com/tmrts/boilr",
+      "docs": "https://github.com/tmrts/boilr/wiki/Introduction",
+      "install": {
+        "brew": "boilr"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 1,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "boilerplate",
+        "project-scaffolding"
+      ],
+      "tier": "unverified",
+      "description": "Create projects from boilerplate templates using simple Golang-powered templates.",
+      "agentScore": 3
+    },
+    {
+      "slug": "cookiecutter",
+      "name": "Cookiecutter",
+      "vendor": {
+        "name": "audreyr",
+        "domain": "github.com/audreyr",
+        "verified": false
+      },
+      "repo": "https://github.com/audreyr/cookiecutter",
+      "docs": "https://cookiecutter.readthedocs.io",
+      "install": {
+        "pip": "cookiecutter"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 2,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "boilerplate"
+      ],
+      "tier": "unverified",
+      "description": "Create projects from interactive templates for any language.",
+      "agentScore": 4
+    },
+    {
+      "slug": "mevn-cli",
+      "name": "MEVN CLI",
+      "vendor": {
+        "name": "madlabsinc",
+        "domain": "github.com/madlabsinc",
+        "verified": false
+      },
+      "repo": "https://github.com/madlabsinc/mevn-cli",
+      "docs": "https://mevn.madlabs.xyz/guide/",
+      "install": {
+        "npm": "mevn-cli"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 2,
+        "tokenEfficiency": 2,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "boilerplate",
+        "scaffolding",
+        "web"
+      ],
+      "tier": "unverified",
+      "description": "Light speed CLI boilerplate for MEVN (Mongo Express Vue Node) stack web apps.",
+      "agentScore": 3
+    },
+    {
+      "slug": "scaffold-static",
+      "name": "scaffold-static",
+      "vendor": {
+        "name": "James George",
+        "domain": "github.com/jamesgeorge007",
+        "verified": false
+      },
+      "repo": "https://github.com/jamesgeorge007/scaffold-static",
+      "docs": null,
+      "install": {
+        "npm": "scaffold-static"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 2,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "boilerplate",
+        "scaffolding",
+        "static-site"
+      ],
+      "tier": "unverified",
+      "description": "Scaffolding utility for quickly starting vanilla JS static site projects.",
+      "agentScore": 4
+    },
+    {
+      "slug": "serve",
+      "name": "serve",
+      "vendor": {
+        "name": "Vercel",
+        "domain": "vercel.com",
+        "verified": false
+      },
+      "repo": "https://github.com/vercel/serve",
+      "docs": "https://github.com/vercel/serve#usage",
+      "install": {
+        "npm": "serve"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "http-server"
+      ],
+      "tier": "unverified",
+      "description": "Serve static files and directories over HTTP/HTTPS with CORS and GZIP support.",
+      "agentScore": 6
     }
   ]
 }
