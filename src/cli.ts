@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
-import type { CliTool } from './types.js';
+import type { CliTool, Registry } from './types.js';
 import { searchTools, findTool, getCategories, sortByAgentScore, tierBadge, filterByMinScore, filterByCategory } from './lib.js';
 import { loadRegistry, RegistryError } from './registry.js';
 
