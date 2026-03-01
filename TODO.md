@@ -13,11 +13,13 @@ The app store for AI agents. A CLI for discovering CLIs, with agent-generated in
 - [x] Agent-friendliness scoring (1-10)
 - [x] Verification tiers (verified/community/unverified)
 - [x] Platform-specific install commands
-- [ ] Expand registry to 50+ tools
-- [ ] Add more categories (databases, testing, monitoring, etc.)
+- [x] Expand registry to 50+ tools (420 tools now)
+- [x] Add more categories (crypto, security, databases, testing, monitoring)
 - [ ] `mcli add <slug>` — Submit a tool to the registry
-- [ ] `mcli update` — Fetch latest registry from remote
-- [ ] Publish to npm
+- [x] `mcli update` — Fetch latest registry from remote
+- [x] Publish to npm (@asvanevik/mcli)
+- [x] CI/CD pipeline (GitHub Actions)
+- [x] Smart search (relevance ranking with tier boost)
 
 ---
 
