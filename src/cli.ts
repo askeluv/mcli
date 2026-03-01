@@ -6,6 +6,7 @@ import { searchTools, findTool, getCategories, sortByAgentScore, sortByRelevance
 import { loadRegistry, RegistryError, hasLocalRegistry, updateRegistry, LOCAL_REGISTRY_PATH } from './registry.js';
 import { runAddWizard } from './add.js';
 import { runReviewWizard, loadReviews, getToolReviews, aggregateReviews } from './review.js';
+import { verifyTool, formatVerificationResult } from './verify.js';
 
 // Parse --flag and --flag=value from args
 function parseFlag(args: string[], flag: string): string | null {
@@ -128,6 +129,7 @@ Commands:
   update                   Fetch latest registry from remote
   add <slug>               Submit a new tool (interactive wizard)
   review <slug>            Submit a review for a tool (for agents)
+  verify <slug>            Check verification status of a tool
 
 Filters (for search and list):
   --min-score=N            Only show tools with agent score >= N
@@ -192,6 +194,31 @@ Examples:
       return;
     }
     await runReviewWizard(slug);
+    return;
+  }
+
+  // Handle verify command (requires registry)
+  if (command === 'verify') {
+    const slug = args[1];
+    if (!slug) {
+      console.log('Usage: mcli verify <slug>');
+      console.log('Example: mcli verify gh');
+      return;
+    }
+    
+    // Load registry to find tool
+    const regPath = hasLocalRegistry() ? LOCAL_REGISTRY_PATH : registryPath;
+    const reg = loadRegistry(regPath);
+    const tool = findTool(reg, slug);
+    
+    if (!tool) {
+      console.log(`Tool not found: ${slug}`);
+      return;
+    }
+    
+    console.log('Running verification checks...');
+    const result = await verifyTool(tool);
+    console.log(formatVerificationResult(result));
     return;
   }
 
