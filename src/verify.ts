@@ -32,7 +32,10 @@ function domainToOrg(domain: string): string[] {
   ];
 }
 
-export async function verifyTool(tool: CliTool): Promise<VerificationResult> {
+export async function verifyTool(
+  tool: CliTool,
+  fetcher: typeof fetch = fetch
+): Promise<VerificationResult> {
   const checks: VerificationResult['checks'] = {
     repoExists: { passed: false, detail: 'No repo URL provided' },
     repoActive: { passed: false, detail: 'Could not check activity' },
@@ -50,7 +53,7 @@ export async function verifyTool(tool: CliTool): Promise<VerificationResult> {
   if (tool.repo && tool.repo.includes('github.com')) {
     try {
       const repoPath = tool.repo.replace('https://github.com/', '');
-      const response = await fetch(`https://api.github.com/repos/${repoPath}`, {
+      const response = await fetcher(`https://api.github.com/repos/${repoPath}`, {
         headers: { 'User-Agent': 'mcli-verify' },
       });
       

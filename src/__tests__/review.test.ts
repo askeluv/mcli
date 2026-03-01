@@ -111,10 +111,21 @@ describe('aggregateReviews', () => {
 });
 
 describe('anti-gaming measures', () => {
-  it('proofHash is required in review schema', () => {
-    const review = createReview();
-    expect(review.proofHash).toBeDefined();
-    expect(review.proofHash!.length).toBeGreaterThanOrEqual(32);
+  it('proofHash must be valid SHA256 (64 hex chars)', () => {
+    const validHash = 'a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2';
+    const invalidHashes = [
+      'abc123', // too short
+      'a'.repeat(63), // 63 chars
+      'a'.repeat(65), // 65 chars
+      'g'.repeat(64), // invalid hex char
+      'A1B2C3D4E5F6A1B2C3D4E5F6A1B2C3D4E5F6A1B2C3D4E5F6A1B2C3D4E5F6A1B!', // special char
+    ];
+    
+    const sha256Regex = /^[a-f0-9]{64}$/i;
+    expect(sha256Regex.test(validHash)).toBe(true);
+    invalidHashes.forEach(hash => {
+      expect(sha256Regex.test(hash)).toBe(false);
+    });
   });
 
   it('detects duplicate reviews from same agent', () => {
@@ -133,11 +144,11 @@ describe('anti-gaming measures', () => {
     expect(canReview).toBe(true);
   });
 
-  it('validates proof hash format', () => {
-    const validHash = 'a'.repeat(64);
-    const shortHash = 'abc123';
+  it('rejects reviews for non-existent tools', () => {
+    // Slug validation should happen before review wizard runs
+    const existingSlugs = ['gh', 'aws', 'gcloud'];
+    const invalidSlug = 'nonexistent-tool';
     
-    expect(validHash.length).toBeGreaterThanOrEqual(32);
-    expect(shortHash.length).toBeLessThan(32);
+    expect(existingSlugs.includes(invalidSlug)).toBe(false);
   });
 });

@@ -3,10 +3,16 @@
  */
 import * as readline from 'readline';
 import { writeFileSync, readFileSync, existsSync, mkdirSync } from 'fs';
-import { join } from 'path';
+import { join, dirname } from 'path';
 import { homedir } from 'os';
+import { fileURLToPath } from 'url';
 import { createHash } from 'crypto';
 import type { Review } from './types.js';
+import { loadRegistry, hasLocalRegistry, LOCAL_REGISTRY_PATH } from './registry.js';
+import { findTool } from './lib.js';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const bundledRegistryPath = join(__dirname, '..', 'registry', 'tools.json');
 
 const PENDING_DIR = join(homedir(), '.mcli');
 const PENDING_REVIEWS_FILE = join(PENDING_DIR, 'pending-reviews.json');
@@ -60,13 +66,24 @@ export function computeReviewScore(scores: Review['scores']): number {
 }
 
 export async function runReviewWizard(slug: string): Promise<void> {
+  // Validate slug exists in registry before accepting review
+  const registryPath = hasLocalRegistry() ? LOCAL_REGISTRY_PATH : bundledRegistryPath;
+  const registry = loadRegistry(registryPath);
+  const tool = findTool(registry, slug);
+  
+  if (!tool) {
+    console.error(`Error: Tool not found: ${slug}`);
+    console.error('You can only review tools that exist in the registry.');
+    process.exit(1);
+  }
+
   const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
   });
 
   const agentId = getOrCreateAgentId();
-  console.log(`\nReviewing: ${slug}`);
+  console.log(`\nReviewing: ${tool.name} (${slug})`);
   console.log(`Agent ID: ${agentId}\n`);
 
   try {
@@ -85,9 +102,10 @@ export async function runReviewWizard(slug: string): Promise<void> {
     console.log('  echo -n "command: <cmd>, output: <output>" | sha256sum');
     const proofHashInput = await prompt(rl, 'Proof hash: ');
     
-    if (!proofHashInput || proofHashInput.length < 32) {
-      console.error('\n❌ Proof hash is required (must be at least 32 characters)');
+    if (!proofHashInput || !/^[a-f0-9]{64}$/i.test(proofHashInput)) {
+      console.error('\n❌ Proof hash is required (must be a valid SHA256 hash - 64 hex characters)');
       console.log('This prevents spam by requiring you to actually use the tool.');
+      console.log('Generate with: echo -n "command: <cmd>, output: <output>" | sha256sum');
       rl.close();
       process.exit(1);
     }
