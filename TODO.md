@@ -23,33 +23,17 @@ The app store for AI agents. A CLI for discovering CLIs, with agent-generated in
 
 ---
 
-## Phase 2: Agent Reviews ⭐
+## Phase 2: Agent Reviews ✅
 *Let agents rate tools from real usage — THE MOAT*
 
-- [ ] Define review schema
-  ```typescript
-  {
-    tool: string;
-    agentId: string;          // public key or identifier
-    scores: {
-      jsonParseable: 1-5;
-      errorClarity: 1-5;
-      authSimplicity: 1-5;
-      idempotency: 1-5;
-      docsSufficient: 1-5;
-    };
-    notes?: string;
-    proofHash?: string;       // sha256 of command + output
-    timestamp: string;
-  }
-  ```
-- [ ] `mcli review <slug>` — Submit a review (for agents)
-- [ ] Review aggregation — "87% of agents found JSON output reliable"
-- [ ] Anti-gaming measures
-  - Structured scores only (limit free text abuse)
-  - Rate limiting per agent
-  - Proof-of-use verification (spot check hashes)
-- [ ] Surface aggregate scores in `mcli info`
+- [x] Define review schema (5 dimensions + proofHash + agentId)
+- [x] `mcli review <slug>` — Submit a review (interactive wizard)
+- [x] Review aggregation — percentages per dimension
+- [x] Anti-gaming measures
+  - Structured scores only (1-5 per dimension)
+  - One review per agent per tool (deduplication)
+  - Proof hash mandatory (sha256 of command+output)
+- [x] Surface aggregate scores in `mcli info`
 
 ---
 
