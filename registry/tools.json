@@ -14762,6 +14762,471 @@
       ],
       "tier": "community",
       "description": "Generate wallets for 50+ blockchains. BTC, ETH, SON, any EVM chain. Mnemonics and keypairs."
+    },
+    {
+      "slug": "geth",
+      "name": "Geth (go-ethereum)",
+      "vendor": {
+        "name": "Ethereum Foundation",
+        "domain": "ethereum.org",
+        "verified": true
+      },
+      "repo": "https://github.com/ethereum/go-ethereum",
+      "docs": "https://geth.ethereum.org/docs",
+      "install": {
+        "brew": "ethereum",
+        "apt": "geth",
+        "script": "https://geth.ethereum.org/docs/getting-started/installing-geth"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 3,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 7,
+      "categories": [
+        "crypto",
+        "ethereum",
+        "blockchain",
+        "node"
+      ],
+      "tier": "verified",
+      "description": "Official Go implementation of Ethereum. Run a full node, interact with EVM, manage accounts."
+    },
+    {
+      "slug": "lighthouse",
+      "name": "Lighthouse",
+      "vendor": {
+        "name": "Sigma Prime",
+        "domain": "sigmaprime.io",
+        "verified": true
+      },
+      "repo": "https://github.com/sigp/lighthouse",
+      "docs": "https://lighthouse-book.sigmaprime.io",
+      "install": {
+        "cargo": "lighthouse",
+        "binary": "https://github.com/sigp/lighthouse/releases"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 9,
+      "categories": [
+        "crypto",
+        "ethereum",
+        "blockchain",
+        "node",
+        "consensus"
+      ],
+      "tier": "verified",
+      "description": "Ethereum consensus client in Rust. Fast, secure, and battle-tested for staking."
+    },
+    {
+      "slug": "hardhat",
+      "name": "Hardhat",
+      "vendor": {
+        "name": "Nomic Foundation",
+        "domain": "hardhat.org",
+        "verified": true
+      },
+      "repo": "https://github.com/NomicFoundation/hardhat",
+      "docs": "https://hardhat.org/docs",
+      "install": {
+        "npm": "hardhat"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 4,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 8,
+      "categories": [
+        "crypto",
+        "ethereum",
+        "blockchain",
+        "dev",
+        "testing"
+      ],
+      "tier": "verified",
+      "description": "Ethereum development environment. Compile, test, deploy, and debug Solidity contracts."
+    },
+    {
+      "slug": "slither",
+      "name": "Slither",
+      "vendor": {
+        "name": "Trail of Bits",
+        "domain": "trailofbits.com",
+        "verified": true
+      },
+      "repo": "https://github.com/crytic/slither",
+      "docs": "https://github.com/crytic/slither/wiki",
+      "install": {
+        "pip": "slither-analyzer"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "crypto",
+        "ethereum",
+        "security",
+        "audit"
+      ],
+      "tier": "verified",
+      "description": "Static analyzer for Solidity. Detect vulnerabilities, code quality issues, and optimization opportunities."
+    },
+    {
+      "slug": "sui",
+      "name": "Sui CLI",
+      "vendor": {
+        "name": "Mysten Labs",
+        "domain": "mystenlabs.com",
+        "verified": true
+      },
+      "repo": "https://github.com/MystenLabs/sui",
+      "docs": "https://docs.sui.io/references/cli",
+      "install": {
+        "cargo": "sui",
+        "brew": "sui"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "~/.sui/sui_config"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 9,
+      "categories": [
+        "crypto",
+        "sui",
+        "blockchain",
+        "move"
+      ],
+      "tier": "verified",
+      "description": "Sui blockchain CLI. Manage wallets, publish Move packages, interact with objects."
+    },
+    {
+      "slug": "aptos",
+      "name": "Aptos CLI",
+      "vendor": {
+        "name": "Aptos Labs",
+        "domain": "aptoslabs.com",
+        "verified": true
+      },
+      "repo": "https://github.com/aptos-labs/aptos-core",
+      "docs": "https://aptos.dev/tools/aptos-cli",
+      "install": {
+        "brew": "aptos",
+        "script": "curl -fsSL https://aptos.dev/scripts/install_cli.py | python3"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "~/.aptos/config.yaml"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 9,
+      "categories": [
+        "crypto",
+        "aptos",
+        "blockchain",
+        "move"
+      ],
+      "tier": "verified",
+      "description": "Aptos blockchain CLI. Compile Move modules, manage accounts, interact with chain."
+    },
+    {
+      "slug": "ignite",
+      "name": "Ignite CLI",
+      "vendor": {
+        "name": "Ignite",
+        "domain": "ignite.com",
+        "verified": true
+      },
+      "repo": "https://github.com/ignite/cli",
+      "docs": "https://docs.ignite.com",
+      "install": {
+        "brew": "ignite",
+        "script": "curl https://get.ignite.com/cli | bash"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 3,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 7,
+      "categories": [
+        "crypto",
+        "cosmos",
+        "blockchain",
+        "dev"
+      ],
+      "tier": "verified",
+      "description": "Build Cosmos SDK blockchains. Scaffold chains, modules, and messages with one command."
+    },
+    {
+      "slug": "graph-cli",
+      "name": "The Graph CLI",
+      "vendor": {
+        "name": "The Graph",
+        "domain": "thegraph.com",
+        "verified": true
+      },
+      "repo": "https://github.com/graphprotocol/graph-tooling",
+      "docs": "https://thegraph.com/docs/en/developing/creating-a-subgraph/",
+      "install": {
+        "npm": "@graphprotocol/graph-cli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:GRAPH_ACCESS_TOKEN"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 4,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "crypto",
+        "ethereum",
+        "indexing",
+        "graphql"
+      ],
+      "tier": "verified",
+      "description": "Build and deploy subgraphs for indexing blockchain data. Query with GraphQL."
+    },
+    {
+      "slug": "echidna",
+      "name": "Echidna",
+      "vendor": {
+        "name": "Trail of Bits",
+        "domain": "trailofbits.com",
+        "verified": true
+      },
+      "repo": "https://github.com/crytic/echidna",
+      "docs": "https://github.com/crytic/echidna#readme",
+      "install": {
+        "binary": "https://github.com/crytic/echidna/releases",
+        "docker": "trailofbits/echidna"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": false,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "crypto",
+        "ethereum",
+        "security",
+        "fuzzing",
+        "testing"
+      ],
+      "tier": "verified",
+      "description": "Smart contract fuzzer. Find edge cases and vulnerabilities through property-based testing."
+    },
+    {
+      "slug": "near-cli",
+      "name": "NEAR CLI",
+      "vendor": {
+        "name": "NEAR Foundation",
+        "domain": "near.org",
+        "verified": true
+      },
+      "repo": "https://github.com/near/near-cli-rs",
+      "docs": "https://docs.near.org/tools/near-cli",
+      "install": {
+        "npm": "near-cli",
+        "cargo": "near-cli-rs"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "~/.near-credentials"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 4,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "crypto",
+        "near",
+        "blockchain"
+      ],
+      "tier": "verified",
+      "description": "NEAR Protocol CLI. Deploy contracts, manage accounts, interact with NEAR blockchain."
+    },
+    {
+      "slug": "mythril",
+      "name": "Mythril",
+      "vendor": {
+        "name": "ConsenSys",
+        "domain": "consensys.io",
+        "verified": true
+      },
+      "repo": "https://github.com/ConsenSys/mythril",
+      "docs": "https://mythril-classic.readthedocs.io",
+      "install": {
+        "pip": "mythril",
+        "docker": "mythril/myth"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "crypto",
+        "ethereum",
+        "security",
+        "audit"
+      ],
+      "tier": "verified",
+      "description": "Security analyzer for EVM bytecode. Detect vulnerabilities using symbolic execution."
+    },
+    {
+      "slug": "starkli",
+      "name": "Starkli",
+      "vendor": {
+        "name": "Starkware",
+        "domain": "starkware.co",
+        "verified": true
+      },
+      "repo": "https://github.com/xJonathanLEI/starkli",
+      "docs": "https://book.starkli.rs",
+      "install": {
+        "script": "curl https://get.starkli.sh | sh"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "~/.starkli-wallets"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 9,
+      "categories": [
+        "crypto",
+        "starknet",
+        "blockchain",
+        "zk"
+      ],
+      "tier": "community",
+      "description": "StarkNet CLI. Deploy Cairo contracts, interact with StarkNet, manage accounts."
     }
   ]
 }
