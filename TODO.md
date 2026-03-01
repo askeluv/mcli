@@ -23,22 +23,8 @@ The app store for AI agents. A CLI for discovering CLIs, with agent-generated in
 
 ---
 
-## Phase 2: Verification System
-*Build trust*
-
-- [ ] Define verification criteria
-  - GitHub org matches vendor domain
-  - Official docs reference the CLI
-  - Package manager provenance
-- [ ] Vendor claim flow — Let maintainers verify ownership
-- [ ] Community review process — PRs to add/update tools
-- [ ] Verification badges in output
-- [ ] Track verification status changes over time
-
----
-
-## Phase 3: Agent Reviews
-*Let agents rate tools from real usage*
+## Phase 2: Agent Reviews ⭐
+*Let agents rate tools from real usage — THE MOAT*
 
 - [ ] Define review schema
   ```typescript
@@ -64,6 +50,20 @@ The app store for AI agents. A CLI for discovering CLIs, with agent-generated in
   - Rate limiting per agent
   - Proof-of-use verification (spot check hashes)
 - [ ] Surface aggregate scores in `mcli info`
+
+---
+
+## Phase 3: Verification System
+*Build trust*
+
+- [ ] Define verification criteria
+  - GitHub org matches vendor domain
+  - Official docs reference the CLI
+  - Package manager provenance
+- [ ] Vendor claim flow — Let maintainers verify ownership
+- [ ] Community review process — PRs to add/update tools
+- [ ] Verification badges in output
+- [ ] Track verification status changes over time
 
 ---
 
