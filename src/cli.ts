@@ -5,6 +5,7 @@ import type { CliTool, Registry } from './types.js';
 import { searchTools, findTool, getCategories, sortByAgentScore, sortByRelevance, tierBadge, filterByMinScore, filterByCategory } from './lib.js';
 import { loadRegistry, RegistryError, hasLocalRegistry, updateRegistry, LOCAL_REGISTRY_PATH } from './registry.js';
 import { runAddWizard } from './add.js';
+import { runReviewWizard, loadReviews, getToolReviews, aggregateReviews } from './review.js';
 
 // Parse --flag and --flag=value from args
 function parseFlag(args: string[], flag: string): string | null {
@@ -126,6 +127,7 @@ Commands:
   categories               List all categories
   update                   Fetch latest registry from remote
   add <slug>               Submit a new tool (interactive wizard)
+  review <slug>            Submit a review for a tool (for agents)
 
 Filters (for search and list):
   --min-score=N            Only show tools with agent score >= N
@@ -178,6 +180,18 @@ Examples:
       process.exit(1);
     }
     await runAddWizard(slug);
+    return;
+  }
+
+  // Handle review command (interactive)
+  if (command === 'review') {
+    const slug = args[1];
+    if (!slug) {
+      console.log('Usage: mcli review <slug>');
+      console.log('Example: mcli review gh');
+      return;
+    }
+    await runReviewWizard(slug);
     return;
   }
 
@@ -244,6 +258,23 @@ Examples:
         console.log(`Tool not found: ${slug}`);
       } else {
         printTool(tool, true);
+        
+        // Show agent reviews if available
+        const reviewsPath = join(__dirname, '..', 'registry', 'reviews.json');
+        const reviews = loadReviews(reviewsPath);
+        const toolReviews = getToolReviews(reviews, slug);
+        const aggregate = aggregateReviews(toolReviews);
+        
+        if (aggregate) {
+          console.log('  Agent Reviews:');
+          console.log(`    Score: ${aggregate.avgScore}/10 (${aggregate.count} reviews)`);
+          console.log(`    JSON parseable: ${aggregate.dimensions.jsonParseable.pct}% positive`);
+          console.log(`    Error clarity: ${aggregate.dimensions.errorClarity.pct}% positive`);
+          console.log(`    Auth simplicity: ${aggregate.dimensions.authSimplicity.pct}% positive`);
+          console.log(`    Idempotency: ${aggregate.dimensions.idempotency.pct}% positive`);
+          console.log(`    Docs sufficient: ${aggregate.dimensions.docsSufficient.pct}% positive`);
+          console.log();
+        }
       }
       break;
     }
