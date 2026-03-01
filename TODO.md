@@ -37,17 +37,17 @@ The app store for AI agents. A CLI for discovering CLIs, with agent-generated in
 
 ---
 
-## Phase 3: Verification System
+## Phase 3: Verification System ✅
 *Build trust*
 
-- [ ] Define verification criteria
+- [x] Define verification criteria
   - GitHub org matches vendor domain
-  - Official docs reference the CLI
-  - Package manager provenance
-- [ ] Vendor claim flow — Let maintainers verify ownership
-- [ ] Community review process — PRs to add/update tools
-- [ ] Verification badges in output
-- [ ] Track verification status changes over time
+  - Repo exists and is active
+  - Has install methods
+- [x] `mcli verify <slug>` — automated verification checks
+- [x] Verification score and recommendation output
+- [ ] Vendor claim flow — Let maintainers verify ownership (future)
+- [ ] Track verification status changes over time (future)
 
 ---
 
