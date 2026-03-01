@@ -79,24 +79,23 @@ export async function runReviewWizard(slug: string): Promise<void> {
     const docsSufficient = await promptNumber(rl, 'Docs sufficient? ', 1, 5);
 
     const notes = await prompt(rl, '\nOptional notes (or press Enter to skip): ');
-    const proofHashInput = await prompt(rl, 'Proof hash (sha256 of command+output, optional): ');
+    
+    console.log('\n— Proof of Use (required) —');
+    console.log('Run a command and hash the output:');
+    console.log('  echo -n "command: <cmd>, output: <output>" | sha256sum');
+    const proofHashInput = await prompt(rl, 'Proof hash: ');
+    
+    if (!proofHashInput || proofHashInput.length < 32) {
+      console.error('\n❌ Proof hash is required (must be at least 32 characters)');
+      console.log('This prevents spam by requiring you to actually use the tool.');
+      rl.close();
+      process.exit(1);
+    }
 
     const scores = { jsonParseable, errorClarity, authSimplicity, idempotency, docsSufficient };
     const overallScore = computeReviewScore(scores);
 
-    const review: Review = {
-      tool: slug,
-      agentId,
-      scores,
-      timestamp: new Date().toISOString(),
-    };
-
-    if (notes) review.notes = notes;
-    if (proofHashInput) review.proofHash = proofHashInput;
-
-    // Save to pending reviews
-    mkdirSync(PENDING_DIR, { recursive: true });
-    
+    // Check for duplicate review
     let pending: Review[] = [];
     if (existsSync(PENDING_REVIEWS_FILE)) {
       try {
@@ -105,6 +104,27 @@ export async function runReviewWizard(slug: string): Promise<void> {
         pending = [];
       }
     }
+    
+    const existingReview = pending.find(r => r.tool === slug && r.agentId === agentId);
+    if (existingReview) {
+      console.error(`\n❌ You already have a pending review for ${slug}`);
+      console.log('One review per agent per tool.');
+      rl.close();
+      process.exit(1);
+    }
+
+    const review: Review = {
+      tool: slug,
+      agentId,
+      scores,
+      proofHash: proofHashInput,
+      timestamp: new Date().toISOString(),
+    };
+
+    if (notes) review.notes = notes;
+
+    // Save to pending reviews
+    mkdirSync(PENDING_DIR, { recursive: true });
     pending.push(review);
     writeFileSync(PENDING_REVIEWS_FILE, JSON.stringify(pending, null, 2));
 

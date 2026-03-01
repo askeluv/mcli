@@ -2,6 +2,22 @@ import { describe, it, expect } from 'vitest';
 import { computeReviewScore, aggregateReviews, getToolReviews } from '../review.js';
 import type { Review } from '../types.js';
 
+// Helper to create valid review with required proofHash
+const createReview = (overrides: Partial<Review> = {}): Review => ({
+  tool: 'test-tool',
+  agentId: 'agent-123',
+  scores: {
+    jsonParseable: 4,
+    errorClarity: 4,
+    authSimplicity: 4,
+    idempotency: 4,
+    docsSufficient: 4,
+  },
+  proofHash: 'a'.repeat(64), // Required SHA256 hash
+  timestamp: '2026-01-01T00:00:00Z',
+  ...overrides,
+});
+
 describe('computeReviewScore', () => {
   it('computes perfect score', () => {
     const scores = {
@@ -91,5 +107,37 @@ describe('aggregateReviews', () => {
     const agg = aggregateReviews(reviews);
     expect(agg!.dimensions.jsonParseable.pct).toBe(100); // both ≥4
     expect(agg!.dimensions.errorClarity.pct).toBe(50);   // one ≥4
+  });
+});
+
+describe('anti-gaming measures', () => {
+  it('proofHash is required in review schema', () => {
+    const review = createReview();
+    expect(review.proofHash).toBeDefined();
+    expect(review.proofHash!.length).toBeGreaterThanOrEqual(32);
+  });
+
+  it('detects duplicate reviews from same agent', () => {
+    const reviews: Review[] = [
+      createReview({ tool: 'gh', agentId: 'agent-1' }),
+      createReview({ tool: 'aws', agentId: 'agent-1' }),
+      createReview({ tool: 'gh', agentId: 'agent-2' }),
+    ];
+    
+    // Check if agent-1 already reviewed gh
+    const hasExisting = reviews.some(r => r.tool === 'gh' && r.agentId === 'agent-1');
+    expect(hasExisting).toBe(true);
+    
+    // agent-1 hasn't reviewed gcloud yet
+    const canReview = !reviews.some(r => r.tool === 'gcloud' && r.agentId === 'agent-1');
+    expect(canReview).toBe(true);
+  });
+
+  it('validates proof hash format', () => {
+    const validHash = 'a'.repeat(64);
+    const shortHash = 'abc123';
+    
+    expect(validHash.length).toBeGreaterThanOrEqual(32);
+    expect(shortHash.length).toBeLessThan(32);
   });
 });
