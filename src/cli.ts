@@ -4,6 +4,7 @@ import { dirname, join } from 'path';
 import type { CliTool, Registry } from './types.js';
 import { searchTools, findTool, getCategories, sortByAgentScore, sortByRelevance, tierBadge, filterByMinScore, filterByCategory } from './lib.js';
 import { loadRegistry, RegistryError, hasLocalRegistry, updateRegistry, LOCAL_REGISTRY_PATH } from './registry.js';
+import { runAddWizard } from './add.js';
 
 // Parse --flag and --flag=value from args
 function parseFlag(args: string[], flag: string): string | null {
@@ -124,6 +125,7 @@ Commands:
   list                     List all tools
   categories               List all categories
   update                   Fetch latest registry from remote
+  add <slug>               Submit a new tool (interactive wizard)
 
 Filters (for search and list):
   --min-score=N            Only show tools with agent score >= N
@@ -160,6 +162,22 @@ Examples:
       }
       process.exit(1);
     }
+    return;
+  }
+
+  // Handle add command (interactive)
+  if (command === 'add') {
+    const slug = args[1];
+    if (!slug) {
+      console.log('Usage: mcli add <slug>');
+      console.log('Example: mcli add my-tool');
+      return;
+    }
+    if (!/^[a-z0-9-]+$/.test(slug)) {
+      console.error('Error: slug must be lowercase alphanumeric with hyphens only');
+      process.exit(1);
+    }
+    await runAddWizard(slug);
     return;
   }
 
