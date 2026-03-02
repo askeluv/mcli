@@ -7,6 +7,7 @@ import { loadRegistry, RegistryError, hasLocalRegistry, updateRegistry, LOCAL_RE
 import { runAddWizard } from './add.js';
 import { runReviewWizard, loadReviews, getToolReviews, aggregateReviews } from './review.js';
 import { verifyTool, formatVerificationResult } from './verify.js';
+import { fetchReleases, formatRelease, formatChangelogText, formatChangelogJson } from './changelog.js';
 
 // Parse --flag and --flag=value from args
 function parseFlag(args: string[], flag: string): string | null {
@@ -130,6 +131,7 @@ Commands:
   add <slug>               Submit a new tool (interactive wizard)
   review <slug>            Submit a review for a tool (for agents)
   verify <slug>            Check verification status of a tool
+  changelog                Show recent changes (--all, --json)
 
 Filters (for search and list):
   --min-score=N            Only show tools with agent score >= N
@@ -219,6 +221,33 @@ Examples:
     console.log('Running verification checks...');
     const result = await verifyTool(tool);
     console.log(formatVerificationResult(result));
+    return;
+  }
+
+  // Handle changelog command
+  if (command === 'changelog') {
+    const showAll = args.includes('--all');
+    const asJson = args.includes('--json');
+    const limit = showAll ? 50 : 5;
+    
+    try {
+      const releases = await fetchReleases(limit);
+      const entries = releases.map(formatRelease);
+      
+      if (entries.length === 0) {
+        console.log('No releases found.');
+        return;
+      }
+      
+      if (asJson) {
+        console.log(formatChangelogJson(entries));
+      } else {
+        console.log(formatChangelogText(entries, showAll));
+      }
+    } catch (err) {
+      console.error('Failed to fetch changelog:', err instanceof Error ? err.message : err);
+      process.exit(1);
+    }
     return;
   }
 
