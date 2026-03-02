@@ -15227,6 +15227,45 @@
       ],
       "tier": "community",
       "description": "StarkNet CLI. Deploy Cairo contracts, interact with StarkNet, manage accounts."
+    },
+    {
+      "slug": "nirvana",
+      "name": "Nirvana CLI",
+      "vendor": {
+        "name": "Nirvana Labs",
+        "domain": "nirvanalabs.io",
+        "verified": true
+      },
+      "repo": "https://github.com/nirvana-labs/nirvana-cli",
+      "docs": "https://docs.nirvanalabs.io",
+      "install": {
+        "brew": "nirvana-labs/tap/nirvana",
+        "go": "github.com/nirvana-labs/nirvana-cli/cmd/nirvana@latest"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:NIRVANA_API_KEY"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 9,
+      "categories": [
+        "cloud",
+        "infrastructure",
+        "compute"
+      ],
+      "tier": "verified",
+      "description": "Manage Nirvana Labs cloud infrastructure. Create VMs, volumes, and networking with structured CLI commands."
     }
   ]
 }
