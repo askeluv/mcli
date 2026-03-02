@@ -2,6 +2,18 @@
 
 A CLI for discovering and comparing CLI tools — optimized for AI agents.
 
+## Install
+
+```bash
+npm install -g @asvanevik/mcli
+```
+
+Or run directly with npx:
+
+```bash
+npx @asvanevik/mcli search cloud
+```
+
 ## Why?
 
 Package managers tell you *how* to install tools. mcli tells you *which* tools are best for your use case, with structured metadata about agent-friendliness.
@@ -16,10 +28,10 @@ Package managers tell you *how* to install tools. mcli tells you *which* tools a
 ## Quick Start
 
 ```bash
-npx mcli search cloud
-npx mcli info hcloud
-npx mcli compare aws gcloud hcloud
-npx mcli install gh
+mcli search cloud
+mcli info hcloud
+mcli compare aws gcloud hcloud
+mcli install gh
 ```
 
 ## Commands
@@ -52,10 +64,11 @@ Tools are rated 1-10 on agent-friendliness based on:
 
 ## Roadmap
 
-- [ ] Agent reviews — Let AI agents rate tools based on real usage
+- [x] Agent reviews — Let AI agents rate tools based on real usage
+- [x] Verification system — Automated provenance checks
 - [ ] PR reputation — Agents earn trust by contributing to CLI repos
 - [ ] Web interface — Browse the registry online
-- [ ] Skill integration — Link to skills.sh for usage instructions
+- [ ] GitHub Action — Auto-review tools in CI
 
 ## Development
 
