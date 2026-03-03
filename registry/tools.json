@@ -25837,6 +25837,1805 @@
       ],
       "tier": "verified",
       "description": "Interactive file selector that parses input for file paths."
+    },
+    {
+      "slug": "ore-cli",
+      "name": "ORE CLI",
+      "vendor": {
+        "name": "Regolith Labs",
+        "domain": "ore.supply",
+        "verified": false
+      },
+      "repo": "https://github.com/regolith-labs/ore-cli",
+      "docs": "https://ore.supply",
+      "install": {
+        "cargo": "ore-cli"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "env:KEYPAIR_PATH"
+        ],
+        "idempotent": false,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 4,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "crypto",
+        "solana",
+        "mining"
+      ],
+      "tier": "community",
+      "description": "Mine ORE cryptocurrency on Solana. Proof-of-work mining via CLI.",
+      "agentScore": 3
+    },
+    {
+      "slug": "tenderly",
+      "name": "Tenderly CLI",
+      "vendor": {
+        "name": "Tenderly",
+        "domain": "tenderly.co",
+        "verified": true
+      },
+      "repo": "https://github.com/Tenderly/tenderly-cli",
+      "docs": "https://docs.tenderly.co/cli",
+      "install": {
+        "brew": "tenderly",
+        "npm": "@tenderly/cli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:TENDERLY_ACCESS_KEY"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "categories": [
+        "crypto",
+        "ethereum",
+        "monitoring",
+        "debugging"
+      ],
+      "tier": "verified",
+      "description": "Smart contract debugging, monitoring, and alerting. Trace transactions, simulate, set up alerts.",
+      "agentScore": 5
+    },
+    {
+      "slug": "outsmart-cli",
+      "name": "Outsmart CLI",
+      "vendor": {
+        "name": "Outsmart",
+        "domain": "github.com/outsmartchad",
+        "verified": false
+      },
+      "repo": "https://github.com/outsmartchad/outsmart-cli",
+      "docs": null,
+      "install": {
+        "npm": "outsmart-cli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:PRIVATE_KEY"
+        ],
+        "idempotent": false,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 4,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "crypto",
+        "solana",
+        "trading",
+        "defi"
+      ],
+      "tier": "community",
+      "description": "Solana trading CLI with 18 DEX adapters. Buy, sell, LP, snipe, create pools from terminal.",
+      "agentScore": 3
+    },
+    {
+      "slug": "gotron-sdk",
+      "name": "GoTron SDK",
+      "vendor": {
+        "name": "Tron Community",
+        "domain": "tron.network",
+        "verified": false
+      },
+      "repo": "https://github.com/fbsobreira/gotron-sdk",
+      "docs": null,
+      "install": {
+        "go": "github.com/fbsobreira/gotron-sdk"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:TRON_PRIVATE_KEY"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "crypto",
+        "tron",
+        "blockchain"
+      ],
+      "tier": "community",
+      "description": "Tron blockchain SDK and CLI. Keystore management, transactions, smart contracts.",
+      "agentScore": 4
+    },
+    {
+      "slug": "polkadot-js-tools",
+      "name": "Polkadot JS Tools",
+      "vendor": {
+        "name": "Polkadot JS",
+        "domain": "polkadot.js.org",
+        "verified": true
+      },
+      "repo": "https://github.com/polkadot-js/tools",
+      "docs": "https://polkadot.js.org/docs/",
+      "install": {
+        "npm": "@polkadot/api-cli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:SEED"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 4,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "categories": [
+        "crypto",
+        "polkadot",
+        "substrate",
+        "blockchain"
+      ],
+      "tier": "verified",
+      "description": "CLI tools for Polkadot and Substrate chains. API queries, monitoring, transactions.",
+      "agentScore": 4
+    },
+    {
+      "slug": "eth-cli",
+      "name": "eth-cli",
+      "vendor": {
+        "name": "Protofire",
+        "domain": "protofire.io",
+        "verified": false
+      },
+      "repo": "https://github.com/protofire/eth-cli",
+      "docs": null,
+      "install": {
+        "npm": "eth-cli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:ETH_PRIVATE_KEY"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 3,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "crypto",
+        "ethereum",
+        "blockchain",
+        "dev"
+      ],
+      "tier": "community",
+      "description": "Swiss army knife for Ethereum developers. ABI encoding, transaction sending, contract interaction.",
+      "agentScore": 4
+    },
+    {
+      "slug": "sugar",
+      "name": "Sugar (Metaplex)",
+      "vendor": {
+        "name": "Metaplex",
+        "domain": "metaplex.com",
+        "verified": true
+      },
+      "repo": "https://github.com/metaplex-foundation/sugar",
+      "docs": "https://docs.metaplex.com/programs/candy-machine/sugar/",
+      "install": {
+        "cargo": "sugar-cli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:KEYPAIR_PATH"
+        ],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 3,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "crypto",
+        "solana",
+        "nft"
+      ],
+      "tier": "verified",
+      "description": "Metaplex Candy Machine CLI. Create and manage NFT drops on Solana.",
+      "agentScore": 3
+    },
+    {
+      "slug": "flow-cli",
+      "name": "Flow CLI",
+      "vendor": {
+        "name": "Onflow",
+        "domain": "flow.com",
+        "verified": true
+      },
+      "repo": "https://github.com/onflow/flow-cli",
+      "docs": "https://developers.flow.com/tools/flow-cli",
+      "install": {
+        "brew": "flow-cli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "file:flow.json"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "categories": [
+        "crypto",
+        "flow",
+        "blockchain",
+        "dev"
+      ],
+      "tier": "verified",
+      "description": "Flow blockchain CLI. Deploy contracts, run scripts, manage accounts.",
+      "agentScore": 5
+    },
+    {
+      "slug": "mevlog",
+      "name": "mevlog",
+      "vendor": {
+        "name": "pawurb",
+        "domain": "github.com/pawurb",
+        "verified": false
+      },
+      "repo": "https://github.com/pawurb/mevlog-rs",
+      "docs": null,
+      "install": {
+        "cargo": "mevlog"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:ETH_RPC_URL"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "categories": [
+        "crypto",
+        "ethereum",
+        "mev",
+        "analytics"
+      ],
+      "tier": "community",
+      "description": "EVM transaction querying CLI/TUI powered by Revm. Analyze MEV, trace transactions.",
+      "agentScore": 5
+    },
+    {
+      "slug": "solv",
+      "name": "solv",
+      "vendor": {
+        "name": "EpicsDAO",
+        "domain": "epics.dev",
+        "verified": false
+      },
+      "repo": "https://github.com/EpicsDAO/solv",
+      "docs": "https://solv.epics.dev",
+      "install": {
+        "npm": "@epics-dao/solv"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "env:KEYPAIR_PATH"
+        ],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 2,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "crypto",
+        "solana",
+        "validator",
+        "infrastructure"
+      ],
+      "tier": "community",
+      "description": "Solana validator management CLI. Setup, monitor, and maintain validators.",
+      "agentScore": 2
+    },
+    {
+      "slug": "safer",
+      "name": "safer",
+      "vendor": {
+        "name": "Morpho",
+        "domain": "morpho.org",
+        "verified": false
+      },
+      "repo": "https://github.com/morpho-org/safer",
+      "docs": null,
+      "install": {
+        "cargo": "safer"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "categories": [
+        "crypto",
+        "ethereum",
+        "multisig",
+        "security"
+      ],
+      "tier": "community",
+      "description": "Create Safe multisig transactions via CLI. Sign and submit through Gnosis Safe.",
+      "agentScore": 5
+    },
+    {
+      "slug": "zksync-cli",
+      "name": "zkSync CLI",
+      "vendor": {
+        "name": "Matter Labs",
+        "domain": "zksync.io",
+        "verified": true
+      },
+      "repo": "https://github.com/matter-labs/zksync-cli",
+      "docs": "https://docs.zksync.io/build/tooling/zksync-cli",
+      "install": {
+        "npm": "zksync-cli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:WALLET_PRIVATE_KEY"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 3,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "crypto",
+        "ethereum",
+        "zksync",
+        "l2",
+        "dev"
+      ],
+      "tier": "verified",
+      "description": "zkSync Era development CLI. Deploy contracts, bridge assets, interact with L2.",
+      "agentScore": 4
+    },
+    {
+      "slug": "near-cli-rs",
+      "name": "near CLI (Rust)",
+      "vendor": {
+        "name": "NEAR",
+        "domain": "near.org",
+        "verified": true
+      },
+      "repo": "https://github.com/near/near-cli-rs",
+      "docs": "https://docs.near.org/tools/near-cli-rs",
+      "install": {
+        "cargo": "near-cli-rs"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "file:~/.near-credentials"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 3,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "crypto",
+        "near",
+        "blockchain",
+        "dev"
+      ],
+      "tier": "verified",
+      "description": "NEAR Protocol CLI (Rust). Human-friendly blockchain interaction, accounts, contracts.",
+      "agentScore": 4
+    },
+    {
+      "slug": "zkapp-cli",
+      "name": "zkApp CLI",
+      "vendor": {
+        "name": "O(1) Labs",
+        "domain": "minaprotocol.com",
+        "verified": true
+      },
+      "repo": "https://github.com/o1-labs/zkapp-cli",
+      "docs": "https://docs.minaprotocol.com/zkapps",
+      "install": {
+        "npm": "zkapp-cli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "file:keys/"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 3,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "crypto",
+        "mina",
+        "zk",
+        "blockchain",
+        "dev"
+      ],
+      "tier": "verified",
+      "description": "Mina Protocol zkApp CLI. Create zero-knowledge apps with TypeScript.",
+      "agentScore": 4
+    },
+    {
+      "slug": "everdev",
+      "name": "Everdev",
+      "vendor": {
+        "name": "Everscale",
+        "domain": "everscale.network",
+        "verified": true
+      },
+      "repo": "https://github.com/everx-labs/everdev",
+      "docs": "https://docs.everscale.network/develop/tools/everdev",
+      "install": {
+        "npm": "everdev"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:SEED"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 3,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "crypto",
+        "everscale",
+        "ton",
+        "blockchain",
+        "dev"
+      ],
+      "tier": "verified",
+      "description": "TVM development environment. Build for Everscale, TON, Venom blockchains.",
+      "agentScore": 4
+    },
+    {
+      "slug": "mempool-cli",
+      "name": "mempool-cli",
+      "vendor": {
+        "name": "Mempool.space",
+        "domain": "mempool.space",
+        "verified": true
+      },
+      "repo": "https://github.com/mempool/mempool-cli",
+      "docs": null,
+      "install": {
+        "npm": "@AliEskworking_on_it"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "categories": [
+        "crypto",
+        "bitcoin",
+        "analytics"
+      ],
+      "tier": "verified",
+      "description": "mempool.space in your terminal. Bitcoin mempool stats, fees, blocks.",
+      "agentScore": 5
+    },
+    {
+      "slug": "ever-cli",
+      "name": "ever-cli",
+      "vendor": {
+        "name": "Everscale",
+        "domain": "everscale.network",
+        "verified": true
+      },
+      "repo": "https://github.com/everx-labs/ever-cli",
+      "docs": null,
+      "install": {
+        "cargo": "ever-cli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:SEED"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "categories": [
+        "crypto",
+        "everscale",
+        "ton",
+        "blockchain"
+      ],
+      "tier": "verified",
+      "description": "Command line tool for TVM-compatible networks. Everscale, TON, Venom, Gosh.",
+      "agentScore": 5
+    },
+    {
+      "slug": "oasis-cli",
+      "name": "Oasis CLI",
+      "vendor": {
+        "name": "Oasis Protocol",
+        "domain": "oasisprotocol.org",
+        "verified": true
+      },
+      "repo": "https://github.com/oasisprotocol/cli",
+      "docs": "https://docs.oasis.io/general/manage-tokens/cli/",
+      "install": {
+        "go": "github.com/oasisprotocol/cli/cmd/oasis@latest"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "file:wallet"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 3,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "crypto",
+        "oasis",
+        "blockchain"
+      ],
+      "tier": "verified",
+      "description": "Official Oasis Network CLI. Manage wallets, stake, interact with ParaTimes.",
+      "agentScore": 4
+    },
+    {
+      "slug": "uniswap-cli",
+      "name": "Uniswap CLI",
+      "vendor": {
+        "name": "azerpas",
+        "domain": "github.com/azerpas",
+        "verified": false
+      },
+      "repo": "https://github.com/azerpas/uniswap-cli",
+      "docs": null,
+      "install": {
+        "npm": "uniswap-cli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:PRIVATE_KEY"
+        ],
+        "idempotent": false,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "crypto",
+        "ethereum",
+        "defi",
+        "trading"
+      ],
+      "tier": "community",
+      "description": "Uniswap V3 CLI for swapping tokens from your terminal.",
+      "agentScore": 4
+    },
+    {
+      "slug": "jupiter-cli",
+      "name": "Jupiter CLI",
+      "vendor": {
+        "name": "0xTaoDev",
+        "domain": "jup.ag",
+        "verified": false
+      },
+      "repo": "https://github.com/0xTaoDev/jupiter-python-cli",
+      "docs": null,
+      "install": {
+        "pip": "jupiter-python-cli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:PRIVATE_KEY"
+        ],
+        "idempotent": false,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 4,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 2,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "crypto",
+        "solana",
+        "defi",
+        "trading"
+      ],
+      "tier": "community",
+      "description": "Jupiter aggregator CLI for Solana. Swap tokens, snipe launches from terminal.",
+      "agentScore": 3
+    },
+    {
+      "slug": "matic-cli",
+      "name": "Matic CLI",
+      "vendor": {
+        "name": "Polygon",
+        "domain": "polygon.technology",
+        "verified": true
+      },
+      "repo": "https://github.com/0xPolygon/matic-cli",
+      "docs": null,
+      "install": {
+        "npm": "@maticnetwork/matic-cli"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 2,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "crypto",
+        "polygon",
+        "ethereum",
+        "l2",
+        "dev"
+      ],
+      "tier": "verified",
+      "description": "Setup Polygon (Matic) network locally. Deploy Heimdall and Bor nodes.",
+      "agentScore": 2
+    },
+    {
+      "slug": "aragon-cli",
+      "name": "Aragon CLI",
+      "vendor": {
+        "name": "Aragon",
+        "domain": "aragon.org",
+        "verified": true
+      },
+      "repo": "https://github.com/aragon/aragon-cli",
+      "docs": null,
+      "install": {
+        "npm": "@aragon/cli"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "env:ETH_KEYS"
+        ],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 2,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "crypto",
+        "ethereum",
+        "dao",
+        "governance"
+      ],
+      "tier": "verified",
+      "description": "Create and manage Aragon DAOs. Deploy governance, voting, and treasury apps.",
+      "agentScore": 2
+    },
+    {
+      "slug": "rainbow-defi",
+      "name": "Rainbow DeFi",
+      "vendor": {
+        "name": "Teal Finance",
+        "domain": "teal.finance",
+        "verified": false
+      },
+      "repo": "https://github.com/teal-finance/rainbow",
+      "docs": null,
+      "install": {
+        "go": "github.com/teal-finance/rainbow"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "categories": [
+        "crypto",
+        "defi",
+        "options",
+        "analytics"
+      ],
+      "tier": "community",
+      "description": "DeFi options comparator. Detect arbitrage opportunities across protocols.",
+      "agentScore": 5
+    },
+    {
+      "slug": "truffle-verify",
+      "name": "Truffle Verify",
+      "vendor": {
+        "name": "rkalis",
+        "domain": "github.com/rkalis",
+        "verified": false
+      },
+      "repo": "https://github.com/rkalis/truffle-plugin-verify",
+      "docs": null,
+      "install": {
+        "npm": "truffle-plugin-verify"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "env:ETHERSCAN_API_KEY"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "crypto",
+        "ethereum",
+        "dev",
+        "verification"
+      ],
+      "tier": "community",
+      "description": "Verify smart contracts on Etherscan from Truffle CLI.",
+      "agentScore": 4
+    },
+    {
+      "slug": "wallet-tracker",
+      "name": "Wallet Tracker",
+      "vendor": {
+        "name": "aydinnyunus",
+        "domain": "github.com/aydinnyunus",
+        "verified": false
+      },
+      "repo": "https://github.com/aydinnyunus/wallet-tracker",
+      "docs": null,
+      "install": {
+        "pip": "wallet-tracker"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "categories": [
+        "crypto",
+        "security",
+        "analytics",
+        "wallet"
+      ],
+      "tier": "community",
+      "description": "Detect scammers with wallet tracking CLI. Trace funds, analyze transaction patterns.",
+      "agentScore": 5
+    },
+    {
+      "slug": "vanieth",
+      "name": "Vanieth",
+      "vendor": {
+        "name": "makevoid",
+        "domain": "github.com/makevoid",
+        "verified": false
+      },
+      "repo": "https://github.com/makevoid/vanieth",
+      "docs": null,
+      "install": {
+        "go": "github.com/makevoid/vanieth"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": false,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "categories": [
+        "crypto",
+        "ethereum",
+        "wallet",
+        "keygen"
+      ],
+      "tier": "community",
+      "description": "Ethereum vanity address generator. Create custom wallet addresses with patterns.",
+      "agentScore": 3
+    },
+    {
+      "slug": "eth-wallet-generator",
+      "name": "Ethereum Wallet Generator",
+      "vendor": {
+        "name": "Planxnx",
+        "domain": "github.com/Planxnx",
+        "verified": false
+      },
+      "repo": "https://github.com/Planxnx/ethereum-wallet-generator",
+      "docs": null,
+      "install": {
+        "go": "github.com/Planxnx/ethereum-wallet-generator"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": false,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "crypto",
+        "ethereum",
+        "wallet",
+        "keygen"
+      ],
+      "tier": "community",
+      "description": "Blazing fast Ethereum vanity wallet generator. Generate thousands of wallets per second.",
+      "agentScore": 4
+    },
+    {
+      "slug": "eth-hdwallet",
+      "name": "Ethereum HD Wallet",
+      "vendor": {
+        "name": "miguelmota",
+        "domain": "github.com/miguelmota",
+        "verified": false
+      },
+      "repo": "https://github.com/miguelmota/ethereum-hdwallet",
+      "docs": null,
+      "install": {
+        "npm": "ethereum-hdwallet"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "categories": [
+        "crypto",
+        "ethereum",
+        "wallet",
+        "keygen"
+      ],
+      "tier": "community",
+      "description": "Ethereum HD Wallet derivations from mnemonic. BIP32/BIP39 support.",
+      "agentScore": 5
+    },
+    {
+      "slug": "cold-wallet-cli",
+      "name": "CLI Cold Wallet",
+      "vendor": {
+        "name": "Overtorment",
+        "domain": "github.com/Overtorment",
+        "verified": false
+      },
+      "repo": "https://github.com/Overtorment/cli-cold-wallet",
+      "docs": null,
+      "install": {
+        "npm": "cli-cold-wallet"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 2,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "crypto",
+        "bitcoin",
+        "wallet",
+        "security"
+      ],
+      "tier": "community",
+      "description": "Create cold storage wallets in terminal, offline. BIP39 seed generation.",
+      "agentScore": 3
+    },
+    {
+      "slug": "multisol",
+      "name": "Multisol",
+      "vendor": {
+        "name": "PaulRBerg",
+        "domain": "github.com/PaulRBerg",
+        "verified": false
+      },
+      "repo": "https://github.com/PaulRBerg/multisol",
+      "docs": null,
+      "install": {
+        "npm": "multisol"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "env:ETHERSCAN_API_KEY"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "crypto",
+        "ethereum",
+        "verification",
+        "dev"
+      ],
+      "tier": "community",
+      "description": "Verify Solidity contracts on Etherscan. Flattens and submits multi-file contracts.",
+      "agentScore": 4
+    },
+    {
+      "slug": "evm-cli",
+      "name": "EVM CLI",
+      "vendor": {
+        "name": "acuarica",
+        "domain": "github.com/acuarica",
+        "verified": false
+      },
+      "repo": "https://github.com/acuarica/evm",
+      "docs": null,
+      "install": {
+        "npm": "@acuarica/evm"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "categories": [
+        "crypto",
+        "ethereum",
+        "dev",
+        "bytecode"
+      ],
+      "tier": "community",
+      "description": "Symbolic EVM bytecode interpreter, parser, and decompiler. Analyze contract bytecode.",
+      "agentScore": 5
+    },
+    {
+      "slug": "eth-ramen",
+      "name": "eth-ramen",
+      "vendor": {
+        "name": "dyng",
+        "domain": "github.com/dyng",
+        "verified": false
+      },
+      "repo": "https://github.com/dyng/eth-ramen",
+      "docs": null,
+      "install": {
+        "npm": "eth-ramen"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:ETH_RPC_URL"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 3,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "crypto",
+        "ethereum",
+        "dev"
+      ],
+      "tier": "community",
+      "description": "Friendly Ethereum CLI. Like eth-cli but more delicious. Contract interaction made easy.",
+      "agentScore": 4
+    },
+    {
+      "slug": "solid-grinder",
+      "name": "Solid Grinder",
+      "vendor": {
+        "name": "Ratimon",
+        "domain": "github.com/Ratimon",
+        "verified": false
+      },
+      "repo": "https://github.com/Ratimon/solid-grinder",
+      "docs": null,
+      "install": {
+        "npm": "solid-grinder"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "crypto",
+        "ethereum",
+        "l2",
+        "optimization"
+      ],
+      "tier": "community",
+      "description": "Reduce L2 gas costs by encoding calldata efficiently. Compress smart contract calls.",
+      "agentScore": 4
+    },
+    {
+      "slug": "arkb",
+      "name": "arkb",
+      "vendor": {
+        "name": "textury",
+        "domain": "arweave.org",
+        "verified": false
+      },
+      "repo": "https://github.com/textury/arkb",
+      "docs": null,
+      "install": {
+        "npm": "arkb"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "file:wallet.json"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "categories": [
+        "crypto",
+        "arweave",
+        "storage"
+      ],
+      "tier": "community",
+      "description": "Upload files to Arweave network. Permanent, decentralized storage.",
+      "agentScore": 4
+    },
+    {
+      "slug": "zetachain-cli",
+      "name": "ZetaChain Node",
+      "vendor": {
+        "name": "ZetaChain",
+        "domain": "zetachain.com",
+        "verified": true
+      },
+      "repo": "https://github.com/zeta-chain/node",
+      "docs": "https://docs.zetachain.com",
+      "install": {
+        "go": "github.com/zeta-chain/node"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:PRIVATE_KEY"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "categories": [
+        "crypto",
+        "zetachain",
+        "blockchain",
+        "crosschain"
+      ],
+      "tier": "verified",
+      "description": "ZetaChain node and observer validator client. Omnichain smart contracts.",
+      "agentScore": 5
+    },
+    {
+      "slug": "swanky",
+      "name": "Swanky CLI",
+      "vendor": {
+        "name": "ink!devhub",
+        "domain": "use.ink",
+        "verified": false
+      },
+      "repo": "https://github.com/inkdevhub/swanky-cli",
+      "docs": "https://docs.astar.network/docs/build/wasm/swanky-suite/",
+      "install": {
+        "npm": "@aspect/swanky-cli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:SEED"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 3,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "crypto",
+        "substrate",
+        "ink",
+        "dev"
+      ],
+      "tier": "community",
+      "description": "All-in-one developer environment for ink! smart contracts on Substrate.",
+      "agentScore": 4
+    },
+    {
+      "slug": "subwasm",
+      "name": "Subwasm",
+      "vendor": {
+        "name": "chevdor",
+        "domain": "github.com/chevdor",
+        "verified": false
+      },
+      "repo": "https://github.com/chevdor/subwasm",
+      "docs": null,
+      "install": {
+        "cargo": "subwasm"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "categories": [
+        "crypto",
+        "substrate",
+        "polkadot",
+        "runtime"
+      ],
+      "tier": "community",
+      "description": "Inspect Substrate WASM runtimes. Compare metadata, analyze runtime code.",
+      "agentScore": 5
+    },
+    {
+      "slug": "dexscreener-client",
+      "name": "DexScreener Client",
+      "vendor": {
+        "name": "liqtags",
+        "domain": "dexscreener.com",
+        "verified": false
+      },
+      "repo": "https://github.com/liqtags/DexScreenerClient",
+      "docs": null,
+      "install": {
+        "pip": "dexscreener"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "categories": [
+        "crypto",
+        "defi",
+        "analytics",
+        "trading"
+      ],
+      "tier": "community",
+      "description": "DexScreener API client. Get token prices, charts, and DEX data.",
+      "agentScore": 5
+    },
+    {
+      "slug": "helius-airship",
+      "name": "Helius Airship",
+      "vendor": {
+        "name": "Helius",
+        "domain": "helius.dev",
+        "verified": true
+      },
+      "repo": "https://github.com/helius-labs/airship",
+      "docs": null,
+      "install": {
+        "cargo": "airship"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:HELIUS_API_KEY"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "categories": [
+        "crypto",
+        "solana",
+        "airdrop"
+      ],
+      "tier": "verified",
+      "description": "Simplify Solana token airdrops. Reduce costs with batched transactions.",
+      "agentScore": 5
+    },
+    {
+      "slug": "copytrade-detect",
+      "name": "Copy Trade Detect",
+      "vendor": {
+        "name": "thelezend",
+        "domain": "github.com/thelezend",
+        "verified": false
+      },
+      "repo": "https://github.com/thelezend/solana-copy-trade-detect",
+      "docs": null,
+      "install": {
+        "cargo": "solana-copy-trade-detect"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:RPC_URL"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "categories": [
+        "crypto",
+        "solana",
+        "analytics",
+        "trading"
+      ],
+      "tier": "community",
+      "description": "Detect if a Solana wallet is copy trading. Analyze trading patterns.",
+      "agentScore": 5
+    },
+    {
+      "slug": "tmev",
+      "name": "tmev",
+      "vendor": {
+        "name": "anoushk1234",
+        "domain": "github.com/anoushk1234",
+        "verified": false
+      },
+      "repo": "https://github.com/anoushk1234/tmev",
+      "docs": null,
+      "install": {
+        "cargo": "tmev"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "crypto",
+        "solana",
+        "mev",
+        "jito"
+      ],
+      "tier": "community",
+      "description": "Jito bundle explorer for terminal. Analyze Solana MEV bundles.",
+      "agentScore": 4
+    },
+    {
+      "slug": "solayer-cli",
+      "name": "Solayer CLI",
+      "vendor": {
+        "name": "Solayer Labs",
+        "domain": "solayer.org",
+        "verified": false
+      },
+      "repo": "https://github.com/solayer-labs/solayer-cli",
+      "docs": null,
+      "install": {
+        "cargo": "solayer-cli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:KEYPAIR_PATH"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "categories": [
+        "crypto",
+        "solana",
+        "restaking"
+      ],
+      "tier": "community",
+      "description": "Interact with Solayer restaking programs on Solana.",
+      "agentScore": 5
+    },
+    {
+      "slug": "openbook-cli",
+      "name": "OpenBook CLI",
+      "vendor": {
+        "name": "GigaDAO",
+        "domain": "openbook.ag",
+        "verified": false
+      },
+      "repo": "https://github.com/GigaDAO/openbook",
+      "docs": null,
+      "install": {
+        "cargo": "openbook"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:KEYPAIR_PATH"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "crypto",
+        "solana",
+        "dex",
+        "trading"
+      ],
+      "tier": "community",
+      "description": "CLI/TUI for OpenBook DEX on Solana. Trade on central limit order book.",
+      "agentScore": 4
+    },
+    {
+      "slug": "create-solana-dapp",
+      "name": "Create Solana Dapp",
+      "vendor": {
+        "name": "Solana Foundation",
+        "domain": "solana.org",
+        "verified": true
+      },
+      "repo": "https://github.com/solana-foundation/create-solana-dapp",
+      "docs": "https://solana.org/docs/developers",
+      "install": {
+        "npm": "create-solana-dapp"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 2,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 2
+      },
+      "categories": [
+        "crypto",
+        "solana",
+        "scaffolding",
+        "dev"
+      ],
+      "tier": "verified",
+      "description": "Fastest way to create Solana apps. Scaffold dApps with templates.",
+      "agentScore": 3
+    },
+    {
+      "slug": "eigenlayer-cli",
+      "name": "EigenLayer CLI",
+      "vendor": {
+        "name": "Nethermind",
+        "domain": "eigenlayer.xyz",
+        "verified": false
+      },
+      "repo": "https://github.com/NethermindEth/eigenlayer",
+      "docs": "https://docs.eigenlayer.xyz",
+      "install": {
+        "go": "github.com/NethermindEth/eigenlayer"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:PRIVATE_KEY"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "categories": [
+        "crypto",
+        "ethereum",
+        "restaking",
+        "avs"
+      ],
+      "tier": "community",
+      "description": "EigenLayer CLI for operators and stakers. Manage restaking, AVS registration.",
+      "agentScore": 5
+    },
+    {
+      "slug": "thirdweb-cli",
+      "name": "Thirdweb CLI",
+      "vendor": {
+        "name": "Thirdweb",
+        "domain": "thirdweb.com",
+        "verified": true
+      },
+      "repo": "https://github.com/thirdweb-dev/thirdweb-cli",
+      "docs": "https://portal.thirdweb.com/cli",
+      "install": {
+        "npm": "thirdweb"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:THIRDWEB_SECRET_KEY"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 3,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "crypto",
+        "ethereum",
+        "dev",
+        "deployment"
+      ],
+      "tier": "verified",
+      "description": "Publish and deploy smart contracts without private keys. Web3 development toolkit.",
+      "agentScore": 4
+    },
+    {
+      "slug": "archway-cli",
+      "name": "Archway CLI",
+      "vendor": {
+        "name": "Archway",
+        "domain": "archway.io",
+        "verified": true
+      },
+      "repo": "https://github.com/archway-network/cli",
+      "docs": "https://docs.archway.io/developers/developer-tools/archway-cli",
+      "install": {
+        "npm": "@archway-network/cli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:MNEMONIC"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 3,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "categories": [
+        "crypto",
+        "cosmos",
+        "wasm",
+        "dev"
+      ],
+      "tier": "verified",
+      "description": "Develop WASM smart contracts on Archway. CosmWasm development toolkit.",
+      "agentScore": 4
     }
   ]
 }
