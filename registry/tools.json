@@ -27636,6 +27636,47 @@
       "tier": "verified",
       "description": "Develop WASM smart contracts on Archway. CosmWasm development toolkit.",
       "agentScore": 4
+    },
+    {
+      "slug": "hypercore-cli",
+      "name": "HyperCore CLI",
+      "vendor": {
+        "name": "QuickNode",
+        "domain": "quicknode.com",
+        "verified": true
+      },
+      "repo": "https://github.com/quiknode-labs/hypercore-cli",
+      "docs": "https://www.quicknode.com/docs/hyperliquid/datasets",
+      "install": {
+        "npm": "@quicknode/hypercore-cli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:QUICKNODE_ENDPOINT_URL",
+          "env:QUICKNODE_API_KEY"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 4,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "categories": [
+        "crypto",
+        "hyperliquid",
+        "trading",
+        "data",
+        "streaming"
+      ],
+      "tier": "verified",
+      "description": "Stream and backfill Hyperliquid data. Real-time trades, orders, book updates via WebSocket or gRPC.",
+      "agentScore": 5
     }
   ]
 }
