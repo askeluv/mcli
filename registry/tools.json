@@ -18816,6 +18816,1479 @@
       ],
       "tier": "verified",
       "description": "Extremely fast Python linter and formatter, written in Rust."
+    },
+    {
+      "slug": "npm",
+      "name": "npm",
+      "vendor": {
+        "name": "npm Inc",
+        "domain": "npmjs.com",
+        "verified": true
+      },
+      "repo": "https://github.com/npm/cli",
+      "docs": "https://docs.npmjs.com/cli",
+      "install": {
+        "brew": "node"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:NPM_TOKEN",
+          "~/.npmrc"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "javascript",
+        "package-manager"
+      ],
+      "tier": "verified",
+      "description": "Node Package Manager for JavaScript dependencies."
+    },
+    {
+      "slug": "yarn",
+      "name": "Yarn",
+      "vendor": {
+        "name": "Yarn",
+        "domain": "yarnpkg.com",
+        "verified": true
+      },
+      "repo": "https://github.com/yarnpkg/berry",
+      "docs": "https://yarnpkg.com/getting-started",
+      "install": {
+        "brew": "yarn",
+        "npm": "yarn"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "~/.yarnrc.yml"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "javascript",
+        "package-manager"
+      ],
+      "tier": "verified",
+      "description": "Fast, reliable, and secure JavaScript dependency management."
+    },
+    {
+      "slug": "pnpm",
+      "name": "pnpm",
+      "vendor": {
+        "name": "pnpm",
+        "domain": "pnpm.io",
+        "verified": false
+      },
+      "repo": "https://github.com/pnpm/pnpm",
+      "docs": "https://pnpm.io/",
+      "install": {
+        "brew": "pnpm",
+        "npm": "pnpm"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "~/.npmrc"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "javascript",
+        "package-manager"
+      ],
+      "tier": "community",
+      "description": "Fast, disk space efficient JavaScript package manager."
+    },
+    {
+      "slug": "pip",
+      "name": "pip",
+      "vendor": {
+        "name": "PyPA",
+        "domain": "pip.pypa.io",
+        "verified": true
+      },
+      "repo": "https://github.com/pypa/pip",
+      "docs": "https://pip.pypa.io/en/stable/",
+      "install": {
+        "apt": "python3-pip"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "~/.pip/pip.conf"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 3,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "python",
+        "package-manager"
+      ],
+      "tier": "verified",
+      "description": "Python package installer."
+    },
+    {
+      "slug": "poetry",
+      "name": "Poetry",
+      "vendor": {
+        "name": "Poetry",
+        "domain": "python-poetry.org",
+        "verified": false
+      },
+      "repo": "https://github.com/python-poetry/poetry",
+      "docs": "https://python-poetry.org/docs/",
+      "install": {
+        "brew": "poetry",
+        "pip": "poetry"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "~/.config/pypoetry/"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "python",
+        "package-manager",
+        "build"
+      ],
+      "tier": "community",
+      "description": "Python dependency management and packaging made easy."
+    },
+    {
+      "slug": "uv",
+      "name": "uv",
+      "vendor": {
+        "name": "Astral",
+        "domain": "docs.astral.sh/uv",
+        "verified": true
+      },
+      "repo": "https://github.com/astral-sh/uv",
+      "docs": "https://docs.astral.sh/uv/",
+      "install": {
+        "brew": "uv",
+        "pip": "uv",
+        "cargo": "uv"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "python",
+        "package-manager"
+      ],
+      "tier": "verified",
+      "description": "Extremely fast Python package installer and resolver, written in Rust."
+    },
+    {
+      "slug": "cargo",
+      "name": "Cargo",
+      "vendor": {
+        "name": "Rust",
+        "domain": "rust-lang.org",
+        "verified": true
+      },
+      "repo": "https://github.com/rust-lang/cargo",
+      "docs": "https://doc.rust-lang.org/cargo/",
+      "install": {
+        "brew": "rust"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "~/.cargo/credentials.toml"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "rust",
+        "package-manager",
+        "build"
+      ],
+      "tier": "verified",
+      "description": "Rust package manager and build system."
+    },
+    {
+      "slug": "go",
+      "name": "Go",
+      "vendor": {
+        "name": "Google",
+        "domain": "go.dev",
+        "verified": true
+      },
+      "repo": "https://github.com/golang/go",
+      "docs": "https://go.dev/doc/",
+      "install": {
+        "brew": "go",
+        "apt": "golang"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "GOPROXY"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "go",
+        "language",
+        "build"
+      ],
+      "tier": "verified",
+      "description": "Go programming language compiler and tools."
+    },
+    {
+      "slug": "rustup",
+      "name": "rustup",
+      "vendor": {
+        "name": "Rust",
+        "domain": "rust-lang.org",
+        "verified": true
+      },
+      "repo": "https://github.com/rust-lang/rustup",
+      "docs": "https://rust-lang.github.io/rustup/",
+      "install": {
+        "brew": "rustup-init"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 4,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "rust",
+        "toolchain"
+      ],
+      "tier": "verified",
+      "description": "Rust toolchain installer and version manager."
+    },
+    {
+      "slug": "rbenv",
+      "name": "rbenv",
+      "vendor": {
+        "name": "rbenv",
+        "domain": "github.com/rbenv",
+        "verified": false
+      },
+      "repo": "https://github.com/rbenv/rbenv",
+      "docs": "https://github.com/rbenv/rbenv#readme",
+      "install": {
+        "brew": "rbenv"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "ruby",
+        "version-manager"
+      ],
+      "tier": "community",
+      "description": "Simple Ruby version management."
+    },
+    {
+      "slug": "nvm",
+      "name": "nvm",
+      "vendor": {
+        "name": "nvm-sh",
+        "domain": "github.com/nvm-sh",
+        "verified": false
+      },
+      "repo": "https://github.com/nvm-sh/nvm",
+      "docs": "https://github.com/nvm-sh/nvm#readme",
+      "install": {},
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "nodejs",
+        "version-manager"
+      ],
+      "tier": "community",
+      "description": "Node Version Manager for managing multiple Node.js versions."
+    },
+    {
+      "slug": "fnm",
+      "name": "fnm",
+      "vendor": {
+        "name": "Gal Schlezinger",
+        "domain": "github.com/Schniz",
+        "verified": false
+      },
+      "repo": "https://github.com/Schniz/fnm",
+      "docs": "https://github.com/Schniz/fnm#readme",
+      "install": {
+        "brew": "fnm",
+        "cargo": "fnm"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "nodejs",
+        "version-manager"
+      ],
+      "tier": "community",
+      "description": "Fast and simple Node.js version manager built in Rust."
+    },
+    {
+      "slug": "pyenv",
+      "name": "pyenv",
+      "vendor": {
+        "name": "pyenv",
+        "domain": "github.com/pyenv",
+        "verified": false
+      },
+      "repo": "https://github.com/pyenv/pyenv",
+      "docs": "https://github.com/pyenv/pyenv#readme",
+      "install": {
+        "brew": "pyenv"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "python",
+        "version-manager"
+      ],
+      "tier": "community",
+      "description": "Simple Python version management."
+    },
+    {
+      "slug": "asdf",
+      "name": "asdf",
+      "vendor": {
+        "name": "asdf-vm",
+        "domain": "asdf-vm.com",
+        "verified": false
+      },
+      "repo": "https://github.com/asdf-vm/asdf",
+      "docs": "https://asdf-vm.com/guide/getting-started.html",
+      "install": {
+        "brew": "asdf"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "version-manager",
+        "devtools"
+      ],
+      "tier": "community",
+      "description": "Extendable version manager supporting multiple languages."
+    },
+    {
+      "slug": "mise",
+      "name": "mise",
+      "vendor": {
+        "name": "jdx",
+        "domain": "mise.jdx.dev",
+        "verified": false
+      },
+      "repo": "https://github.com/jdx/mise",
+      "docs": "https://mise.jdx.dev/",
+      "install": {
+        "brew": "mise",
+        "cargo": "mise"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "version-manager",
+        "devtools",
+        "tasks"
+      ],
+      "tier": "community",
+      "description": "Polyglot tool version manager and task runner (asdf alternative)."
+    },
+    {
+      "slug": "xh",
+      "name": "xh",
+      "vendor": {
+        "name": "ducaale",
+        "domain": "github.com/ducaale",
+        "verified": false
+      },
+      "repo": "https://github.com/ducaale/xh",
+      "docs": "https://github.com/ducaale/xh#readme",
+      "install": {
+        "brew": "xh",
+        "cargo": "xh"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "various"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "http",
+        "api",
+        "devtools"
+      ],
+      "tier": "community",
+      "description": "Friendly and fast HTTP request tool (HTTPie compatible, Rust)."
+    },
+    {
+      "slug": "grpcurl",
+      "name": "grpcurl",
+      "vendor": {
+        "name": "fullstorydev",
+        "domain": "github.com/fullstorydev",
+        "verified": false
+      },
+      "repo": "https://github.com/fullstorydev/grpcurl",
+      "docs": "https://github.com/fullstorydev/grpcurl#readme",
+      "install": {
+        "brew": "grpcurl",
+        "go": "github.com/fullstorydev/grpcurl/cmd/grpcurl"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "various"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "grpc",
+        "api",
+        "devtools"
+      ],
+      "tier": "community",
+      "description": "curl for gRPC - command-line tool for interacting with gRPC servers."
+    },
+    {
+      "slug": "hey",
+      "name": "hey",
+      "vendor": {
+        "name": "Jaana Dogan",
+        "domain": "github.com/rakyll",
+        "verified": false
+      },
+      "repo": "https://github.com/rakyll/hey",
+      "docs": "https://github.com/rakyll/hey#readme",
+      "install": {
+        "brew": "hey",
+        "go": "github.com/rakyll/hey"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 3,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "http",
+        "benchmarking",
+        "devtools"
+      ],
+      "tier": "community",
+      "description": "HTTP load generator, ApacheBench (ab) replacement."
+    },
+    {
+      "slug": "wrk",
+      "name": "wrk",
+      "vendor": {
+        "name": "Will Glozer",
+        "domain": "github.com/wg",
+        "verified": false
+      },
+      "repo": "https://github.com/wg/wrk",
+      "docs": "https://github.com/wg/wrk#readme",
+      "install": {
+        "brew": "wrk"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "http",
+        "benchmarking",
+        "load-testing"
+      ],
+      "tier": "community",
+      "description": "Modern HTTP benchmarking tool with Lua scripting support."
+    },
+    {
+      "slug": "vegeta",
+      "name": "Vegeta",
+      "vendor": {
+        "name": "Tomás Senart",
+        "domain": "github.com/tsenart",
+        "verified": false
+      },
+      "repo": "https://github.com/tsenart/vegeta",
+      "docs": "https://github.com/tsenart/vegeta#readme",
+      "install": {
+        "brew": "vegeta",
+        "go": "github.com/tsenart/vegeta"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "http",
+        "load-testing",
+        "benchmarking"
+      ],
+      "tier": "community",
+      "description": "HTTP load testing tool and library with attack/report modes."
+    },
+    {
+      "slug": "miller",
+      "name": "Miller",
+      "vendor": {
+        "name": "John Kerl",
+        "domain": "miller.readthedocs.io",
+        "verified": false
+      },
+      "repo": "https://github.com/johnkerl/miller",
+      "docs": "https://miller.readthedocs.io/",
+      "install": {
+        "brew": "miller",
+        "apt": "miller"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "data",
+        "csv",
+        "json",
+        "devtools"
+      ],
+      "tier": "community",
+      "description": "Like awk/sed/cut/join for name-indexed data (CSV, JSON, etc)."
+    },
+    {
+      "slug": "csvkit",
+      "name": "csvkit",
+      "vendor": {
+        "name": "wireservice",
+        "domain": "csvkit.readthedocs.io",
+        "verified": false
+      },
+      "repo": "https://github.com/wireservice/csvkit",
+      "docs": "https://csvkit.readthedocs.io/",
+      "install": {
+        "brew": "csvkit",
+        "pip": "csvkit"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "data",
+        "csv",
+        "devtools"
+      ],
+      "tier": "community",
+      "description": "Suite of utilities for converting to and working with CSV."
+    },
+    {
+      "slug": "xsv",
+      "name": "xsv",
+      "vendor": {
+        "name": "BurntSushi",
+        "domain": "github.com/BurntSushi",
+        "verified": false
+      },
+      "repo": "https://github.com/BurntSushi/xsv",
+      "docs": "https://github.com/BurntSushi/xsv#readme",
+      "install": {
+        "brew": "xsv",
+        "cargo": "xsv"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 3,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "data",
+        "csv"
+      ],
+      "tier": "community",
+      "description": "Fast CSV command-line toolkit written in Rust."
+    },
+    {
+      "slug": "lnav",
+      "name": "lnav",
+      "vendor": {
+        "name": "Tim Stack",
+        "domain": "lnav.org",
+        "verified": false
+      },
+      "repo": "https://github.com/tstack/lnav",
+      "docs": "https://docs.lnav.org/",
+      "install": {
+        "brew": "lnav",
+        "apt": "lnav"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 3,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 3
+      },
+      "agentScore": 6,
+      "categories": [
+        "logging",
+        "tui"
+      ],
+      "tier": "community",
+      "description": "Log file navigator with automatic format detection."
+    },
+    {
+      "slug": "multitail",
+      "name": "MultiTail",
+      "vendor": {
+        "name": "Folkert van Heusden",
+        "domain": "vanheusden.com/multitail",
+        "verified": false
+      },
+      "repo": "https://github.com/folkertvanheusden/multitail",
+      "docs": "https://www.vanheusden.com/multitail/",
+      "install": {
+        "brew": "multitail",
+        "apt": "multitail"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 3,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 3
+      },
+      "agentScore": 6,
+      "categories": [
+        "logging",
+        "monitoring"
+      ],
+      "tier": "community",
+      "description": "Tail multiple files in split windows with colors and filtering."
+    },
+    {
+      "slug": "stern",
+      "name": "Stern",
+      "vendor": {
+        "name": "stern",
+        "domain": "github.com/stern",
+        "verified": false
+      },
+      "repo": "https://github.com/stern/stern",
+      "docs": "https://github.com/stern/stern#readme",
+      "install": {
+        "brew": "stern"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "kubeconfig"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "kubernetes",
+        "logging"
+      ],
+      "tier": "community",
+      "description": "Multi pod and container log tailing for Kubernetes."
+    },
+    {
+      "slug": "age",
+      "name": "age",
+      "vendor": {
+        "name": "Filippo Valsorda",
+        "domain": "age-encryption.org",
+        "verified": false
+      },
+      "repo": "https://github.com/FiloSottile/age",
+      "docs": "https://age-encryption.org/",
+      "install": {
+        "brew": "age",
+        "go": "filippo.io/age/cmd/age"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 9,
+      "categories": [
+        "security",
+        "encryption"
+      ],
+      "tier": "community",
+      "description": "Simple, modern file encryption tool with small explicit keys."
+    },
+    {
+      "slug": "sops",
+      "name": "SOPS",
+      "vendor": {
+        "name": "getsops",
+        "domain": "getsops.io",
+        "verified": false
+      },
+      "repo": "https://github.com/getsops/sops",
+      "docs": "https://getsops.io/",
+      "install": {
+        "brew": "sops",
+        "go": "github.com/getsops/sops/v3/cmd/sops"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "various KMS"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "security",
+        "secrets",
+        "encryption"
+      ],
+      "tier": "community",
+      "description": "Simple and flexible tool for managing secrets encrypted files."
+    },
+    {
+      "slug": "gpg",
+      "name": "GnuPG",
+      "vendor": {
+        "name": "GNU",
+        "domain": "gnupg.org",
+        "verified": true
+      },
+      "repo": "https://github.com/gpg/gnupg",
+      "docs": "https://gnupg.org/documentation/",
+      "install": {
+        "brew": "gnupg",
+        "apt": "gnupg"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "keyring"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 4,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "security",
+        "encryption",
+        "signing"
+      ],
+      "tier": "verified",
+      "description": "Complete implementation of the OpenPGP standard."
+    },
+    {
+      "slug": "openssl",
+      "name": "OpenSSL",
+      "vendor": {
+        "name": "OpenSSL",
+        "domain": "openssl.org",
+        "verified": true
+      },
+      "repo": "https://github.com/openssl/openssl",
+      "docs": "https://www.openssl.org/docs/",
+      "install": {
+        "brew": "openssl",
+        "apt": "openssl"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "security",
+        "encryption",
+        "tls"
+      ],
+      "tier": "verified",
+      "description": "Robust, commercial-grade cryptography library and toolkit."
+    },
+    {
+      "slug": "step",
+      "name": "step",
+      "vendor": {
+        "name": "Smallstep",
+        "domain": "smallstep.com",
+        "verified": true
+      },
+      "repo": "https://github.com/smallstep/cli",
+      "docs": "https://smallstep.com/docs/step-cli/",
+      "install": {
+        "brew": "step"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "security",
+        "certificates",
+        "pki"
+      ],
+      "tier": "verified",
+      "description": "Zero trust swiss army knife for working with X509/JWT/OAuth."
+    },
+    {
+      "slug": "cfssl",
+      "name": "CFSSL",
+      "vendor": {
+        "name": "Cloudflare",
+        "domain": "github.com/cloudflare",
+        "verified": true
+      },
+      "repo": "https://github.com/cloudflare/cfssl",
+      "docs": "https://github.com/cloudflare/cfssl#readme",
+      "install": {
+        "brew": "cfssl",
+        "go": "github.com/cloudflare/cfssl/cmd/cfssl"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "security",
+        "certificates",
+        "pki"
+      ],
+      "tier": "verified",
+      "description": "Cloudflare's PKI/TLS swiss army knife for certificate operations."
+    },
+    {
+      "slug": "kustomize",
+      "name": "Kustomize",
+      "vendor": {
+        "name": "Kubernetes",
+        "domain": "kustomize.io",
+        "verified": true
+      },
+      "repo": "https://github.com/kubernetes-sigs/kustomize",
+      "docs": "https://kustomize.io/",
+      "install": {
+        "brew": "kustomize"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "kubernetes",
+        "configuration"
+      ],
+      "tier": "verified",
+      "description": "Kubernetes configuration customization without templates."
+    },
+    {
+      "slug": "kubectx",
+      "name": "kubectx",
+      "vendor": {
+        "name": "ahmetb",
+        "domain": "github.com/ahmetb",
+        "verified": false
+      },
+      "repo": "https://github.com/ahmetb/kubectx",
+      "docs": "https://github.com/ahmetb/kubectx#readme",
+      "install": {
+        "brew": "kubectx"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "kubeconfig"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 4,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "kubernetes",
+        "devtools"
+      ],
+      "tier": "community",
+      "description": "Faster way to switch between Kubernetes contexts and namespaces."
+    },
+    {
+      "slug": "krew",
+      "name": "Krew",
+      "vendor": {
+        "name": "Kubernetes",
+        "domain": "krew.sigs.k8s.io",
+        "verified": true
+      },
+      "repo": "https://github.com/kubernetes-sigs/krew",
+      "docs": "https://krew.sigs.k8s.io/",
+      "install": {
+        "brew": "krew"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "kubernetes",
+        "package-manager"
+      ],
+      "tier": "verified",
+      "description": "Plugin manager for kubectl command-line tool."
+    },
+    {
+      "slug": "kind",
+      "name": "kind",
+      "vendor": {
+        "name": "Kubernetes",
+        "domain": "kind.sigs.k8s.io",
+        "verified": true
+      },
+      "repo": "https://github.com/kubernetes-sigs/kind",
+      "docs": "https://kind.sigs.k8s.io/",
+      "install": {
+        "brew": "kind",
+        "go": "sigs.k8s.io/kind"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "kubernetes",
+        "development",
+        "containers"
+      ],
+      "tier": "verified",
+      "description": "Kubernetes IN Docker - local clusters for testing K8s."
+    },
+    {
+      "slug": "minikube",
+      "name": "minikube",
+      "vendor": {
+        "name": "Kubernetes",
+        "domain": "minikube.sigs.k8s.io",
+        "verified": true
+      },
+      "repo": "https://github.com/kubernetes/minikube",
+      "docs": "https://minikube.sigs.k8s.io/docs/",
+      "install": {
+        "brew": "minikube"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 9,
+      "categories": [
+        "kubernetes",
+        "development"
+      ],
+      "tier": "verified",
+      "description": "Run Kubernetes locally for development and testing."
+    },
+    {
+      "slug": "k3d",
+      "name": "k3d",
+      "vendor": {
+        "name": "k3d-io",
+        "domain": "k3d.io",
+        "verified": false
+      },
+      "repo": "https://github.com/k3d-io/k3d",
+      "docs": "https://k3d.io/",
+      "install": {
+        "brew": "k3d"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "kubernetes",
+        "development",
+        "containers"
+      ],
+      "tier": "community",
+      "description": "Little helper to run k3s in Docker - lightweight K8s clusters."
+    },
+    {
+      "slug": "argocd",
+      "name": "Argo CD CLI",
+      "vendor": {
+        "name": "Argo Project",
+        "domain": "argoproj.github.io",
+        "verified": true
+      },
+      "repo": "https://github.com/argoproj/argo-cd",
+      "docs": "https://argo-cd.readthedocs.io/en/stable/cli_installation/",
+      "install": {
+        "brew": "argocd"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:ARGOCD_AUTH_TOKEN"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "kubernetes",
+        "gitops",
+        "ci"
+      ],
+      "tier": "verified",
+      "description": "Declarative GitOps CD for Kubernetes."
+    },
+    {
+      "slug": "flux",
+      "name": "Flux CLI",
+      "vendor": {
+        "name": "Flux",
+        "domain": "fluxcd.io",
+        "verified": true
+      },
+      "repo": "https://github.com/fluxcd/flux2",
+      "docs": "https://fluxcd.io/flux/cmd/",
+      "install": {
+        "brew": "fluxcd/tap/flux"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "kubeconfig"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "kubernetes",
+        "gitops",
+        "ci"
+      ],
+      "tier": "verified",
+      "description": "Continuous delivery toolkit for Kubernetes using GitOps."
     }
   ]
 }
