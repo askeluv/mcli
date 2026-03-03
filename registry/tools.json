@@ -17083,6 +17083,1739 @@
       ],
       "tier": "verified",
       "description": "Command-line interface for SQLite databases."
+    },
+    {
+      "slug": "circleci",
+      "name": "CircleCI CLI",
+      "vendor": {
+        "name": "CircleCI",
+        "domain": "circleci.com",
+        "verified": true
+      },
+      "repo": "https://github.com/CircleCI-Public/circleci-cli",
+      "docs": "https://circleci.com/docs/local-cli/",
+      "install": {
+        "brew": "circleci",
+        "snap": "circleci"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:CIRCLECI_CLI_TOKEN"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "ci",
+        "devops"
+      ],
+      "tier": "verified",
+      "description": "CircleCI command-line interface for running local builds and config validation."
+    },
+    {
+      "slug": "jenkins-cli",
+      "name": "Jenkins CLI",
+      "vendor": {
+        "name": "Jenkins",
+        "domain": "jenkins.io",
+        "verified": true
+      },
+      "repo": "https://github.com/jenkinsci/jenkins",
+      "docs": "https://www.jenkins.io/doc/book/managing/cli/",
+      "install": {},
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:JENKINS_USER_ID",
+          "env:JENKINS_API_TOKEN"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "ci",
+        "automation",
+        "devops"
+      ],
+      "tier": "verified",
+      "description": "Command-line interface for Jenkins CI server management."
+    },
+    {
+      "slug": "drone",
+      "name": "Drone CLI",
+      "vendor": {
+        "name": "Harness",
+        "domain": "drone.io",
+        "verified": true
+      },
+      "repo": "https://github.com/harness/drone-cli",
+      "docs": "https://docs.drone.io/cli/",
+      "install": {
+        "brew": "drone-cli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:DRONE_TOKEN",
+          "env:DRONE_SERVER"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "ci",
+        "devops",
+        "containers"
+      ],
+      "tier": "verified",
+      "description": "CLI for Drone CI - container-native continuous delivery platform."
+    },
+    {
+      "slug": "act",
+      "name": "act",
+      "vendor": {
+        "name": "nektos",
+        "domain": "github.com/nektos",
+        "verified": false
+      },
+      "repo": "https://github.com/nektos/act",
+      "docs": "https://nektosact.com/",
+      "install": {
+        "brew": "act",
+        "go": "github.com/nektos/act"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "env:GITHUB_TOKEN"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 7,
+      "categories": [
+        "ci",
+        "github",
+        "devtools"
+      ],
+      "tier": "community",
+      "description": "Run GitHub Actions locally for faster development iteration."
+    },
+    {
+      "slug": "earthly",
+      "name": "Earthly",
+      "vendor": {
+        "name": "Earthly Technologies",
+        "domain": "earthly.dev",
+        "verified": true
+      },
+      "repo": "https://github.com/earthly/earthly",
+      "docs": "https://docs.earthly.dev/",
+      "install": {
+        "brew": "earthly"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 9,
+      "categories": [
+        "ci",
+        "build",
+        "containers"
+      ],
+      "tier": "verified",
+      "description": "Build automation tool that combines Dockerfiles and Makefiles."
+    },
+    {
+      "slug": "curl",
+      "name": "curl",
+      "vendor": {
+        "name": "curl",
+        "domain": "curl.se",
+        "verified": true
+      },
+      "repo": "https://github.com/curl/curl",
+      "docs": "https://curl.se/docs/",
+      "install": {
+        "brew": "curl",
+        "apt": "curl"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "various"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "networking",
+        "http",
+        "api"
+      ],
+      "tier": "verified",
+      "description": "Command line tool for transferring data with URLs."
+    },
+    {
+      "slug": "wget",
+      "name": "wget",
+      "vendor": {
+        "name": "GNU",
+        "domain": "gnu.org",
+        "verified": true
+      },
+      "repo": "https://github.com/mirror/wget",
+      "docs": "https://www.gnu.org/software/wget/manual/",
+      "install": {
+        "brew": "wget",
+        "apt": "wget"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "networking",
+        "download"
+      ],
+      "tier": "verified",
+      "description": "Network utility to retrieve files using HTTP, HTTPS, FTP."
+    },
+    {
+      "slug": "netcat",
+      "name": "netcat",
+      "vendor": {
+        "name": "nmap",
+        "domain": "nmap.org",
+        "verified": true
+      },
+      "repo": "https://github.com/nmap/nmap",
+      "docs": "https://nmap.org/ncat/guide/",
+      "install": {
+        "brew": "netcat",
+        "apt": "netcat-openbsd"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 4,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 7,
+      "categories": [
+        "networking",
+        "debugging"
+      ],
+      "tier": "verified",
+      "description": "Networking utility for reading/writing data across network connections."
+    },
+    {
+      "slug": "nmap",
+      "name": "nmap",
+      "vendor": {
+        "name": "Nmap Project",
+        "domain": "nmap.org",
+        "verified": true
+      },
+      "repo": "https://github.com/nmap/nmap",
+      "docs": "https://nmap.org/book/man.html",
+      "install": {
+        "brew": "nmap",
+        "apt": "nmap"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "networking",
+        "security",
+        "scanning"
+      ],
+      "tier": "verified",
+      "description": "Network exploration and security auditing tool."
+    },
+    {
+      "slug": "mtr",
+      "name": "mtr",
+      "vendor": {
+        "name": "mtr",
+        "domain": "github.com/traviscross/mtr",
+        "verified": false
+      },
+      "repo": "https://github.com/traviscross/mtr",
+      "docs": "https://github.com/traviscross/mtr#readme",
+      "install": {
+        "brew": "mtr",
+        "apt": "mtr"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 4,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 9,
+      "categories": [
+        "networking",
+        "diagnostics"
+      ],
+      "tier": "community",
+      "description": "Network diagnostic tool combining ping and traceroute."
+    },
+    {
+      "slug": "dig",
+      "name": "dig",
+      "vendor": {
+        "name": "ISC",
+        "domain": "isc.org",
+        "verified": true
+      },
+      "repo": "https://github.com/isc-projects/bind9",
+      "docs": "https://bind9.readthedocs.io/en/latest/manpages.html",
+      "install": {
+        "brew": "bind",
+        "apt": "dnsutils"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 3,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 9,
+      "categories": [
+        "networking",
+        "dns"
+      ],
+      "tier": "verified",
+      "description": "DNS lookup utility for querying DNS servers."
+    },
+    {
+      "slug": "doggo",
+      "name": "doggo",
+      "vendor": {
+        "name": "mr-karan",
+        "domain": "github.com/mr-karan",
+        "verified": false
+      },
+      "repo": "https://github.com/mr-karan/doggo",
+      "docs": "https://doggo.mrkaran.dev/docs/",
+      "install": {
+        "brew": "doggo",
+        "go": "github.com/mr-karan/doggo/cmd/doggo"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "networking",
+        "dns"
+      ],
+      "tier": "community",
+      "description": "Modern command-line DNS client with JSON output and DoH/DoT support."
+    },
+    {
+      "slug": "tcpdump",
+      "name": "tcpdump",
+      "vendor": {
+        "name": "tcpdump",
+        "domain": "tcpdump.org",
+        "verified": true
+      },
+      "repo": "https://github.com/the-tcpdump-group/tcpdump",
+      "docs": "https://www.tcpdump.org/manpages/tcpdump.1.html",
+      "install": {
+        "brew": "tcpdump",
+        "apt": "tcpdump"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 7,
+      "categories": [
+        "networking",
+        "security",
+        "debugging"
+      ],
+      "tier": "verified",
+      "description": "Network packet analyzer for capturing and displaying network traffic."
+    },
+    {
+      "slug": "socat",
+      "name": "socat",
+      "vendor": {
+        "name": "socat",
+        "domain": "dest-unreach.org",
+        "verified": false
+      },
+      "repo": "https://github.com/3ndG4me/socat",
+      "docs": "http://www.dest-unreach.org/socat/doc/socat.html",
+      "install": {
+        "brew": "socat",
+        "apt": "socat"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 4,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 6,
+      "categories": [
+        "networking",
+        "proxy"
+      ],
+      "tier": "community",
+      "description": "Multipurpose relay for bidirectional data transfer between channels."
+    },
+    {
+      "slug": "sed",
+      "name": "sed",
+      "vendor": {
+        "name": "GNU",
+        "domain": "gnu.org",
+        "verified": true
+      },
+      "repo": "https://github.com/mirror/sed",
+      "docs": "https://www.gnu.org/software/sed/manual/sed.html",
+      "install": {
+        "brew": "gnu-sed",
+        "apt": "sed"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 9,
+      "categories": [
+        "text",
+        "devtools"
+      ],
+      "tier": "verified",
+      "description": "Stream editor for filtering and transforming text."
+    },
+    {
+      "slug": "awk",
+      "name": "awk",
+      "vendor": {
+        "name": "GNU",
+        "domain": "gnu.org",
+        "verified": true
+      },
+      "repo": "https://github.com/onetrueawk/awk",
+      "docs": "https://www.gnu.org/software/gawk/manual/gawk.html",
+      "install": {
+        "brew": "gawk",
+        "apt": "gawk"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 9,
+      "categories": [
+        "text",
+        "devtools"
+      ],
+      "tier": "verified",
+      "description": "Pattern scanning and text processing language."
+    },
+    {
+      "slug": "sd",
+      "name": "sd",
+      "vendor": {
+        "name": "chmln",
+        "domain": "github.com/chmln",
+        "verified": false
+      },
+      "repo": "https://github.com/chmln/sd",
+      "docs": "https://github.com/chmln/sd#readme",
+      "install": {
+        "brew": "sd",
+        "cargo": "sd"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 9,
+      "categories": [
+        "text",
+        "search-replace"
+      ],
+      "tier": "community",
+      "description": "Intuitive find & replace CLI - simpler alternative to sed."
+    },
+    {
+      "slug": "choose",
+      "name": "choose",
+      "vendor": {
+        "name": "theryangeary",
+        "domain": "github.com/theryangeary",
+        "verified": false
+      },
+      "repo": "https://github.com/theryangeary/choose",
+      "docs": "https://github.com/theryangeary/choose#readme",
+      "install": {
+        "brew": "choose-rust",
+        "cargo": "choose"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 9,
+      "categories": [
+        "text",
+        "devtools"
+      ],
+      "tier": "community",
+      "description": "Human-friendly alternative to cut and awk for column selection."
+    },
+    {
+      "slug": "git",
+      "name": "git",
+      "vendor": {
+        "name": "Git",
+        "domain": "git-scm.com",
+        "verified": true
+      },
+      "repo": "https://github.com/git/git",
+      "docs": "https://git-scm.com/doc",
+      "install": {
+        "brew": "git",
+        "apt": "git"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "ssh keys",
+          "credential helpers"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 3,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 9,
+      "categories": [
+        "git",
+        "vcs"
+      ],
+      "tier": "verified",
+      "description": "Distributed version control system."
+    },
+    {
+      "slug": "git-lfs",
+      "name": "Git LFS",
+      "vendor": {
+        "name": "GitHub",
+        "domain": "git-lfs.com",
+        "verified": true
+      },
+      "repo": "https://github.com/git-lfs/git-lfs",
+      "docs": "https://git-lfs.com/",
+      "install": {
+        "brew": "git-lfs",
+        "apt": "git-lfs"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "git credentials"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "git",
+        "storage"
+      ],
+      "tier": "verified",
+      "description": "Git extension for versioning large files."
+    },
+    {
+      "slug": "git-crypt",
+      "name": "git-crypt",
+      "vendor": {
+        "name": "AGWA",
+        "domain": "github.com/AGWA",
+        "verified": false
+      },
+      "repo": "https://github.com/AGWA/git-crypt",
+      "docs": "https://github.com/AGWA/git-crypt#readme",
+      "install": {
+        "brew": "git-crypt",
+        "apt": "git-crypt"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "GPG keys"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "git",
+        "security",
+        "encryption"
+      ],
+      "tier": "community",
+      "description": "Transparent file encryption in git."
+    },
+    {
+      "slug": "pre-commit",
+      "name": "pre-commit",
+      "vendor": {
+        "name": "pre-commit",
+        "domain": "pre-commit.com",
+        "verified": false
+      },
+      "repo": "https://github.com/pre-commit/pre-commit",
+      "docs": "https://pre-commit.com/",
+      "install": {
+        "brew": "pre-commit",
+        "pip": "pre-commit"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 8,
+      "categories": [
+        "git",
+        "devtools",
+        "linting"
+      ],
+      "tier": "community",
+      "description": "Framework for managing git pre-commit hooks."
+    },
+    {
+      "slug": "gitleaks",
+      "name": "Gitleaks",
+      "vendor": {
+        "name": "gitleaks",
+        "domain": "gitleaks.io",
+        "verified": false
+      },
+      "repo": "https://github.com/gitleaks/gitleaks",
+      "docs": "https://github.com/gitleaks/gitleaks#readme",
+      "install": {
+        "brew": "gitleaks",
+        "go": "github.com/gitleaks/gitleaks/v8"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "git",
+        "security",
+        "scanning"
+      ],
+      "tier": "community",
+      "description": "Detect and prevent hardcoded secrets in git repos."
+    },
+    {
+      "slug": "trufflehog",
+      "name": "TruffleHog",
+      "vendor": {
+        "name": "Truffle Security",
+        "domain": "trufflesecurity.com",
+        "verified": true
+      },
+      "repo": "https://github.com/trufflesecurity/trufflehog",
+      "docs": "https://github.com/trufflesecurity/trufflehog#readme",
+      "install": {
+        "brew": "trufflehog",
+        "go": "github.com/trufflesecurity/trufflehog/v3"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "git",
+        "security",
+        "secrets"
+      ],
+      "tier": "verified",
+      "description": "Find and verify credentials in git repos, filesystems, and S3."
+    },
+    {
+      "slug": "az",
+      "name": "Azure CLI",
+      "vendor": {
+        "name": "Microsoft",
+        "domain": "azure.microsoft.com",
+        "verified": true
+      },
+      "repo": "https://github.com/Azure/azure-cli",
+      "docs": "https://docs.microsoft.com/en-us/cli/azure/",
+      "install": {
+        "brew": "azure-cli",
+        "apt": "azure-cli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "az login",
+          "service principal"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 4,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "cloud",
+        "azure",
+        "infrastructure"
+      ],
+      "tier": "verified",
+      "description": "Microsoft Azure command-line interface."
+    },
+    {
+      "slug": "oci",
+      "name": "OCI CLI",
+      "vendor": {
+        "name": "Oracle",
+        "domain": "oracle.com",
+        "verified": true
+      },
+      "repo": "https://github.com/oracle/oci-cli",
+      "docs": "https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm",
+      "install": {
+        "brew": "oci-cli",
+        "pip": "oci-cli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "~/.oci/config"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 9,
+      "categories": [
+        "cloud",
+        "oracle",
+        "infrastructure"
+      ],
+      "tier": "verified",
+      "description": "Oracle Cloud Infrastructure command-line interface."
+    },
+    {
+      "slug": "linode-cli",
+      "name": "Linode CLI",
+      "vendor": {
+        "name": "Linode",
+        "domain": "linode.com",
+        "verified": true
+      },
+      "repo": "https://github.com/linode/linode-cli",
+      "docs": "https://www.linode.com/docs/products/tools/cli/",
+      "install": {
+        "brew": "linode-cli",
+        "pip": "linode-cli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:LINODE_CLI_TOKEN"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "cloud",
+        "infrastructure"
+      ],
+      "tier": "verified",
+      "description": "Official CLI for Linode cloud platform management."
+    },
+    {
+      "slug": "vultr-cli",
+      "name": "Vultr CLI",
+      "vendor": {
+        "name": "Vultr",
+        "domain": "vultr.com",
+        "verified": true
+      },
+      "repo": "https://github.com/vultr/vultr-cli",
+      "docs": "https://github.com/vultr/vultr-cli#readme",
+      "install": {
+        "brew": "vultr-cli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:VULTR_API_KEY"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "cloud",
+        "infrastructure"
+      ],
+      "tier": "verified",
+      "description": "Official CLI for Vultr cloud platform."
+    },
+    {
+      "slug": "scaleway-cli",
+      "name": "Scaleway CLI",
+      "vendor": {
+        "name": "Scaleway",
+        "domain": "scaleway.com",
+        "verified": true
+      },
+      "repo": "https://github.com/scaleway/scaleway-cli",
+      "docs": "https://github.com/scaleway/scaleway-cli#readme",
+      "install": {
+        "brew": "scw"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:SCW_ACCESS_KEY",
+          "env:SCW_SECRET_KEY"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "cloud",
+        "infrastructure"
+      ],
+      "tier": "verified",
+      "description": "Scaleway cloud platform CLI for European cloud resources."
+    },
+    {
+      "slug": "tar",
+      "name": "tar",
+      "vendor": {
+        "name": "GNU",
+        "domain": "gnu.org",
+        "verified": true
+      },
+      "repo": "https://github.com/Distrotech/tar",
+      "docs": "https://www.gnu.org/software/tar/manual/",
+      "install": {
+        "brew": "gnu-tar",
+        "apt": "tar"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 9,
+      "categories": [
+        "archive",
+        "compression"
+      ],
+      "tier": "verified",
+      "description": "Archive utility for creating and extracting tar files."
+    },
+    {
+      "slug": "gzip",
+      "name": "gzip",
+      "vendor": {
+        "name": "GNU",
+        "domain": "gnu.org",
+        "verified": true
+      },
+      "repo": "https://github.com/madler/zlib",
+      "docs": "https://www.gnu.org/software/gzip/manual/gzip.html",
+      "install": {
+        "brew": "gzip",
+        "apt": "gzip"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 9,
+      "categories": [
+        "compression"
+      ],
+      "tier": "verified",
+      "description": "File compression utility using Lempel-Ziv coding."
+    },
+    {
+      "slug": "zstd",
+      "name": "zstd",
+      "vendor": {
+        "name": "Facebook",
+        "domain": "facebook.github.io/zstd",
+        "verified": true
+      },
+      "repo": "https://github.com/facebook/zstd",
+      "docs": "https://facebook.github.io/zstd/",
+      "install": {
+        "brew": "zstd",
+        "apt": "zstd"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 9,
+      "categories": [
+        "compression"
+      ],
+      "tier": "verified",
+      "description": "Fast real-time compression algorithm with high ratios."
+    },
+    {
+      "slug": "pigz",
+      "name": "pigz",
+      "vendor": {
+        "name": "Mark Adler",
+        "domain": "zlib.net/pigz",
+        "verified": false
+      },
+      "repo": "https://github.com/madler/pigz",
+      "docs": "https://zlib.net/pigz/pigz.pdf",
+      "install": {
+        "brew": "pigz",
+        "apt": "pigz"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 9,
+      "categories": [
+        "compression"
+      ],
+      "tier": "community",
+      "description": "Parallel implementation of gzip for modern multi-processor systems."
+    },
+    {
+      "slug": "p7zip",
+      "name": "7-Zip",
+      "vendor": {
+        "name": "7-Zip",
+        "domain": "7-zip.org",
+        "verified": true
+      },
+      "repo": "https://github.com/p7zip-project/p7zip",
+      "docs": "https://7-zip.org/",
+      "install": {
+        "brew": "p7zip",
+        "apt": "p7zip-full"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "compression",
+        "archive"
+      ],
+      "tier": "verified",
+      "description": "High compression ratio file archiver supporting many formats."
+    },
+    {
+      "slug": "htop",
+      "name": "htop",
+      "vendor": {
+        "name": "htop",
+        "domain": "htop.dev",
+        "verified": false
+      },
+      "repo": "https://github.com/htop-dev/htop",
+      "docs": "https://htop.dev/",
+      "install": {
+        "brew": "htop",
+        "apt": "htop"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 2,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 2
+      },
+      "agentScore": 5,
+      "categories": [
+        "system",
+        "monitoring",
+        "tui"
+      ],
+      "tier": "community",
+      "description": "Interactive process viewer for Unix systems."
+    },
+    {
+      "slug": "btop",
+      "name": "btop",
+      "vendor": {
+        "name": "aristocratos",
+        "domain": "github.com/aristocratos",
+        "verified": false
+      },
+      "repo": "https://github.com/aristocratos/btop",
+      "docs": "https://github.com/aristocratos/btop#readme",
+      "install": {
+        "brew": "btop",
+        "apt": "btop"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 2,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 2
+      },
+      "agentScore": 5,
+      "categories": [
+        "system",
+        "monitoring",
+        "tui"
+      ],
+      "tier": "community",
+      "description": "Resource monitor with customizable interface and mouse support."
+    },
+    {
+      "slug": "ncdu",
+      "name": "ncdu",
+      "vendor": {
+        "name": "ncdu",
+        "domain": "dev.yorhel.nl/ncdu",
+        "verified": false
+      },
+      "repo": "https://github.com/rofl0r/ncdu",
+      "docs": "https://dev.yorhel.nl/ncdu/man",
+      "install": {
+        "brew": "ncdu",
+        "apt": "ncdu"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 3,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 3
+      },
+      "agentScore": 8,
+      "categories": [
+        "system",
+        "disk",
+        "tui"
+      ],
+      "tier": "community",
+      "description": "Ncurses disk usage analyzer with interactive navigation."
+    },
+    {
+      "slug": "tree",
+      "name": "tree",
+      "vendor": {
+        "name": "Old Maven",
+        "domain": "oldmanprogrammer.net",
+        "verified": false
+      },
+      "repo": "https://github.com/Old-Man-Programmer/tree",
+      "docs": "https://linux.die.net/man/1/tree",
+      "install": {
+        "brew": "tree",
+        "apt": "tree"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "filesystem",
+        "devtools"
+      ],
+      "tier": "community",
+      "description": "Display directory structure in a tree-like format."
+    },
+    {
+      "slug": "lsof",
+      "name": "lsof",
+      "vendor": {
+        "name": "lsof",
+        "domain": "github.com/lsof-org",
+        "verified": false
+      },
+      "repo": "https://github.com/lsof-org/lsof",
+      "docs": "https://github.com/lsof-org/lsof#readme",
+      "install": {
+        "brew": "lsof",
+        "apt": "lsof"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "system",
+        "debugging"
+      ],
+      "tier": "community",
+      "description": "List open files and the processes that opened them."
+    },
+    {
+      "slug": "strace",
+      "name": "strace",
+      "vendor": {
+        "name": "strace",
+        "domain": "strace.io",
+        "verified": false
+      },
+      "repo": "https://github.com/strace/strace",
+      "docs": "https://strace.io/",
+      "install": {
+        "apt": "strace"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 7,
+      "categories": [
+        "system",
+        "debugging"
+      ],
+      "tier": "community",
+      "description": "Linux syscall tracer for debugging and diagnostics."
+    },
+    {
+      "slug": "tmux",
+      "name": "tmux",
+      "vendor": {
+        "name": "tmux",
+        "domain": "tmux.github.io",
+        "verified": false
+      },
+      "repo": "https://github.com/tmux/tmux",
+      "docs": "https://github.com/tmux/tmux/wiki",
+      "install": {
+        "brew": "tmux",
+        "apt": "tmux"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 3,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 3
+      },
+      "agentScore": 7,
+      "categories": [
+        "terminal",
+        "multiplexer"
+      ],
+      "tier": "community",
+      "description": "Terminal multiplexer for managing multiple sessions."
+    },
+    {
+      "slug": "screen",
+      "name": "GNU Screen",
+      "vendor": {
+        "name": "GNU",
+        "domain": "gnu.org",
+        "verified": true
+      },
+      "repo": "https://github.com/alexander-naumov/gnu-screen",
+      "docs": "https://www.gnu.org/software/screen/manual/",
+      "install": {
+        "brew": "screen",
+        "apt": "screen"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 3,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 3
+      },
+      "agentScore": 6,
+      "categories": [
+        "terminal",
+        "multiplexer"
+      ],
+      "tier": "verified",
+      "description": "Full-screen window manager that multiplexes a physical terminal."
+    },
+    {
+      "slug": "shellcheck",
+      "name": "ShellCheck",
+      "vendor": {
+        "name": "Vidar Holen",
+        "domain": "shellcheck.net",
+        "verified": false
+      },
+      "repo": "https://github.com/koalaman/shellcheck",
+      "docs": "https://www.shellcheck.net/wiki/",
+      "install": {
+        "brew": "shellcheck",
+        "apt": "shellcheck"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "shell",
+        "linting",
+        "devtools"
+      ],
+      "tier": "community",
+      "description": "Static analysis tool for shell scripts to find bugs and issues."
+    },
+    {
+      "slug": "shfmt",
+      "name": "shfmt",
+      "vendor": {
+        "name": "Daniel Martí",
+        "domain": "github.com/mvdan",
+        "verified": false
+      },
+      "repo": "https://github.com/mvdan/sh",
+      "docs": "https://github.com/mvdan/sh#readme",
+      "install": {
+        "brew": "shfmt",
+        "go": "mvdan.cc/sh/v3/cmd/shfmt"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 9,
+      "categories": [
+        "shell",
+        "formatting",
+        "devtools"
+      ],
+      "tier": "community",
+      "description": "Shell script formatter supporting bash and POSIX shell."
+    },
+    {
+      "slug": "prettier",
+      "name": "Prettier",
+      "vendor": {
+        "name": "Prettier",
+        "domain": "prettier.io",
+        "verified": true
+      },
+      "repo": "https://github.com/prettier/prettier",
+      "docs": "https://prettier.io/docs/",
+      "install": {
+        "npm": "prettier"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 9,
+      "categories": [
+        "formatting",
+        "devtools"
+      ],
+      "tier": "verified",
+      "description": "Opinionated code formatter for JavaScript, TypeScript, CSS, and more."
+    },
+    {
+      "slug": "black",
+      "name": "Black",
+      "vendor": {
+        "name": "PSF",
+        "domain": "black.readthedocs.io",
+        "verified": true
+      },
+      "repo": "https://github.com/psf/black",
+      "docs": "https://black.readthedocs.io/",
+      "install": {
+        "brew": "black",
+        "pip": "black"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 9,
+      "categories": [
+        "python",
+        "formatting",
+        "devtools"
+      ],
+      "tier": "verified",
+      "description": "Uncompromising Python code formatter."
+    },
+    {
+      "slug": "ruff",
+      "name": "Ruff",
+      "vendor": {
+        "name": "Astral",
+        "domain": "docs.astral.sh/ruff",
+        "verified": true
+      },
+      "repo": "https://github.com/astral-sh/ruff",
+      "docs": "https://docs.astral.sh/ruff/",
+      "install": {
+        "brew": "ruff",
+        "pip": "ruff",
+        "cargo": "ruff"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "python",
+        "linting",
+        "formatting",
+        "devtools"
+      ],
+      "tier": "verified",
+      "description": "Extremely fast Python linter and formatter, written in Rust."
     }
   ]
 }
