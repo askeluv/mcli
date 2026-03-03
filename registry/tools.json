@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-03-01",
+  "updated": "2026-03-03",
   "tools": [
     {
       "slug": "hcloud",
@@ -15266,6 +15266,1823 @@
       ],
       "tier": "verified",
       "description": "Manage Nirvana Labs cloud infrastructure. Create VMs, volumes, and networking with structured CLI commands."
+    },
+    {
+      "slug": "restic",
+      "name": "restic",
+      "vendor": {
+        "name": "restic",
+        "domain": "restic.net",
+        "verified": false
+      },
+      "repo": "https://github.com/restic/restic",
+      "docs": "https://restic.readthedocs.io/",
+      "install": {
+        "brew": "restic",
+        "apt": "restic",
+        "go": "github.com/restic/restic/cmd/restic"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:RESTIC_PASSWORD",
+          "env:RESTIC_REPOSITORY"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "backup",
+        "sysadmin"
+      ],
+      "tier": "community",
+      "description": "Fast, secure, efficient backup program with deduplication and encryption."
+    },
+    {
+      "slug": "ansible",
+      "name": "Ansible",
+      "vendor": {
+        "name": "Red Hat",
+        "domain": "ansible.com",
+        "verified": true
+      },
+      "repo": "https://github.com/ansible/ansible",
+      "docs": "https://docs.ansible.com/",
+      "install": {
+        "brew": "ansible",
+        "pip": "ansible",
+        "apt": "ansible"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "ssh keys",
+          "env:ANSIBLE_VAULT_PASSWORD"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 5,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "automation",
+        "configuration",
+        "devops"
+      ],
+      "tier": "verified",
+      "description": "Agentless automation platform for configuration management and orchestration."
+    },
+    {
+      "slug": "terraform",
+      "name": "Terraform",
+      "vendor": {
+        "name": "HashiCorp",
+        "domain": "terraform.io",
+        "verified": true
+      },
+      "repo": "https://github.com/hashicorp/terraform",
+      "docs": "https://developer.hashicorp.com/terraform/docs",
+      "install": {
+        "brew": "terraform",
+        "apt": "terraform"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "provider-specific"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "infrastructure",
+        "cloud",
+        "devops"
+      ],
+      "tier": "verified",
+      "description": "Infrastructure as Code tool for building, changing, and versioning infrastructure."
+    },
+    {
+      "slug": "consul",
+      "name": "Consul",
+      "vendor": {
+        "name": "HashiCorp",
+        "domain": "consul.io",
+        "verified": true
+      },
+      "repo": "https://github.com/hashicorp/consul",
+      "docs": "https://developer.hashicorp.com/consul/docs",
+      "install": {
+        "brew": "consul",
+        "apt": "consul"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:CONSUL_HTTP_TOKEN"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "service-discovery",
+        "infrastructure",
+        "networking"
+      ],
+      "tier": "verified",
+      "description": "Service mesh and service discovery for distributed systems."
+    },
+    {
+      "slug": "vault",
+      "name": "Vault",
+      "vendor": {
+        "name": "HashiCorp",
+        "domain": "vaultproject.io",
+        "verified": true
+      },
+      "repo": "https://github.com/hashicorp/vault",
+      "docs": "https://developer.hashicorp.com/vault/docs",
+      "install": {
+        "brew": "vault",
+        "apt": "vault"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:VAULT_TOKEN",
+          "env:VAULT_ADDR"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "security",
+        "secrets",
+        "infrastructure"
+      ],
+      "tier": "verified",
+      "description": "Secrets management, encryption, and identity management platform."
+    },
+    {
+      "slug": "nomad",
+      "name": "Nomad",
+      "vendor": {
+        "name": "HashiCorp",
+        "domain": "nomadproject.io",
+        "verified": true
+      },
+      "repo": "https://github.com/hashicorp/nomad",
+      "docs": "https://developer.hashicorp.com/nomad/docs",
+      "install": {
+        "brew": "nomad",
+        "apt": "nomad"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:NOMAD_TOKEN",
+          "env:NOMAD_ADDR"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "orchestration",
+        "scheduling",
+        "infrastructure"
+      ],
+      "tier": "verified",
+      "description": "Simple and flexible workload orchestrator for containers and non-containerized apps."
+    },
+    {
+      "slug": "packer",
+      "name": "Packer",
+      "vendor": {
+        "name": "HashiCorp",
+        "domain": "packer.io",
+        "verified": true
+      },
+      "repo": "https://github.com/hashicorp/packer",
+      "docs": "https://developer.hashicorp.com/packer/docs",
+      "install": {
+        "brew": "packer",
+        "apt": "packer"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "provider-specific"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "images",
+        "infrastructure",
+        "devops"
+      ],
+      "tier": "verified",
+      "description": "Tool for building identical machine images for multiple platforms."
+    },
+    {
+      "slug": "kubectl",
+      "name": "kubectl",
+      "vendor": {
+        "name": "Kubernetes",
+        "domain": "kubernetes.io",
+        "verified": true
+      },
+      "repo": "https://github.com/kubernetes/kubectl",
+      "docs": "https://kubernetes.io/docs/reference/kubectl/",
+      "install": {
+        "brew": "kubernetes-cli",
+        "apt": "kubectl"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "kubeconfig"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "kubernetes",
+        "containers",
+        "orchestration"
+      ],
+      "tier": "verified",
+      "description": "Kubernetes command-line tool for cluster management and deployment."
+    },
+    {
+      "slug": "helm",
+      "name": "Helm",
+      "vendor": {
+        "name": "CNCF",
+        "domain": "helm.sh",
+        "verified": true
+      },
+      "repo": "https://github.com/helm/helm",
+      "docs": "https://helm.sh/docs/",
+      "install": {
+        "brew": "helm",
+        "apt": "helm"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "kubeconfig"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "kubernetes",
+        "packaging",
+        "deployment"
+      ],
+      "tier": "verified",
+      "description": "Kubernetes package manager for installing and managing applications."
+    },
+    {
+      "slug": "podman",
+      "name": "Podman",
+      "vendor": {
+        "name": "Red Hat",
+        "domain": "podman.io",
+        "verified": true
+      },
+      "repo": "https://github.com/containers/podman",
+      "docs": "https://docs.podman.io/",
+      "install": {
+        "brew": "podman",
+        "apt": "podman"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "registry login"
+        ],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 4,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 9,
+      "categories": [
+        "containers",
+        "devtools"
+      ],
+      "tier": "verified",
+      "description": "Daemonless container engine compatible with Docker CLI, rootless by default."
+    },
+    {
+      "slug": "buildah",
+      "name": "Buildah",
+      "vendor": {
+        "name": "Red Hat",
+        "domain": "buildah.io",
+        "verified": true
+      },
+      "repo": "https://github.com/containers/buildah",
+      "docs": "https://buildah.io/docs/",
+      "install": {
+        "brew": "buildah",
+        "apt": "buildah"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "registry login"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "containers",
+        "images",
+        "devtools"
+      ],
+      "tier": "verified",
+      "description": "OCI container image builder that doesn't require a daemon."
+    },
+    {
+      "slug": "skopeo",
+      "name": "Skopeo",
+      "vendor": {
+        "name": "Red Hat",
+        "domain": "github.com/containers",
+        "verified": true
+      },
+      "repo": "https://github.com/containers/skopeo",
+      "docs": "https://github.com/containers/skopeo/blob/main/docs/skopeo.1.md",
+      "install": {
+        "brew": "skopeo",
+        "apt": "skopeo"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "registry credentials"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "containers",
+        "images",
+        "registry"
+      ],
+      "tier": "verified",
+      "description": "Work with container registries - copy, inspect, and sign images without Docker."
+    },
+    {
+      "slug": "dive",
+      "name": "dive",
+      "vendor": {
+        "name": "Alex Goodman",
+        "domain": "github.com/wagoodman",
+        "verified": false
+      },
+      "repo": "https://github.com/wagoodman/dive",
+      "docs": "https://github.com/wagoodman/dive#readme",
+      "install": {
+        "brew": "dive",
+        "apt": "dive"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 3,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "containers",
+        "images",
+        "devtools"
+      ],
+      "tier": "community",
+      "description": "Explore each layer in a Docker image to optimize image size."
+    },
+    {
+      "slug": "trivy",
+      "name": "Trivy",
+      "vendor": {
+        "name": "Aqua Security",
+        "domain": "aquasecurity.github.io",
+        "verified": true
+      },
+      "repo": "https://github.com/aquasecurity/trivy",
+      "docs": "https://aquasecurity.github.io/trivy/",
+      "install": {
+        "brew": "trivy",
+        "apt": "trivy"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "security",
+        "containers",
+        "scanning"
+      ],
+      "tier": "verified",
+      "description": "Comprehensive vulnerability scanner for containers, filesystems, and IaC."
+    },
+    {
+      "slug": "hadolint",
+      "name": "Hadolint",
+      "vendor": {
+        "name": "hadolint",
+        "domain": "github.com/hadolint",
+        "verified": false
+      },
+      "repo": "https://github.com/hadolint/hadolint",
+      "docs": "https://github.com/hadolint/hadolint#readme",
+      "install": {
+        "brew": "hadolint",
+        "apt": "hadolint"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "docker",
+        "linting",
+        "devtools"
+      ],
+      "tier": "community",
+      "description": "Dockerfile linter that checks for best practices and common mistakes."
+    },
+    {
+      "slug": "syft",
+      "name": "Syft",
+      "vendor": {
+        "name": "Anchore",
+        "domain": "anchore.com",
+        "verified": true
+      },
+      "repo": "https://github.com/anchore/syft",
+      "docs": "https://github.com/anchore/syft#readme",
+      "install": {
+        "brew": "syft",
+        "go": "github.com/anchore/syft/cmd/syft"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "security",
+        "sbom",
+        "containers"
+      ],
+      "tier": "verified",
+      "description": "CLI tool and library for generating Software Bill of Materials (SBOM)."
+    },
+    {
+      "slug": "grype",
+      "name": "Grype",
+      "vendor": {
+        "name": "Anchore",
+        "domain": "anchore.com",
+        "verified": true
+      },
+      "repo": "https://github.com/anchore/grype",
+      "docs": "https://github.com/anchore/grype#readme",
+      "install": {
+        "brew": "grype",
+        "go": "github.com/anchore/grype/cmd/grype"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "security",
+        "vulnerability",
+        "scanning"
+      ],
+      "tier": "verified",
+      "description": "Vulnerability scanner for container images and filesystems."
+    },
+    {
+      "slug": "kompose",
+      "name": "Kompose",
+      "vendor": {
+        "name": "Kubernetes",
+        "domain": "kompose.io",
+        "verified": true
+      },
+      "repo": "https://github.com/kubernetes/kompose",
+      "docs": "https://kompose.io/",
+      "install": {
+        "brew": "kompose",
+        "apt": "kompose"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "kubernetes",
+        "docker",
+        "migration"
+      ],
+      "tier": "verified",
+      "description": "Convert Docker Compose files to Kubernetes resources."
+    },
+    {
+      "slug": "prometheus",
+      "name": "Prometheus",
+      "vendor": {
+        "name": "CNCF",
+        "domain": "prometheus.io",
+        "verified": true
+      },
+      "repo": "https://github.com/prometheus/prometheus",
+      "docs": "https://prometheus.io/docs/",
+      "install": {
+        "brew": "prometheus",
+        "apt": "prometheus"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "monitoring",
+        "metrics",
+        "observability"
+      ],
+      "tier": "verified",
+      "description": "Monitoring system and time series database with powerful query language."
+    },
+    {
+      "slug": "promtool",
+      "name": "promtool",
+      "vendor": {
+        "name": "CNCF",
+        "domain": "prometheus.io",
+        "verified": true
+      },
+      "repo": "https://github.com/prometheus/prometheus",
+      "docs": "https://prometheus.io/docs/prometheus/latest/command-line/promtool/",
+      "install": {
+        "brew": "prometheus"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "monitoring",
+        "validation",
+        "devtools"
+      ],
+      "tier": "verified",
+      "description": "Tool for validating Prometheus configuration and rules files."
+    },
+    {
+      "slug": "alertmanager",
+      "name": "Alertmanager",
+      "vendor": {
+        "name": "CNCF",
+        "domain": "prometheus.io",
+        "verified": true
+      },
+      "repo": "https://github.com/prometheus/alertmanager",
+      "docs": "https://prometheus.io/docs/alerting/latest/alertmanager/",
+      "install": {
+        "brew": "alertmanager"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "monitoring",
+        "alerting",
+        "observability"
+      ],
+      "tier": "verified",
+      "description": "Handles alerts from Prometheus with deduplication, grouping, and routing."
+    },
+    {
+      "slug": "loki",
+      "name": "Loki",
+      "vendor": {
+        "name": "Grafana Labs",
+        "domain": "grafana.com",
+        "verified": true
+      },
+      "repo": "https://github.com/grafana/loki",
+      "docs": "https://grafana.com/docs/loki/",
+      "install": {
+        "brew": "loki"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:LOKI_ADDR"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "logging",
+        "observability"
+      ],
+      "tier": "verified",
+      "description": "Horizontally-scalable, multi-tenant log aggregation system inspired by Prometheus."
+    },
+    {
+      "slug": "logcli",
+      "name": "logcli",
+      "vendor": {
+        "name": "Grafana Labs",
+        "domain": "grafana.com",
+        "verified": true
+      },
+      "repo": "https://github.com/grafana/loki",
+      "docs": "https://grafana.com/docs/loki/latest/query/logcli/",
+      "install": {
+        "brew": "logcli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:LOKI_ADDR"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "logging",
+        "observability",
+        "query"
+      ],
+      "tier": "verified",
+      "description": "CLI for querying Loki logs with LogQL."
+    },
+    {
+      "slug": "goreleaser",
+      "name": "GoReleaser",
+      "vendor": {
+        "name": "GoReleaser",
+        "domain": "goreleaser.com",
+        "verified": false
+      },
+      "repo": "https://github.com/goreleaser/goreleaser",
+      "docs": "https://goreleaser.com/",
+      "install": {
+        "brew": "goreleaser",
+        "go": "github.com/goreleaser/goreleaser"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "env:GITHUB_TOKEN"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "go",
+        "release",
+        "ci"
+      ],
+      "tier": "community",
+      "description": "Release automation tool for Go projects with multi-platform support."
+    },
+    {
+      "slug": "golangci-lint",
+      "name": "golangci-lint",
+      "vendor": {
+        "name": "golangci",
+        "domain": "golangci-lint.run",
+        "verified": false
+      },
+      "repo": "https://github.com/golangci/golangci-lint",
+      "docs": "https://golangci-lint.run/",
+      "install": {
+        "brew": "golangci-lint",
+        "go": "github.com/golangci/golangci-lint/cmd/golangci-lint"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "go",
+        "linting",
+        "devtools"
+      ],
+      "tier": "community",
+      "description": "Fast linters runner for Go with many linters aggregated."
+    },
+    {
+      "slug": "air",
+      "name": "Air",
+      "vendor": {
+        "name": "cosmtrek",
+        "domain": "github.com/cosmtrek",
+        "verified": false
+      },
+      "repo": "https://github.com/cosmtrek/air",
+      "docs": "https://github.com/cosmtrek/air#readme",
+      "install": {
+        "go": "github.com/cosmtrek/air"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 3,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      },
+      "agentScore": 6,
+      "categories": [
+        "go",
+        "development",
+        "hot-reload"
+      ],
+      "tier": "community",
+      "description": "Live reload for Go apps during development."
+    },
+    {
+      "slug": "goose",
+      "name": "Goose",
+      "vendor": {
+        "name": "pressly",
+        "domain": "github.com/pressly",
+        "verified": false
+      },
+      "repo": "https://github.com/pressly/goose",
+      "docs": "https://pressly.github.io/goose/",
+      "install": {
+        "brew": "goose",
+        "go": "github.com/pressly/goose/v3/cmd/goose"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "database",
+        "migrations",
+        "go"
+      ],
+      "tier": "community",
+      "description": "Database migration tool supporting SQL and Go functions."
+    },
+    {
+      "slug": "dbmate",
+      "name": "dbmate",
+      "vendor": {
+        "name": "Adrian Macneil",
+        "domain": "github.com/amacneil",
+        "verified": false
+      },
+      "repo": "https://github.com/amacneil/dbmate",
+      "docs": "https://github.com/amacneil/dbmate#readme",
+      "install": {
+        "brew": "dbmate",
+        "go": "github.com/amacneil/dbmate"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "env:DATABASE_URL"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "database",
+        "migrations",
+        "devtools"
+      ],
+      "tier": "community",
+      "description": "Lightweight, framework-agnostic database migration tool."
+    },
+    {
+      "slug": "migrate",
+      "name": "golang-migrate",
+      "vendor": {
+        "name": "golang-migrate",
+        "domain": "github.com/golang-migrate",
+        "verified": false
+      },
+      "repo": "https://github.com/golang-migrate/migrate",
+      "docs": "https://github.com/golang-migrate/migrate#readme",
+      "install": {
+        "brew": "golang-migrate",
+        "go": "github.com/golang-migrate/migrate/v4/cmd/migrate"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "database",
+        "migrations",
+        "go"
+      ],
+      "tier": "community",
+      "description": "Database migrations written in Go with CLI and library support."
+    },
+    {
+      "slug": "atlas",
+      "name": "Atlas",
+      "vendor": {
+        "name": "Ariga",
+        "domain": "atlasgo.io",
+        "verified": false
+      },
+      "repo": "https://github.com/ariga/atlas",
+      "docs": "https://atlasgo.io/docs",
+      "install": {
+        "brew": "ariga/tap/atlas"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "database",
+        "schema",
+        "devtools"
+      ],
+      "tier": "community",
+      "description": "Database schema management tool with declarative migrations."
+    },
+    {
+      "slug": "ko",
+      "name": "ko",
+      "vendor": {
+        "name": "ko-build",
+        "domain": "ko.build",
+        "verified": false
+      },
+      "repo": "https://github.com/ko-build/ko",
+      "docs": "https://ko.build/",
+      "install": {
+        "brew": "ko",
+        "go": "github.com/ko-build/ko"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "registry credentials"
+        ],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "go",
+        "containers",
+        "kubernetes"
+      ],
+      "tier": "community",
+      "description": "Build and deploy Go applications to Kubernetes without Dockerfiles."
+    },
+    {
+      "slug": "hyperfine",
+      "name": "hyperfine",
+      "vendor": {
+        "name": "David Peter",
+        "domain": "github.com/sharkdp",
+        "verified": false
+      },
+      "repo": "https://github.com/sharkdp/hyperfine",
+      "docs": "https://github.com/sharkdp/hyperfine#readme",
+      "install": {
+        "brew": "hyperfine",
+        "cargo": "hyperfine",
+        "apt": "hyperfine"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "benchmark",
+        "devtools"
+      ],
+      "tier": "community",
+      "description": "Command-line benchmarking tool with statistical analysis."
+    },
+    {
+      "slug": "delta",
+      "name": "delta",
+      "vendor": {
+        "name": "Dan Davison",
+        "domain": "github.com/dandavison",
+        "verified": false
+      },
+      "repo": "https://github.com/dandavison/delta",
+      "docs": "https://dandavison.github.io/delta/",
+      "install": {
+        "brew": "git-delta",
+        "cargo": "git-delta",
+        "apt": "git-delta"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "git",
+        "diff",
+        "devtools"
+      ],
+      "tier": "community",
+      "description": "Syntax-highlighting pager for git, diff, and grep output."
+    },
+    {
+      "slug": "bottom",
+      "name": "bottom",
+      "vendor": {
+        "name": "Clement Tsang",
+        "domain": "github.com/ClementTsang",
+        "verified": false
+      },
+      "repo": "https://github.com/ClementTsang/bottom",
+      "docs": "https://clementtsang.github.io/bottom/",
+      "install": {
+        "brew": "bottom",
+        "cargo": "bottom",
+        "apt": "bottom"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 2,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 2
+      },
+      "agentScore": 5,
+      "categories": [
+        "monitoring",
+        "system",
+        "tui"
+      ],
+      "tier": "community",
+      "description": "Cross-platform graphical process/system monitor for the terminal."
+    },
+    {
+      "slug": "procs",
+      "name": "procs",
+      "vendor": {
+        "name": "dalance",
+        "domain": "github.com/dalance",
+        "verified": false
+      },
+      "repo": "https://github.com/dalance/procs",
+      "docs": "https://github.com/dalance/procs#readme",
+      "install": {
+        "brew": "procs",
+        "cargo": "procs"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "system",
+        "process",
+        "devtools"
+      ],
+      "tier": "community",
+      "description": "Modern replacement for ps with color output and search."
+    },
+    {
+      "slug": "tokei",
+      "name": "tokei",
+      "vendor": {
+        "name": "XAMPPRocky",
+        "domain": "github.com/XAMPPRocky",
+        "verified": false
+      },
+      "repo": "https://github.com/XAMPPRocky/tokei",
+      "docs": "https://github.com/XAMPPRocky/tokei#readme",
+      "install": {
+        "brew": "tokei",
+        "cargo": "tokei"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 5,
+        "tokenEfficiency": 5,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 5
+      },
+      "agentScore": 10,
+      "categories": [
+        "code",
+        "statistics",
+        "devtools"
+      ],
+      "tier": "community",
+      "description": "Fast code statistics tool counting lines of code."
+    },
+    {
+      "slug": "nushell",
+      "name": "Nushell",
+      "vendor": {
+        "name": "Nushell",
+        "domain": "nushell.sh",
+        "verified": false
+      },
+      "repo": "https://github.com/nushell/nushell",
+      "docs": "https://www.nushell.sh/book/",
+      "install": {
+        "brew": "nushell",
+        "cargo": "nu"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 3,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "shell",
+        "devtools"
+      ],
+      "tier": "community",
+      "description": "Modern shell with structured data and powerful pipelines."
+    },
+    {
+      "slug": "zellij",
+      "name": "Zellij",
+      "vendor": {
+        "name": "Zellij",
+        "domain": "zellij.dev",
+        "verified": false
+      },
+      "repo": "https://github.com/zellij-org/zellij",
+      "docs": "https://zellij.dev/documentation/",
+      "install": {
+        "brew": "zellij",
+        "cargo": "zellij"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 2,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 2
+      },
+      "agentScore": 5,
+      "categories": [
+        "terminal",
+        "multiplexer"
+      ],
+      "tier": "community",
+      "description": "Terminal workspace with batteries included (tmux alternative)."
+    },
+    {
+      "slug": "alacritty",
+      "name": "Alacritty",
+      "vendor": {
+        "name": "Alacritty",
+        "domain": "alacritty.org",
+        "verified": false
+      },
+      "repo": "https://github.com/alacritty/alacritty",
+      "docs": "https://github.com/alacritty/alacritty#readme",
+      "install": {
+        "brew": "alacritty",
+        "cargo": "alacritty"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 1,
+        "nonInteractive": 1,
+        "tokenEfficiency": 2,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 1
+      },
+      "agentScore": 3,
+      "categories": [
+        "terminal",
+        "emulator"
+      ],
+      "tier": "community",
+      "description": "Cross-platform, GPU-accelerated terminal emulator."
+    },
+    {
+      "slug": "mdbook",
+      "name": "mdBook",
+      "vendor": {
+        "name": "Rust Lang",
+        "domain": "rust-lang.github.io",
+        "verified": true
+      },
+      "repo": "https://github.com/rust-lang/mdBook",
+      "docs": "https://rust-lang.github.io/mdBook/",
+      "install": {
+        "brew": "mdbook",
+        "cargo": "mdbook"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "documentation",
+        "markdown",
+        "devtools"
+      ],
+      "tier": "verified",
+      "description": "Create books from Markdown files like Gitbook."
+    },
+    {
+      "slug": "typst",
+      "name": "Typst",
+      "vendor": {
+        "name": "Typst",
+        "domain": "typst.app",
+        "verified": false
+      },
+      "repo": "https://github.com/typst/typst",
+      "docs": "https://typst.app/docs/",
+      "install": {
+        "brew": "typst",
+        "cargo": "typst-cli"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [],
+        "idempotent": true,
+        "interactive": false,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 2,
+        "nonInteractive": 5,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "typesetting",
+        "documents",
+        "devtools"
+      ],
+      "tier": "community",
+      "description": "Modern typesetting system - fast alternative to LaTeX."
+    },
+    {
+      "slug": "deno",
+      "name": "Deno",
+      "vendor": {
+        "name": "Deno Land",
+        "domain": "deno.land",
+        "verified": true
+      },
+      "repo": "https://github.com/denoland/deno",
+      "docs": "https://deno.land/manual",
+      "install": {
+        "brew": "deno",
+        "cargo": "deno"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 4,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 5,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 9,
+      "categories": [
+        "javascript",
+        "typescript",
+        "runtime"
+      ],
+      "tier": "verified",
+      "description": "Secure JavaScript/TypeScript runtime with first-class TypeScript support."
+    },
+    {
+      "slug": "bun",
+      "name": "Bun",
+      "vendor": {
+        "name": "Oven",
+        "domain": "bun.sh",
+        "verified": true
+      },
+      "repo": "https://github.com/oven-sh/bun",
+      "docs": "https://bun.sh/docs",
+      "install": {
+        "brew": "bun",
+        "npm": "bun"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 4,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 9,
+      "categories": [
+        "javascript",
+        "typescript",
+        "runtime",
+        "bundler"
+      ],
+      "tier": "verified",
+      "description": "Fast all-in-one JavaScript runtime, bundler, transpiler, and package manager."
+    },
+    {
+      "slug": "redis-cli",
+      "name": "redis-cli",
+      "vendor": {
+        "name": "Redis",
+        "domain": "redis.io",
+        "verified": true
+      },
+      "repo": "https://github.com/redis/redis",
+      "docs": "https://redis.io/docs/manual/cli/",
+      "install": {
+        "brew": "redis",
+        "apt": "redis-tools"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "env:REDISCLI_AUTH"
+        ],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 3,
+        "nonInteractive": 4,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "database",
+        "redis",
+        "cache"
+      ],
+      "tier": "verified",
+      "description": "Command-line interface for Redis key-value store."
+    },
+    {
+      "slug": "mongosh",
+      "name": "MongoDB Shell",
+      "vendor": {
+        "name": "MongoDB",
+        "domain": "mongodb.com",
+        "verified": true
+      },
+      "repo": "https://github.com/mongodb-js/mongosh",
+      "docs": "https://www.mongodb.com/docs/mongodb-shell/",
+      "install": {
+        "brew": "mongosh",
+        "npm": "@mongosh/cli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "connection string"
+        ],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 3,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "database",
+        "mongodb",
+        "nosql"
+      ],
+      "tier": "verified",
+      "description": "Modern MongoDB shell with full JavaScript support."
+    },
+    {
+      "slug": "psql",
+      "name": "psql",
+      "vendor": {
+        "name": "PostgreSQL",
+        "domain": "postgresql.org",
+        "verified": true
+      },
+      "repo": "https://github.com/postgres/postgres",
+      "docs": "https://www.postgresql.org/docs/current/app-psql.html",
+      "install": {
+        "brew": "postgresql",
+        "apt": "postgresql-client"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "env:PGPASSWORD",
+          "~/.pgpass"
+        ],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 3,
+        "nonInteractive": 4,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "database",
+        "postgresql",
+        "sql"
+      ],
+      "tier": "verified",
+      "description": "PostgreSQL interactive terminal client."
+    },
+    {
+      "slug": "mysql-cli",
+      "name": "mysql",
+      "vendor": {
+        "name": "Oracle",
+        "domain": "mysql.com",
+        "verified": true
+      },
+      "repo": "https://github.com/mysql/mysql-server",
+      "docs": "https://dev.mysql.com/doc/refman/8.0/en/mysql.html",
+      "install": {
+        "brew": "mysql-client",
+        "apt": "mysql-client"
+      },
+      "capabilities": {
+        "jsonOutput": false,
+        "auth": [
+          "env:MYSQL_PWD",
+          "~/.my.cnf"
+        ],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScores": {
+        "jsonOutput": 3,
+        "nonInteractive": 4,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 8,
+      "categories": [
+        "database",
+        "mysql",
+        "sql"
+      ],
+      "tier": "verified",
+      "description": "MySQL command-line client."
+    },
+    {
+      "slug": "sqlite3",
+      "name": "sqlite3",
+      "vendor": {
+        "name": "SQLite",
+        "domain": "sqlite.org",
+        "verified": true
+      },
+      "repo": "https://github.com/sqlite/sqlite",
+      "docs": "https://sqlite.org/cli.html",
+      "install": {
+        "brew": "sqlite",
+        "apt": "sqlite3"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [],
+        "idempotent": false,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 4,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      },
+      "agentScore": 9,
+      "categories": [
+        "database",
+        "sqlite",
+        "sql"
+      ],
+      "tier": "verified",
+      "description": "Command-line interface for SQLite databases."
     }
   ]
 }
