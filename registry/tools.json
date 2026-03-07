@@ -27756,6 +27756,162 @@
         "safetyFeatures": 4,
         "pipelineFriendly": 5
       }
+    },
+    {
+      "slug": "wrangler",
+      "name": "Cloudflare Wrangler",
+      "vendor": {
+        "name": "Cloudflare",
+        "domain": "cloudflare.com",
+        "verified": true
+      },
+      "repo": "https://github.com/cloudflare/workers-sdk",
+      "docs": "https://developers.cloudflare.com/workers/wrangler/",
+      "install": {
+        "npm": "wrangler"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "wrangler login",
+          "env:CLOUDFLARE_API_TOKEN"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": true
+      },
+      "agentScore": 8,
+      "categories": [
+        "cloud",
+        "serverless",
+        "cdn"
+      ],
+      "tier": "verified",
+      "description": "Deploy Workers, Pages, R2, KV, D1, Queues. The Cloudflare developer platform CLI.",
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 4,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 4,
+        "pipelineFriendly": 4
+      }
+    },
+    {
+      "slug": "tccli",
+      "name": "Tencent Cloud CLI",
+      "vendor": {
+        "name": "Tencent Cloud",
+        "domain": "tencentcloud.com",
+        "verified": true
+      },
+      "repo": "https://github.com/TencentCloud/tencentcloud-cli",
+      "docs": "https://www.tencentcloud.com/product/cli",
+      "install": {
+        "pip": "tccli"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "tccli configure",
+          "env:TENCENTCLOUD_SECRET_ID",
+          "env:TENCENTCLOUD_SECRET_KEY"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScore": 7,
+      "categories": [
+        "cloud",
+        "infrastructure"
+      ],
+      "tier": "verified",
+      "description": "Manage Tencent Cloud resources. Chinas second-largest cloud provider.",
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 3,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      }
+    },
+    {
+      "slug": "koocli",
+      "name": "Huawei Cloud CLI (KooCLI)",
+      "vendor": {
+        "name": "Huawei Cloud",
+        "domain": "huaweicloud.com",
+        "verified": true
+      },
+      "docs": "https://support.huaweicloud.com/intl/en-us/hcli/index.html",
+      "install": {
+        "binary": "https://support.huaweicloud.com/intl/en-us/qs-hcli/hcli_02_003_02.html"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "hcloud configure",
+          "env:HUAWEICLOUD_AK",
+          "env:HUAWEICLOUD_SK"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScore": 6,
+      "categories": [
+        "cloud",
+        "infrastructure"
+      ],
+      "tier": "verified",
+      "description": "Manage Huawei Cloud resources. Binary is hcloud (conflicts with Hetzner name).",
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 3,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 3
+      }
+    },
+    {
+      "slug": "ibmcloud",
+      "name": "IBM Cloud CLI",
+      "vendor": {
+        "name": "IBM",
+        "domain": "ibm.com",
+        "verified": true
+      },
+      "repo": "https://github.com/IBM-Cloud/ibm-cloud-cli-release",
+      "docs": "https://cloud.ibm.com/docs/cli",
+      "install": {
+        "brew": "ibm-cloud-cli",
+        "binary": "https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "ibmcloud login",
+          "env:IBMCLOUD_API_KEY"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScore": 7,
+      "categories": [
+        "cloud",
+        "infrastructure",
+        "ai"
+      ],
+      "tier": "verified",
+      "description": "Manage IBM Cloud resources including Watson AI services.",
+      "agentScores": {
+        "jsonOutput": 4,
+        "nonInteractive": 4,
+        "tokenEfficiency": 3,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      }
     }
   ]
 }
