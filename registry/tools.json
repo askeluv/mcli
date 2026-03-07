@@ -27677,6 +27677,46 @@
       "tier": "verified",
       "description": "Stream and backfill Hyperliquid data. Real-time trades, orders, book updates via WebSocket or gRPC.",
       "agentScore": 5
+    },
+    {
+      "slug": "aliyun",
+      "name": "Alibaba Cloud CLI",
+      "vendor": {
+        "name": "Alibaba Cloud",
+        "domain": "alibabacloud.com",
+        "verified": true
+      },
+      "repo": "https://github.com/aliyun/aliyun-cli",
+      "docs": "https://www.alibabacloud.com/help/en/cli",
+      "install": {
+        "brew": "aliyun-cli",
+        "script": "https://aliyuncli.alicdn.com/install.sh"
+      },
+      "capabilities": {
+        "jsonOutput": true,
+        "auth": [
+          "aliyun configure",
+          "env:ALIBABA_CLOUD_ACCESS_KEY_ID",
+          "env:ALIBABA_CLOUD_ACCESS_KEY_SECRET"
+        ],
+        "idempotent": true,
+        "interactive": true,
+        "streaming": false
+      },
+      "agentScore": 8,
+      "categories": [
+        "cloud",
+        "infrastructure"
+      ],
+      "tier": "verified",
+      "description": "Manage Alibaba Cloud resources via OpenAPI. JSON output by default, multiple auth modes.",
+      "agentScores": {
+        "jsonOutput": 5,
+        "nonInteractive": 4,
+        "tokenEfficiency": 4,
+        "safetyFeatures": 3,
+        "pipelineFriendly": 4
+      }
     }
   ]
 }
