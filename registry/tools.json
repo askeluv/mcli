@@ -14360,7 +14360,7 @@
         ],
         "idempotent": true,
         "interactive": false,
-        "streaming": false
+        "streaming": true
       },
       "agentScores": {
         "jsonOutput": 5,
@@ -14373,10 +14373,11 @@
       "categories": [
         "crypto",
         "analytics",
-        "blockchain"
+        "blockchain",
+        "trading"
       ],
       "tier": "verified",
-      "description": "Onchain analytics CLI for Smart Money, wallet profiling, token research. Built for AI agents."
+      "description": "Onchain analytics + trading CLI. Smart Money, token research, wallet profiling, prediction markets, perps. 60+ commands, NDJSON streaming, --fields for token efficiency."
     },
     {
       "slug": "cast",
